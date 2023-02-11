@@ -8,14 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is a starter project.  It is intended to be a core learning asset for the students
-who have enrolled the Design and Testing subject of the Software Engineering curriculum of the 
-University of Seville.  This project helps them start working on their new information system 
-projects.
-
-To get this project up and running, please follow the appropriate guideline, taking into 
-account that you must link the appropriate version of the Acme-Framework excluding the 
-following resources:
-
-- **/fragments/**
+Acme Life-Long Learning, Inc. (Acme L3, Inc. para abreviar) es una empresa ficticia que se 
+especializa en ayudar a los estudiantes a iniciarse en una variedad de asuntos con la ayuda 
+de profesores de renombre. El objetivo de este proyecto es desarrollar un WIS para ayudar a 
+esta organización a administrar su negocio.
  
