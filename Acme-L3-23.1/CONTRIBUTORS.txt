@@ -9,3 +9,4 @@
 # they accept any liabilities with respect to them.
 
 - Javier Nunes (javnunrui@alum.us.es)
+- Manuel Carnero Vergel (mancarver1@alum.us.es)
