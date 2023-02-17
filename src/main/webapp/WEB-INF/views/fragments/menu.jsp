@@ -25,6 +25,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.jdsports.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.julnavrod" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.manpalpin" action="https://www.twitch.tv/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.pabmarval" action="https://twitter.com/home"/>
 
 		</acme:menu-option>
 
