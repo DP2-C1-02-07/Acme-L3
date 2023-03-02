@@ -49,6 +49,9 @@ public class Banner extends AbstractEntity {
 	@URL
 	protected String			targetWebDocumentLink;
 
+	@NotNull
+	protected Advertiser		advertised;
+
 
 	@AssertTrue
 	protected boolean isDisplayPeriodValid() {
