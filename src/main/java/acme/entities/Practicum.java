@@ -3,6 +3,8 @@ package acme.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -10,6 +12,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
+import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,18 +28,17 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}[0-9]{4}")
+	@Pattern(regexp = "^[A-Z]{1,3}[0-9][0-9]{3}")
 	protected String			code;
 
 	@NotBlank
 	@Length(max = 75)
 	protected String			title;
 
-	@NotNull
+	@NotBlank
 	@Length(max = 100)
 	protected String			abstractThing;
 
-	@NotNull
 	@Length(max = 100)
 	protected String			goals;
 
@@ -46,5 +48,8 @@ public class Practicum extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
+	@NotNull
+	@Valid
+	@ManyToOne
+	protected Company			company;
 }
