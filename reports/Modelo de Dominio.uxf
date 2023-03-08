@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>56</x>
-      <y>128</y>
+      <x>120</x>
+      <y>184</y>
       <w>256</w>
       <h>120</h>
     </coordinates>
@@ -24,8 +24,8 @@ Peep
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>352</x>
-      <y>128</y>
+      <x>416</x>
+      <y>184</y>
       <w>248</w>
       <h>112</h>
     </coordinates>
@@ -43,8 +43,8 @@ Bulletin
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>24</x>
-      <y>320</y>
+      <x>40</x>
+      <y>376</y>
       <w>256</w>
       <h>136</h>
     </coordinates>
@@ -64,8 +64,8 @@ Offer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>632</x>
-      <y>128</y>
+      <x>696</x>
+      <y>184</y>
       <w>264</w>
       <h>120</h>
     </coordinates>
@@ -84,35 +84,33 @@ Note
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>744</x>
-      <y>320</y>
-      <w>288</w>
-      <h>216</h>
+      <x>768</x>
+      <y>376</y>
+      <w>344</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Form&gt;&gt;
 Dashboard
 --
-+ totalNumberOfPrincipalsEachRole: Integer
-+ ratioPeepsEmail: Double
-+ ratioPeepsLink: Double
-+ ratioCritical: Double
-+ ratioNonCritical: Double
-+ averageBudgetInOffersByCurrency: Double
-+ minimumBudgetInOffersByCurrency: Double
-+ maximumBudgetInOffersByCurrency: Double
-+ standardDeviationBudgetInOffersByCurrency: Double
-+ averageNotesPosted: Double
-+ minimumNotesPosted: Double
-+ maximumNotesPosted: Double
-+ standardDeviationNotesPosted: Double</panel_attributes>
++ totalNumberOfPrincipalsByRole: Map&lt;String, Integer&gt;
++ ratioOfPeepsBothEmailLink: Double
++ ratioOfCriticalNonCriticalBulletins: Map&lt;String, Double&gt;
++ averageBudgetOfferByCurrency: Map&lt;String, Double&gt;
++ minimumBudgetOfferByCurrency: Map&lt;String, Double&gt;
++ maximumBudgetOfferByCurrency: Map&lt;String, Double&gt;
++ standardDeviationBudgetOfferByCurrency: Map&lt;String, Double&gt;
++ averageNumberOfNotesPostedLast10Weeks: Double
++ minimumNumberOfNotesPostedLast10Weeks: Double
++ maximumNumberOfNotesPostedLast10Weeks: Double
++ standardDeviationNumberOfNotesPostedLast10Weeks: Double</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>320</y>
+      <x>352</x>
+      <y>376</y>
       <w>240</w>
       <h>136</h>
     </coordinates>
@@ -132,8 +130,8 @@ Banner
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>0</x>
-      <y>520</y>
+      <x>16</x>
+      <y>576</y>
       <w>184</w>
       <h>72</h>
     </coordinates>
@@ -147,8 +145,8 @@ least one week.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>80</x>
-      <y>448</y>
+      <x>96</x>
+      <y>504</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -158,8 +156,8 @@ least one week.</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>808</x>
-      <y>0</y>
+      <x>872</x>
+      <y>56</y>
       <w>248</w>
       <h>88</h>
     </coordinates>
@@ -174,8 +172,8 @@ of the principal who has posted the note and
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>888</x>
-      <y>80</y>
+      <x>952</x>
+      <y>136</y>
       <w>56</w>
       <h>144</h>
     </coordinates>
@@ -185,8 +183,8 @@ of the principal who has posted the note and
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>608</x>
-      <y>320</y>
+      <x>624</x>
+      <y>376</y>
       <w>120</w>
       <h>88</h>
     </coordinates>
@@ -202,8 +200,8 @@ Advertiser
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>360</x>
-      <y>520</y>
+      <x>376</x>
+      <y>576</y>
       <w>200</w>
       <h>72</h>
     </coordinates>
@@ -217,8 +215,8 @@ one week</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>448</y>
+      <x>464</x>
+      <y>504</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -228,8 +226,8 @@ one week</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>192</x>
-      <y>520</y>
+      <x>208</x>
+      <y>576</y>
       <w>128</w>
       <h>32</h>
     </coordinates>
@@ -240,12 +238,52 @@ price must be positive</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>448</y>
+      <x>256</x>
+      <y>504</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>128</x>
+      <y>32</y>
+      <w>216</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Form&gt;&gt;
+SystemConfiguration
+--
++ systemCurrency: String {NotBlank}
++ acceptedCurrencies: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>448</x>
+      <y>56</y>
+      <w>256</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+acceptedCurrencies must follow the next pattern:
+"^[A-Z]{3}(,[A-Z]{3})*$"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>64</y>
+      <w>128</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
 </diagram>
