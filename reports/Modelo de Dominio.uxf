@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>128</y>
+      <w>256</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Peep
+--
++ instantiationMoment: Date {Past}
++ title: String {NotBlank, Length(max=75)}
++ nick: String {NotBlank, Length(max=75)}
++ message: String {NotBlank, Length(max=100)}
++ emailAddress: String {Email}
++ link: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>128</y>
+      <w>248</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Bulletin
+--
++ instantiationMoment: Date {Past}
++ title: String {NotBlank, Length(max=75)}
++ message: String {NotBlank, Length(max=75)}
++ flag: boolean
++ link: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>320</y>
+      <w>256</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ instantiationMoment: Date {Past}
++ heading: String {NotBlank, Length(max=75)}
++ summary: String {NotBlank, Length(max=100)}
++ availabilityStart: Date
++ availabilityEnd: Date
++ price: Money {Min(0), NotNull}
++ link: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>632</x>
+      <y>128</y>
+      <w>264</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Note
+--
++ instantiationMoment: Date
++ title: String {NotBlank, Length(max=75)}
++ message: String {NotBlank, Length(max=100)}
++ emailAddress: String {Email}
++ link: String {URL}
+/ author: String {NotBlank, Length(max=100)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>320</y>
+      <w>288</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Form&gt;&gt;
+Dashboard
+--
++ totalNumberOfPrincipalsEachRole: Integer
++ ratioPeepsEmail: Double
++ ratioPeepsLink: Double
++ ratioCritical: Double
++ ratioNonCritical: Double
++ averageBudgetInOffersByCurrency: Double
++ minimumBudgetInOffersByCurrency: Double
++ maximumBudgetInOffersByCurrency: Double
++ standardDeviationBudgetInOffersByCurrency: Double
++ averageNotesPosted: Double
++ minimumNotesPosted: Double
++ maximumNotesPosted: Double
++ standardDeviationNotesPosted: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>320</y>
+      <w>240</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {Past}
++ displayStartMoment: Date
++ displayEndMoment: Date
++ linkPicture: String {URL]
++ slogan: String {NotBlank, Length(max=75)}
++ linkDocument: String {URL}
++ advertised: Advertiser</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>520</y>
+      <w>184</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+availabiltyPeriod must be at least 
+one day after the offer is 
+instantiated and must last for at 
+least one week.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>448</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>808</x>
+      <y>0</y>
+      <w>248</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+The author must be computed as follows: 
+“〈username〉 - 〈surname, name〉”, 
+where “〈user-name〉” denotes the username 
+of the principal who has posted the note and 
+“〈surname, name〉” denotes his or her full name</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>80</y>
+      <w>56</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;160.0;50.0;160.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>320</y>
+      <w>120</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Enum&gt;&gt;
+Advertiser
+--
++ PRODUCT
++ SERVICE
++ ORGANISATION</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>360</x>
+      <y>520</y>
+      <w>200</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+displayPeriod must start at any
+moment after the instantiation/update
+moment and must last for at least
+one week</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>448</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>192</x>
+      <y>520</y>
+      <w>128</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+price must be positive</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>448</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
