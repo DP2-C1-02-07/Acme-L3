@@ -61,6 +61,11 @@ public class Offer extends AbstractEntity {
 		return result;
 	}
 
+	@AssertTrue
+	protected boolean isMoneyPositive() {
+		return this.price.getAmount() >= 0.0;
+	}
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
