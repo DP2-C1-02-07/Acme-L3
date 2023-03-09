@@ -4,16 +4,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>184</y>
-      <w>256</w>
+      <x>40</x>
+      <y>208</y>
+      <w>352</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Peep
 --
-+ instantiationMoment: Date {Past}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
 + title: String {NotBlank, Length(max=75)}
 + nick: String {NotBlank, Length(max=75)}
 + message: String {NotBlank, Length(max=100)}
@@ -24,69 +24,69 @@ Peep
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>184</y>
-      <w>248</w>
+      <x>400</x>
+      <y>208</y>
+      <w>352</w>
       <h>112</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Bulletin
 --
-+ instantiationMoment: Date {Past}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
 + title: String {NotBlank, Length(max=75)}
-+ message: String {NotBlank, Length(max=75)}
-+ flag: boolean
++ message: String {NotBlank, Length(max=100)}
++ flag: boolean {NotNull}
 + link: String {URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>376</y>
-      <w>256</w>
+      <x>56</x>
+      <y>400</y>
+      <w>352</w>
       <h>136</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Offer
 --
-+ instantiationMoment: Date {Past}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
 + heading: String {NotBlank, Length(max=75)}
 + summary: String {NotBlank, Length(max=100)}
-+ availabilityStart: Date
-+ availabilityEnd: Date
-+ price: Money {Min(0), NotNull}
++ availabilityStart: Date {NotNull, Temporal(TIMESTAMP)}
++ availabilityEnd: Date {NotNull, Temporal(TIMESTAMP)}
++ price: Money
 + link: String {URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>184</y>
-      <w>264</w>
+      <x>768</x>
+      <y>208</y>
+      <w>320</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Note
 --
-+ instantiationMoment: Date
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP)}
 + title: String {NotBlank, Length(max=75)}
 + message: String {NotBlank, Length(max=100)}
 + emailAddress: String {Email}
 + link: String {URL}
-/ author: String {NotBlank, Length(max=100)}</panel_attributes>
+/ author: String {NotBlank, Length(max=75)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
-      <y>376</y>
-      <w>344</w>
+      <x>776</x>
+      <y>392</y>
+      <w>360</w>
       <h>192</h>
     </coordinates>
     <panel_attributes>bg=green
@@ -109,29 +109,28 @@ Dashboard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>352</x>
-      <y>376</y>
-      <w>240</w>
-      <h>136</h>
+      <x>416</x>
+      <y>400</y>
+      <w>352</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Banner
 --
-+ instantiationMoment: Date {Past}
-+ displayStartMoment: Date
-+ displayEndMoment: Date
-+ linkPicture: String {URL]
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ displayStartMoment: Date {NotNull, Temporal(TIMESTAMP)}
++ displayEndMoment: Date {NotNull, Temporal(TIMESTAMP)}
++ pictureLink: String {NotNull, URL}
 + slogan: String {NotBlank, Length(max=75)}
-+ linkDocument: String {URL}
-+ advertised: Advertiser</panel_attributes>
++ documentLink: String {NotNull, URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>16</x>
-      <y>576</y>
+      <x>32</x>
+      <y>600</y>
       <w>184</w>
       <h>72</h>
     </coordinates>
@@ -145,8 +144,8 @@ least one week.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>96</x>
-      <y>504</y>
+      <x>112</x>
+      <y>528</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -156,8 +155,8 @@ least one week.</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>872</x>
-      <y>56</y>
+      <x>888</x>
+      <y>80</y>
       <w>248</w>
       <h>88</h>
     </coordinates>
@@ -172,36 +171,19 @@ of the principal who has posted the note and
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>952</x>
-      <y>136</y>
-      <w>56</w>
-      <h>144</h>
+      <x>1000</x>
+      <y>160</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;160.0;50.0;160.0;50.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>624</x>
-      <y>376</y>
-      <w>120</w>
-      <h>88</h>
-    </coordinates>
-    <panel_attributes>bg=green
-&lt;&lt;Enum&gt;&gt;
-Advertiser
---
-+ PRODUCT
-+ SERVICE
-+ ORGANISATION</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>376</x>
-      <y>576</y>
+      <x>496</x>
+      <y>600</y>
       <w>200</w>
       <h>72</h>
     </coordinates>
@@ -215,19 +197,19 @@ one week</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>504</y>
+      <x>584</x>
+      <y>512</y>
       <w>24</w>
-      <h>88</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>208</x>
-      <y>576</y>
+      <x>224</x>
+      <y>600</y>
       <w>128</w>
       <h>32</h>
     </coordinates>
@@ -238,8 +220,8 @@ price must be positive</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>256</x>
-      <y>504</y>
+      <x>272</x>
+      <y>528</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -249,9 +231,9 @@ price must be positive</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>128</x>
-      <y>32</y>
-      <w>216</w>
+      <x>144</x>
+      <y>56</y>
+      <w>416</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>bg=green
@@ -259,31 +241,7 @@ price must be positive</panel_attributes>
 SystemConfiguration
 --
 + systemCurrency: String {NotBlank}
-+ acceptedCurrencies: String {NotBlank}</panel_attributes>
++ acceptedCurrencies: String {Pattern(regexp="^[A-Z]{3}(,[A-Z]{3})*$"), NotBlank}</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>448</x>
-      <y>56</y>
-      <w>256</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>bg=pink
-acceptedCurrencies must follow the next pattern:
-"^[A-Z]{3}(,[A-Z]{3})*$"</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>336</x>
-      <y>64</y>
-      <w>128</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
 </diagram>
