@@ -1,11 +1,11 @@
 
 package acme.entities;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.AssertTrue;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -27,15 +27,18 @@ public class Banner extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	protected LocalDateTime		instationMoment;
+	protected Date				instantationMoment;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDateTime		displayStartMoment;
+	protected Date				displayStartMoment;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDateTime		displayEndMoment;
+	protected Date				displayEndMoment;
 
 	@NotNull
 	@URL
@@ -47,19 +50,7 @@ public class Banner extends AbstractEntity {
 
 	@NotNull
 	@URL
-	protected String			targetWebDocumentLink;
-
-	@NotNull
-	protected Advertiser		advertised;
-
-
-	@AssertTrue
-	protected boolean isDisplayPeriodValid() {
-		if (this.displayStartMoment == null || this.displayEndMoment == null)
-			return false;
-		final Duration duration = Duration.between(this.displayStartMoment, this.displayEndMoment);
-		return duration.toDays() >= 7;
-	}
+	protected String			documentLink;
 
 	// Derived attributes -----------------------------------------------------
 
