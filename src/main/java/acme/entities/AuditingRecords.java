@@ -55,4 +55,9 @@ public class AuditingRecords extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+
+	//	@NotNull
+	//	@Valid
+	//	@ManyToOne(optional = false)
+	//	protected Audit				audit;
 }
