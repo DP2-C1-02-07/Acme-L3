@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -39,18 +40,24 @@ public class AuditingRecords extends AbstractEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	protected Date				subjectStart;
+	protected Date				subjectAuditedStartMoment;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	protected Date				subjectEnd;
+	protected Date				subjectAuditedEndMoment;
 
 	@NotNull
 	protected Marks				mark;
 
 	@URL
 	protected String			link;
+
+
+	@AssertTrue
+	protected boolean isSubjectAuditedPeriodValid() {
+		return this.subjectAuditedEndMoment.getTime() - this.subjectAuditedStartMoment.getTime() >= 3600000l;
+	}
 
 	// Derived attributes -----------------------------------------------------
 
