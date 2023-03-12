@@ -43,6 +43,8 @@ public class Offer extends AbstractEntity {
 	@Length(max = 100)
 	protected String			summary;
 
+	// availabilityPeriod custom constraint will be added as soon as possible
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				availabilityStart;
@@ -51,24 +53,14 @@ public class Offer extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				availabilityEnd;
 
+	// price custom constraint will be added as soon as possible
+
 	@Valid
 	protected Money				price;
 
 	@URL
 	protected String			link;
 
-
-	@AssertTrue
-	protected boolean isAvailabilityPeriodValid() {
-		final boolean lastAWeek = this.availabilityEnd.getTime() - this.availabilityStart.getTime() >= 604800000l;
-		final boolean dayAfterInstantiation = this.availabilityStart.getTime() - this.instantiationMoment.getTime() >= 86400000l;
-		boolean result = true;
-
-		if (!lastAWeek || !dayAfterInstantiation)
-			result = false;
-
-		return result;
-	}
 
 	@AssertTrue
 	protected boolean isMoneyPositive() {

@@ -16,6 +16,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.enums.Marks;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
