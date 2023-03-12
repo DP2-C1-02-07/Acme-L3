@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -60,12 +59,6 @@ public class Offer extends AbstractEntity {
 
 	@URL
 	protected String			link;
-
-
-	@AssertTrue
-	protected boolean isMoneyPositive() {
-		return this.price.getAmount() >= 0.0;
-	}
 
 	// Derived attributes -----------------------------------------------------
 
