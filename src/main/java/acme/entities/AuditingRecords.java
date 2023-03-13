@@ -8,7 +8,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -40,6 +39,8 @@ public class AuditingRecords extends AbstractEntity {
 	@Length(max = 100)
 	protected String			assessment;
 
+	// subjectAuditedPeriod custom constraint will be added as soon as possible
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
@@ -56,19 +57,12 @@ public class AuditingRecords extends AbstractEntity {
 	@URL
 	protected String			link;
 
-
-	@AssertTrue
-	protected boolean isSubjectAuditedPeriodValid() {
-		return this.subjectAuditedEndMoment.getTime() - this.subjectAuditedStartMoment.getTime() >= 3600000l;
-	}
-
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
-
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Audit audit;
+	protected Audit				audit;
 }
