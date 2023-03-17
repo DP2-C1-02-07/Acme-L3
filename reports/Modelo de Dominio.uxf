@@ -4,16 +4,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
+      <x>8</x>
       <y>208</y>
-      <w>352</w>
+      <w>400</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Peep
 --
-+ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
 + title: String {NotBlank, Length(max=75)}
 + nick: String {NotBlank, Length(max=75)}
 + message: String {NotBlank, Length(max=100)}
@@ -24,7 +24,7 @@ Peep
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>416</x>
       <y>208</y>
       <w>352</w>
       <h>112</h>
@@ -43,7 +43,7 @@ Bulletin
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>56</x>
+      <x>24</x>
       <y>400</y>
       <w>352</w>
       <h>136</h>
@@ -57,23 +57,23 @@ Offer
 + summary: String {NotBlank, Length(max=100)}
 + availabilityStart: Date {NotNull, Temporal(TIMESTAMP)}
 + availabilityEnd: Date {NotNull, Temporal(TIMESTAMP)}
-+ price: Money
++ price: Money {NotNull}
 + link: String {URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
+      <x>776</x>
       <y>208</y>
-      <w>320</w>
+      <w>400</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Note
 --
-+ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP)}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
 + title: String {NotBlank, Length(max=75)}
 + message: String {NotBlank, Length(max=100)}
 + emailAddress: String {Email}
@@ -84,8 +84,8 @@ Note
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>776</x>
-      <y>392</y>
+      <x>800</x>
+      <y>400</y>
       <w>360</w>
       <h>192</h>
     </coordinates>
@@ -109,16 +109,16 @@ Dashboard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
+      <x>384</x>
       <y>400</y>
-      <w>352</w>
+      <w>408</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
 Banner
 --
-+ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
 + displayStartMoment: Date {NotNull, Temporal(TIMESTAMP)}
 + displayEndMoment: Date {NotNull, Temporal(TIMESTAMP)}
 + pictureLink: String {NotNull, URL}
@@ -182,7 +182,7 @@ of the principal who has posted the note and
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>496</x>
+      <x>464</x>
       <y>600</y>
       <w>200</w>
       <h>72</h>
@@ -197,7 +197,7 @@ one week</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
+      <x>552</x>
       <y>512</y>
       <w>24</w>
       <h>104</h>
@@ -208,7 +208,7 @@ one week</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>224</x>
+      <x>248</x>
       <y>600</y>
       <w>128</w>
       <h>32</h>
@@ -220,7 +220,7 @@ price must be positive</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>272</x>
+      <x>296</x>
       <y>528</y>
       <w>24</w>
       <h>88</h>
