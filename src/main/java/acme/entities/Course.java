@@ -12,7 +12,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.enums.ContentType;
+import acme.entities.enums.CourseType;
 import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Lecturer;
@@ -44,7 +44,7 @@ public class Course extends AbstractEntity {
 	protected String			anAbstract;
 
 	@NotNull
-	protected ContentType		contentType;
+	protected CourseType		courseType;
 
 	// Custom constraint retailPrice as soon as possible in Service
 	@Valid
