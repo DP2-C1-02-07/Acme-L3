@@ -5,6 +5,12 @@ user-account-administrator-02,true,"UserIdentity{name: 'Administrator1', surname
 user-account-administrator-03,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator2@acme.com'}",administrator2,administrator2
 user-account-auditor-01,true,"UserIdentity{name: 'Auditor01', surname: 'Auditor01', email: 'auditor01@acme.com'}",auditor1,auditor1
 user-account-auditor-02,true,"UserIdentity{name: 'Auditor02', surname: 'Auditor02', email: 'auditor02@acme.com'}",auditor2,auditor2
+user-account-auditor-03,true,"UserIdentity{name: 'Auditor03', surname: 'Auditor03', email: 'auditor03@acme.com'}",auditor3,auditor3
+user-account-auditor-04,true,"UserIdentity{name: 'Auditor04', surname: 'Auditor04', email: 'auditor04@acme.com'}",auditor4,auditor4
+user-account-auditor-05,true,"UserIdentity{name: 'Auditor05', surname: 'Auditor05', email: 'auditor05@acme.com'}",auditor5,auditor5
+user-account-auditor-06,true,"UserIdentity{name: 'Auditor06', surname: 'Auditor06', email: 'auditor06@acme.com'}",auditor6,auditor6
+user-account-auditor-07,true,"UserIdentity{name: 'Auditor07', surname: 'Auditor07', email: 'auditor07@acme.com'}",auditor7,auditor7
+user-account-auditor-08,true,"UserIdentity{name: 'Auditor08', surname: 'Auditor08', email: 'auditor08@acme.com'}",auditor8,auditor8
 user-account-company-01,true,"UserIdentity{name: 'company1', surname: 'company1', email: 'company1@acme.com'}",company1,company1
 user-account-company-02,true,"UserIdentity{name: 'company2', surname: 'company2', email: 'company2@acme.com'}",company2,company2
 user-account-company-03,true,"UserIdentity{name: 'company3', surname: 'company3', email: 'company3@acme.com'}",company3,company3
