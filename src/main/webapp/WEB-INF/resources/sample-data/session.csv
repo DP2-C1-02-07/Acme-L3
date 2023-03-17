@@ -1,0 +1,5 @@
+key,title,abstract-thing,start-date,finish-date,info,key:practicum
+session-01,The first session,The first abstract,"2022/09/01 12:00","2022/09/09 12:00",null,practicum-01
+session-02,The second session,The second abstract,"2022/09/11 12:00","2022/09/20 12:00",https://ev.us.es/webapps/login/,practicum-01
+session-03,The first session for other practicum,The first abstract for other practicum,"2022/09/01 12:00","2022/09/09 12:00",null,practicum-02
+session-04,The second session for other practicum,The second abstract for other practicum,"2022/09/01 12:00","2022/09/09 12:00",null,practicum-02
