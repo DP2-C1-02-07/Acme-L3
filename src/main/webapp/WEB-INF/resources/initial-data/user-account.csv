@@ -17,3 +17,7 @@ user-account-company-03,true,"UserIdentity{name: 'company3', surname: 'company3'
 user-account-company-04,true,"UserIdentity{name: 'company4', surname: 'company4', email: 'company4@acme.com'}",company4,company4
 user-account-company-05,true,"UserIdentity{name: 'company5', surname: 'company5', email: 'company5@acme.com'}",company5,company5
 user-account-company-06,true,"UserIdentity{name: 'company6', surname: 'company6', email: 'company6@acme.com'}",company6,company6
+user-account-assistant-01,true,"UserIdentity{name: 'assistant1', surname: 'assistant1', email: 'assistant1@acme.com'}",assistant1,assistant1
+user-account-assistant-02,true,"UserIdentity{name: 'assistant2', surname: 'assistant2', email: 'assistant2@acme.com'}",assistant2,assistant2
+user-account-assistant-03,true,"UserIdentity{name: 'assistan3', surname: 'assistant3', email: 'assistant3@acme.com'}",assistant3,assistant3
+user-account-assistant-04,true,"UserIdentity{name: 'assistan4', surname: 'assistant4', email: 'assistant4@acme.com'}",assistant4,assistant4
