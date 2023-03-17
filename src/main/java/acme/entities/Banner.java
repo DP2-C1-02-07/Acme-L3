@@ -36,6 +36,8 @@ public class Banner extends AbstractEntity {
 	@NotNull
 	protected Date				displayStartMoment;
 
+	//Custom constraint validPeriod
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				displayEndMoment;

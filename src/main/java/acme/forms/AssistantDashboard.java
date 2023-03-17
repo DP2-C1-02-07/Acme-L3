@@ -15,13 +15,13 @@ public class AssistantDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Integer						totalNumberOfTheorySessions;
-	Integer						totalNumberOfHandsOnSessions;
-	double						averageSessionsTime;
+	int							totalNumberOfTheorySessions;
+	int							totalNumberOfHandsOnSessions;
+	Double						averageSessionsTime;
 	double						deviationSessionsTime;
 	double						minimumSessionsTime;
 	double						maximumSessionsTime;
-	double						averageTurorialsTime;
+	Double						averageTurorialsTime;
 	double						deviationTutorialsTime;
 	double						minimumTutorialsTime;
 	double						maximumTutorialsTime;
