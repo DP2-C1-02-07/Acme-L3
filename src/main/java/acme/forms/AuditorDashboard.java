@@ -15,14 +15,14 @@ public class AuditorDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Integer						numberOfAuditsTheoryCourses;
-	Integer						numberOfAuditsHandOnCourses;
+	int							numberOfAuditsTheoryCourses;
+	int							numberOfAuditsHandOnCourses;
 	double						averageAuditingRecordsInAudits;
 	double						deviationAuditingRecordsInAudits;
 	double						minimumAuditingRecordsInAudits;
 	double						maximumAuditingRecordsInAudits;
-	double						averageTimePeriodLengthsAuditingRecords;
-	double						deviationTimePeriodLengthsAuditingRecords;
-	double						minimumTimePeriodLengthsAuditingRecords;
-	double						maximumTimePeriodLengthsAuditingRecords;
+	Double						averageTimePeriodLengthsAuditingRecords;
+	Double						deviationTimePeriodLengthsAuditingRecords;
+	Double						minimumTimePeriodLengthsAuditingRecords;
+	Double						maximumTimePeriodLengthsAuditingRecords;
 }
