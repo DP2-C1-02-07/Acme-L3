@@ -23,7 +23,7 @@
 
 	<groupId>Acme</groupId>	
 	<artifactId>Acme-L3-D02</artifactId>
-	<version>23.1</version>
+	<version>D02</version>
 	<packaging>war</packaging>
 
 	<parent>
