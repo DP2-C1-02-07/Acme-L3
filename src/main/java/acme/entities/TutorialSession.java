@@ -49,6 +49,7 @@ public class TutorialSession extends AbstractEntity {
 	@NotNull
 	protected Date					finishDate;
 
+	// Custom requirement about time period,at least one day ahead, from one up to five hour long 
 	@URL
 	protected String				info;
 

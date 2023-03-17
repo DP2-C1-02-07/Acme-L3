@@ -1,0 +1,10 @@
+key,title,abstract-session,session-type,start-date,finish-date,info,key:tutorial
+tutorial-session-01,Session 1: empezar a crear un blog.,Abstract 1,THEORY,2023/02/21 19:30,2023/02/21 20:30,null,tutorial-01
+tutorial-session-02,Session 2: configuración de tu blog en WordPress,Crea un blog con WordPress en 30 min: fácil y rápido para principiantes,THEORY,2023/02/23 19:30,2023/02/23 20:30,null,tutorial-01
+tutorial-session-03,Session 1: introducción a Python,Aprende a programar en Python: una guía introductoria para principiantes,THEORY,2023/03/01 18:00,2023/03/01 19:00,https://es.wikipedia.org,tutorial-06
+tutorial-session-04,Session 2: programación básica en Python,Aprende a programar en Python: una guía introductoria para principiantes,HANDS_ON,2023/03/03 18:00,2023/03/03 19:00,http://es.wikipedia.org,tutorial-06
+tutorial-session-05,Session 1: técnicas de fotografía,Mejora tus habilidades fotográficas,THEORY,2023/03/06 16:00,2023/03/06 17:00,null,tutorial-02
+tutorial-session-06,Session 2: edición de fotografías,Mejora tus habilidades fotográficas,HANDS_ON,2023/03/08 16:00,2023/03/08 17:00,null,tutorial-02
+tutorial-session-07,Session 1: técnicas básicas de cocina,Cocina una cena gourmet fácilmente: recetas sencillas y deliciosas,THEORY,2023/03/10 20:00,2023/03/10 21:00,null,tutorial-04
+tutorial-session-08,Session 2: preparación de platos principales,Cocina una cena gourmet fácilmente: recetas sencillas y deliciosas,HANDS_ON,2023/03/12 20:00,2023/03/12 21:00,null,tutorial-04
+tutorial-session-09,Session 1: introducción al yoga,Tutorial de yoga para principiantes: posturas y respiración básicas,THEORY,2023/03/15 17:30,2023/03/15 18:30,null,tutorial-07

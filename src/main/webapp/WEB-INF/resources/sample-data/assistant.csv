@@ -1,0 +1,7 @@
+key,supervisor,expertise-fields,resume,link,key:user-account
+assistant-01,supervisorsupervisorsupervisorsupervisorsupervisorsuper,expertiseexpertiseexpertiseexpertiseexpertiseexpertiseexpertiseexpertiseexpertiseexpertise,resumeresumeresumeresumeresumeresumeresumeresumeresumeresume,https://twitter.com,user-account-assistant-01
+assistant-02,supervisor 2,expertise 2,resume 2,http://twitter.com,user-account-assistant-02
+assistant-03,supervisor 3,expertise 3,resume 3,null,user-account-assistant-03
+assistant-04,supervisor 4,expertise 4,resume 4,null,user-account-assistant-04
+assistant-05,supervisor 5,"expertise 5, expertise 3",resume 5,null,user-account-assistant-04
+assistant-06,supervisor 6,"expertise 6, expertise 4",resume 6,null,user-account-assistant-04
