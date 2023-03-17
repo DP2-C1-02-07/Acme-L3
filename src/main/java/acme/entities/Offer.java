@@ -55,6 +55,7 @@ public class Offer extends AbstractEntity {
 	// price custom constraint will be added as soon as possible
 
 	@Valid
+	@NotNull
 	protected Money				price;
 
 	@URL
