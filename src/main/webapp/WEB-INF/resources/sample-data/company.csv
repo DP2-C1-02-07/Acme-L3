@@ -1,0 +1,7 @@
+key,name,vat,summary,info,key:user-account
+company-01,company1,VATRF45,This is a sample company,null,user-account-company-01
+company-02,Company2butwith75charactersssssssssssssssssssssssssssssssssssssssssssssssss,VATRF45jjjjjjjjjjjjjjjjjj,100characterssssssss100characterssssssss100characterssssssss100characterssssssss100characterssssssss,https://www.google.es/,user-account-company-02
+company-03,company3,VATRF45jjjjjjjjjjjjjjjjjj,This is a sample company,https://www.google.es/,user-account-company-03
+company-04,company4,VATRF45KMNNN,This is a sample company,null,user-account-company-04
+company-05,company5,VATRF76,This is a sample company,null,user-account-company-05
+company-06,company6,VATRF89,This is a sample company,null,user-account-company-06
