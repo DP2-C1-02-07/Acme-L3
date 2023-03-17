@@ -4,6 +4,7 @@ package acme.entities;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.enums.ContentType;
+import acme.entities.enums.Type;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Lecturer;
 import lombok.Getter;
@@ -36,6 +37,7 @@ public class Lecture extends AbstractEntity {
 	@Length(max = 100)
 	protected String			anAbstract;
 
+	@Digits(integer = 3, fraction = 2)
 	@Min(1)
 	protected double			learningTime;
 
@@ -44,7 +46,7 @@ public class Lecture extends AbstractEntity {
 	protected String			body;
 
 	@NotNull
-	protected ContentType		contentType;
+	protected Type				type;
 
 	@URL
 	protected String			furtherInformation;
