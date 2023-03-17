@@ -1,0 +1,10 @@
+key,instantiation-moment,heading,summary,availability-start,availability-end,price,link
+offer-01,2020/03/12 11:00,This is the first offer,A simple offer for Acme-L3,2020/03/16 12:00,2020/03/25 12:00,"EUR 400.00",
+offer-02,2020/02/02 17:00,This is the first offer with 75 characters in the heading: imiimimimimimim,A simple offer for Acme-L3 with 100 characters in the sumary: eimemacimcaemciqpeimiencueucbwueiddddd,2020/02/08 12:00,2020/02/20 12:00,"USD 470.00",https://github.com/
+offer-03,2020/07/20 09:00,Ar,P3,2020/07/30 12:00,2020/08/04 10:00,"EUR 285.00",
+offer-04,2021/10/22 11:00,This is the first offer,A simple offer for Acme-L3,2020/03/16 12:00,2020/03/25 12:00,"EUR 400.00",
+offer-05,2016/04/19 17:00,This is the first offer with 75 characters in the heading: imiimimimimimim,A simple offer for Acme-L3 with 100 characters in the sumary: eimemacimcaemciqpeimiencueucbwueiddddd,2020/02/08 12:00,2020/02/20 12:00,"USD 470.00",https://github.com/
+offer-06,2015/07/19 20:00,An offer that you can't refuse,A perfectly balanced offer,2015/07/28 12:00,2020/07/19 20:00,"EUR 14,000.00",
+offer-07,2020/03/12 11:00,This is the first offer,A simple offer for Acme-L3,2020/03/16 12:00,2020/03/25 12:00,"EUR 400.00",
+offer-08,2020/02/02 17:00,This is the first offer with 75 characters in the heading: imiimimimimimim,A simple offer for Acme-L3 with 100 characters in the sumary: eimemacimcaemciqpeimiencueucbwueiddddd,2020/02/08 12:00,2020/02/20 12:00,"USD 470.00",https://github.com/
+offer-09,2020/07/20 09:00,Ar,P3,2020/07/30 12:00,2020/08/04 10:00,"EUR 285.00",

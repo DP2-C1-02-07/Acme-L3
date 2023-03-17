@@ -1,0 +1,10 @@
+key,instantiation-moment,title,message,flag,link
+bulletin-01,2020/02/03 10:00,The first bulletin,This is a testing message,true,https://chat.openai.com/chat
+bulletin-02,2018/02/26 21:00,This is a bulletin with a 75 characters title: asasasasasasasasasasasasasas,This is a testing limit message: awererucnemciamecimaimcvrvnrwunvuwnvwnnwruvnrwunvviwnrvnwurnveqvvwa,false,
+bulletin-03,2020/02/03 10:00,T,Th,true,https://github.com/
+bulletin-04,2020/01/03 10:00,The second bulletin bulletin,This is another testing message,false,https://www.canva.com
+bulletin-05,2018/09/16 11:50,This is a bulletin with a 75 characters title: asasasasasasasasasasasasasas,This is a testing limit message: awererucnemciamecimaimcvrvnrwunvuwnvwnnwruvnrwunvviwnrvnwurnveqvvwa,false,
+bulletin-06,2020/02/03 10:00,T,Th,true,https://github.com/
+bulletin-07,2020/07/29 10:00,The 7th bulletin in Acme-L3,This is a testing message for the bulletin number 7,false,https://www.ufcespanol.com/
+bulletin-08,2018/02/26 21:00,This is a bulletin with a 75 characters title: asasasasasasasasasasasasasas,This is a testing limit message: awererucnemciamecimaimcvrvnrwunvuwnvwnnwruvnrwunvviwnrvnwurnveqvvwa,true,
+bulletin-09,2020/02/03 10:00,T,Th,true,https://github.com/

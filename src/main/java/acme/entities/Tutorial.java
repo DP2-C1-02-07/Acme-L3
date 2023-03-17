@@ -51,12 +51,12 @@ public class Tutorial extends AbstractEntity {
 
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne
 	protected Course			course;
 
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne
 	protected Assistant			assistant;
 
 }
