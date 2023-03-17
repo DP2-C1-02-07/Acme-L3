@@ -23,3 +23,10 @@ user-account-assistant-04,true,"UserIdentity{name: 'assistan4', surname: 'assist
 user-account-student-01,true,"UserIdentity{name: 'Paco', surname: 'Ingles', email: 'paco@acme.com'}",student1,student1
 user-account-student-02,true,"UserIdentity{name: 'Juan', surname: 'Demiespaña', email: 'juan@acme.com'}",student2,student2
 user-account-auditor-03,true,"UserIdentity{name: 'Auditor03', surname: 'Auditor03', email: 'auditor03@acme.com'}",auditor3,auditor3
+user-account-lecturer-01,true,"UserIdentity{name: 'Lecturer01', surname: 'Lecturer01', email: 'lecturer01@acme.com'}",lecturer1,lecturer1
+user-account-lecturer-02,true,"UserIdentity{name: 'Lecturer02', surname: 'Lecturer02', email: 'lecturer02@acme.com'}",lecturer2,lecturer2
+user-account-lecturer-03,true,"UserIdentity{name: 'Lecturer03', surname: 'Lecturer03', email: 'lecturer03@acme.com'}",lecturer3,lecturer3
+user-account-lecturer-04,true,"UserIdentity{name: 'Lecturer04', surname: 'Lecturer04', email: 'lecturer04@acme.com'}",lecturer4,lecturer4
+user-account-lecturer-05,true,"UserIdentity{name: 'Lecturer05', surname: 'Lecturer05', email: 'lecturer05@acme.com'}",lecturer5,lecturer5
+user-account-lecturer-06,true,"UserIdentity{name: 'Lecturer06', surname: 'Lecturer06', email: 'lecturer06@acme.com'}",lecturer6,lecturer6
+user-account-lecturer-07,true,"UserIdentity{name: 'Lecturer07', surname: 'Lecturer07', email: 'lecturer07@acme.com'}",lecturer7,lecturer7
