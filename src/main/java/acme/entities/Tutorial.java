@@ -50,7 +50,8 @@ public class Tutorial extends AbstractEntity {
 	protected Double			estimatedTotalTime;
 
 	// Relationships ----------------------------------------------------------
-
+	
+	//Comentado debido a que no disponemos del sample-data de Course
 	//@NotNull
 	//@Valid
 	//@ManyToOne(optional = false)

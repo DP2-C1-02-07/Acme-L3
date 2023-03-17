@@ -44,19 +44,17 @@ public class Workbook extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date				startDate;
+	protected Date				time;
 	
 
 	@URL
 	protected String			link;
 
 
-	//  mark
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
 	@NotNull
 	@Valid
 	@OneToOne(optional=false)
