@@ -5,7 +5,6 @@ user-account-administrator-02,true,"UserIdentity{name: 'Administrator1', surname
 user-account-administrator-03,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator2@acme.com'}",administrator2,administrator2
 user-account-auditor-01,true,"UserIdentity{name: 'Auditor01', surname: 'Auditor01', email: 'auditor01@acme.com'}",auditor1,auditor1
 user-account-auditor-02,true,"UserIdentity{name: 'Auditor02', surname: 'Auditor02', email: 'auditor02@acme.com'}",auditor2,auditor2
-user-account-auditor-03,true,"UserIdentity{name: 'Auditor03', surname: 'Auditor03', email: 'auditor03@acme.com'}",auditor3,auditor3
 user-account-auditor-04,true,"UserIdentity{name: 'Auditor04', surname: 'Auditor04', email: 'auditor04@acme.com'}",auditor4,auditor4
 user-account-auditor-05,true,"UserIdentity{name: 'Auditor05', surname: 'Auditor05', email: 'auditor05@acme.com'}",auditor5,auditor5
 user-account-auditor-06,true,"UserIdentity{name: 'Auditor06', surname: 'Auditor06', email: 'auditor06@acme.com'}",auditor6,auditor6
@@ -21,3 +20,6 @@ user-account-assistant-01,true,"UserIdentity{name: 'assistant1', surname: 'assis
 user-account-assistant-02,true,"UserIdentity{name: 'assistant2', surname: 'assistant2', email: 'assistant2@acme.com'}",assistant2,assistant2
 user-account-assistant-03,true,"UserIdentity{name: 'assistan3', surname: 'assistant3', email: 'assistant3@acme.com'}",assistant3,assistant3
 user-account-assistant-04,true,"UserIdentity{name: 'assistan4', surname: 'assistant4', email: 'assistant4@acme.com'}",assistant4,assistant4
+user-account-student-01,true,"UserIdentity{name: 'Paco', surname: 'Ingles', email: 'paco@acme.com'}",student1,student1
+user-account-student-02,true,"UserIdentity{name: 'Juan', surname: 'Demiespaña', email: 'juan@acme.com'}",student2,student2
+user-account-auditor-03,true,"UserIdentity{name: 'Auditor03', surname: 'Auditor03', email: 'auditor03@acme.com'}",auditor3,auditor3

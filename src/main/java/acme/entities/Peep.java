@@ -3,7 +3,6 @@ package acme.entities;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -30,7 +29,6 @@ public class Peep extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Column(unique = true)
 	@Length(max = 75)
 	protected String			title;
 
@@ -40,11 +38,11 @@ public class Peep extends AbstractEntity {
 	protected Date				instantiationMoment;
 
 	@NotBlank
-	@Length(max = 75)
+	@Length(max = 100)
 	protected String			message;
 
 	@NotBlank
-	@Length(max = 100)
+	@Length(max = 75)
 	protected String			nick;
 
 	@URL

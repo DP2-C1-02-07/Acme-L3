@@ -40,8 +40,8 @@ public class Bulletin extends AbstractEntity {
 	@Length(max = 100)
 	protected String			message;
 
-	@NotNull
-	protected Boolean			flag;
+	
+	protected boolean			flag;
 
 	@URL
 	protected String			link;

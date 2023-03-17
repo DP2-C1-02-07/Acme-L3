@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -43,6 +44,9 @@ public class Enrolment extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goals;
 
+	//Debido al momento del desarrollo en el que nos encontramos, estimatedDate debería calcularse a raíz deç
+	//las horas acumuladas en Course, pero debido a como esán diseñadas las entidades ahora mismo, decidimos
+	//esperar y setear estimatedDate en un futuro servicio, en lugar de en una propiedad derivada.
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				estimatedDate;
@@ -54,11 +58,15 @@ public class Enrolment extends AbstractEntity {
 	
 	@NotNull
 	@Valid
-	@OneToOne
+	@ManyToOne(optional=false)
 	protected Student			student;
+	
 	
 	@NotNull
 	@Valid
-	@OneToOne
-	protected Course			course;
+	@OneToOne(optional=false)
+	protected Course			course	;
+	
+
+
 }
