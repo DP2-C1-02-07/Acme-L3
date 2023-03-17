@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.enums.Type;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,9 +40,7 @@ public class Workbook extends AbstractEntity {
 	@Length(max = 100)
 	protected String			abstractElement;
 
-	//0 para a theory activity, 1 para hands-on activity
-	@NotNull
-	protected boolean			type;
+	protected Type			type;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
@@ -60,6 +59,6 @@ public class Workbook extends AbstractEntity {
 
 	@NotNull
 	@Valid
-	@OneToOne
+	@OneToOne(optional=false)
 	protected Enrolment			enrolment;
 }
