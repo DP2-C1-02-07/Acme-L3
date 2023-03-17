@@ -1,0 +1,12 @@
+key,subject,assessment,subjectAuditedStartMoment,subjectAuditedEndMoment,mark,link,key:audit
+auditingRecord-01,Lecturer's quality,The lecturers in this course are experts in the field,2021/01/01 12:00,2021/01/26 16:45,A_PLUS,null,audit-01
+auditingRecord-02,S,The lecturers in this course are experts in the field,2021/01/01 12:00,2021/01/26 16:45,A_PLUS,null,audit-02
+auditingRecord-03,Subject example close to the upper limit which 75 characters pshtqburmajrbc,The lecturers in this course are experts in the field,2021/01/01 12:00,2021/01/26 16:45,A_PLUS,null,audit-03
+auditingRecord-04,Lecturer's quality,Bad,2021/01/01 12:00,2021/01/26 16:45,A_PLUS,null,audit-04
+auditingRecord-05,Lecturer's quality,Assessment example close to the upper limit which is 100 characters qwertyuiopasdfghjklñzxcvbnmrrrrr,2021/01/01 12:00,2021/01/26 16:45,A_PLUS,null,audit-05
+auditingRecord-06,Lecturer's quality,The lecturers in this course are experts in the field,1903/01/01 12:00,2021/01/26 16:45,A_PLUS,null,audit-06
+auditingRecord-07,Lecturer's quality,The lecturers in this course are experts in the field,2022/06/01 12:00,2022/06/26 16:45,A_PLUS,null,audit-07
+auditingRecord-08,Lecturer's quality,The lecturers in this course are experts in the field,2021/01/01 12:00,2021/01/01 16:45,A_PLUS,null,audit-08
+auditingRecord-09,Lecturer's quality,The lecturers in this course are experts in the field,2021/01/01 12:00,2022/07/26 16:45,A_PLUS,null,audit-09
+auditingRecord-10,Lecturer's quality,The lecturers in this course are experts in the field,2021/01/01 12:00,2021/01/26 16:45,C,null,audit-10
+auditingRecord-11,Lecturer's quality,The lecturers in this course are experts in the field,2021/01/01 12:00,2021/01/26 16:45,A_PLUS,http://www.example.com,audit-10
