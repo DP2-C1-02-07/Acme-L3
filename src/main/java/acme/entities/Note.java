@@ -37,6 +37,8 @@ public class Note extends AbstractEntity {
 	@Length(max = 75)
 	protected String			title;
 
+	//The author computing will be added as soon as possible
+
 	@NotBlank
 	@Length(max = 75)
 	protected String			author;
