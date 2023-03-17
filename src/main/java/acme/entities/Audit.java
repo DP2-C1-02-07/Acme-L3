@@ -74,6 +74,8 @@ public class Audit extends AbstractEntity {
 	@ManyToOne(optional = false)
 	protected Auditor				auditor;
 
+	// Esta relacion no esta implementada ya que no hay datos de Course, y daria error
+
 	//	@NotNull
 	//	@Valid
 	//	@ManyToOne(optional = false)
