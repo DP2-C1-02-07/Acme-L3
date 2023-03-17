@@ -1,0 +1,12 @@
+key,code,title,an-abstract,course-type,retail-price,further-information,key:lecturer
+course-01,ABC123,Programming introduction,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-01
+course-02,DEF456,Programming introduction,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-02
+course-03,A001,Programming introduction,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-03
+course-04,ABD123,P,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-04
+course-05,ABE123,Programming introductionsssssssssssssssssssssssssssssssssssssssssssssssssss,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-05
+course-06,ABF123,Programming introduction,t,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-06
+course-07,ABG123,Programming introduction,This course offers an introduction to programming fundamentalsssssssssssssssssssssssssssssssssssssss,BALANCED,"EUR 1,000.00",http://courseinfo.com,lecturer-07
+course-08,ABH123,Programming introduction,This course offers an introduction to programming fundamentals,THEORETICAL,"EUR 1,000.00",http://courseinfo.com,lecturer-01
+course-09,ABI123,Programming introduction,This course offers an introduction to programming fundamentals,BALANCED,"USD 1,000.00",http://courseinfo.com,lecturer-01
+course-10,ABJ123,Programming introduction,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",https://courseinformation.com,lecturer-01
+course-11,ABK123,Programming introduction,This course offers an introduction to programming fundamentals,BALANCED,"EUR 1,000.00",null,lecturer-01
