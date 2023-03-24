@@ -8,4 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-23.1	This is the first version of Acme L3
+D01	Acme L3 version with the requirements of deliverable 1 implemented
+D02 Acme L3 version with the previous requirements and requirements of deliverable 2 implemented
+D03 Acme L3 version with the previous requirements and requirements of deliverable 3 implemented
