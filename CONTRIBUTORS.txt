@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- Javier Nunes (javnunrui@alum.us.es)
+- Javier Nunes Ruiz (javnunrui@alum.us.es)
 - Manuel Carnero Vergel (mancarver1@alum.us.es)
 - Julio Navarro Rodriguez (julnavrod@alum.us.es)
 - Manuel Palacios Pineda (manpalpin@alum.us.es)
