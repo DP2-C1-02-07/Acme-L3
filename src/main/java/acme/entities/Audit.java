@@ -1,12 +1,9 @@
 
 package acme.entities;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -49,35 +46,36 @@ public class Audit extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+	// Implementada más adelante
 
-	@NotNull
-	public String mark() {
-		String marks = "N/A";
-		if (!this.auditingRecords.isEmpty())
-			for (int i = 0; i < this.auditingRecords.size(); i++)
-				if (i == 0)
-					marks = this.auditingRecords.get(i).getMark().toString();
-				else
-					marks = marks + ", " + this.auditingRecords.get(i).getMark().toString();
-		return marks;
+	//	@NotNull
+	//	protected String			mark;
 
-	}
+	//	@NotNull
+	//	public String mark() {
+	//		String marks = "N/A";
+	//		if (!this.auditingRecords.isEmpty())
+	//			for (int i = 0; i < this.auditingRecords.size(); i++)
+	//				if (i == 0)
+	//					marks = this.auditingRecords.get(i).getMark().toString();
+	//				else
+	//					marks = marks + ", " + this.auditingRecords.get(i).getMark().toString();
+	//		return marks;
+	//
+	//	}
 
 	// Relationships ----------------------------------------------------------
 
-
-	@OneToMany(mappedBy = "audit")
-	private List<AuditingRecords>	auditingRecords;
+	//	@OneToMany(mappedBy = "audit")
+	//	private List<AuditingRecords>	auditingRecords;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Auditor				auditor;
+	protected Auditor			auditor;
 
-	// Esta relacion no esta implementada ya que no hay datos de Course, y daria error
-
-	//	@NotNull
-	//	@Valid
-	//	@ManyToOne(optional = false)
-	//	protected Course	course;
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Course			course;
 }
