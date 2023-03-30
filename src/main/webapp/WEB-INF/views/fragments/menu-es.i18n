@@ -25,6 +25,11 @@ master.menu.anonymous.favourite-link.julnavrod = 47549618Q: Navarro Rodriguez, J
 master.menu.anonymous.favourite-link.manpalpin = 29511597K: Palacios Pineda, Manuel
 master.menu.anonymous.favourite-link.pabmarval = 77924893L: Martínez Valladares, Pablo
 
+# master.menu.authenticated ##################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.all-offers = Todas las ofertas
+
 
 # master.menu.administrator ###################################################
 

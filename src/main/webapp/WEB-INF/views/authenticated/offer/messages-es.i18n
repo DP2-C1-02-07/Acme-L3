@@ -1,0 +1,7 @@
+authenticated.offer.form.label.instantiationMoment = Momento de Instanciación:
+authenticated.offer.form.label.heading = Estado:
+authenticated.offer.form.label.summary = Resumen:
+authenticated.offer.form.label.availabilityStart = Inicio del periodo de validez
+authenticated.offer.list.label.availabilityEnd = Fin del periodo de validez
+authenticated.offer.list.label.price = Precio
+authenticated.offer.list.label.link = Enlace (Opcional)
