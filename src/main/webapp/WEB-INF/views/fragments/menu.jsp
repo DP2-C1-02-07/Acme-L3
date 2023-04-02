@@ -19,17 +19,17 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		  	<acme:menu-suboption code="master.menu.anonymous.carnero-vergel-manuel" action="http://www.google.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.javnunrui" action="https://www.jdsports.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.julnavrod" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.manpalpin" action="https://www.twitch.tv/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.pabmarval" action="https://twitter.com/home"/>
-
+			<acme:menu-suboption code="master.menu.anonymous.list-courses" action="/any/course/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="Authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.anonymous.list-courses" action="/any/course/list"/>
 			<acme:menu-suboption code="All Offers" action="/authenticated/offer/list"/>
 		</acme:menu-option>
 
