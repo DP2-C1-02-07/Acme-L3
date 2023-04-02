@@ -1,0 +1,15 @@
+any.job.list.label.code = Código
+any.job.list.label.title = Título
+any.job.list.label.anAbstract = Abstracto
+any.job.list.label.courseType = Tipo curso
+any.job.list.label.retailPrice = Precio de venta al por menor
+any.job.list.label.furtherInformation = Más información
+
+any.job.form.label.code = Código:
+any.job.form.label.title = Título:
+any.job.form.label.anAbstract = Abstracto:
+any.job.form.label.courseType = Tipo curso:
+any.job.form.label.retailPrice = Precio de venta al por menor:
+any.job.form.label.furtherInformation = Más información: (Opcional)
+
+info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente 
