@@ -1,0 +1,6 @@
+authenticated.lecturer.form.label.almaMater = Alma mater:
+authenticated.lecturer.form.label.resume = Resumen:
+authenticated.lecturer.form.label.qualifications = Calificaciones:
+authenticated.lecturer.form.label.furtherInformation = Más información: (Opcional)
+
+authenticated.lecturer.form.button.create = Registrar
