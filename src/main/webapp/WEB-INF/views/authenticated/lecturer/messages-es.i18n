@@ -4,3 +4,4 @@ authenticated.lecturer.form.label.qualifications = Calificaciones:
 authenticated.lecturer.form.label.furtherInformation = Más información: (Opcional)
 
 authenticated.lecturer.form.button.create = Registrar
+authenticated.lecturer.form.button.update = Actualizar

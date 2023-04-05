@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
-import acme.framework.components.accounts.UserAccount;
 import acme.framework.components.models.Tuple;
 import acme.framework.controllers.HttpMethod;
 import acme.framework.helpers.PrincipalHelper;
@@ -14,7 +13,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
 
 @Service
-public class AuthenticatedLecturerCreateService extends AbstractService<Authenticated, Lecturer> {
+public class AuthenticatedLecturerUpdateService extends AbstractService<Authenticated, Lecturer> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -31,11 +30,7 @@ public class AuthenticatedLecturerCreateService extends AbstractService<Authenti
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = !super.getRequest().getPrincipal().hasRole(Lecturer.class);
-
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -43,14 +38,10 @@ public class AuthenticatedLecturerCreateService extends AbstractService<Authenti
 		Lecturer object;
 		Principal principal;
 		int userAccountId;
-		UserAccount userAccount;
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
-		userAccount = this.repository.findOneUserAccountById(userAccountId);
-
-		object = new Lecturer();
-		object.setUserAccount(userAccount);
+		object = this.repository.findOneLecturerByUserAccountId(userAccountId);
 
 		super.getBuffer().setData(object);
 	}
@@ -76,6 +67,8 @@ public class AuthenticatedLecturerCreateService extends AbstractService<Authenti
 
 	@Override
 	public void unbind(final Lecturer object) {
+		assert object != null;
+
 		Tuple tuple;
 
 		tuple = super.unbind(object, "almaMater", "resume", "qualifications", "furtherInformation");
