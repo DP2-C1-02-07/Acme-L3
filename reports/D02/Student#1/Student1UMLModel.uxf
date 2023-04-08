@@ -47,7 +47,7 @@ Lecture
       <x>14</x>
       <y>252</y>
       <w>280</w>
-      <h>105</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -59,6 +59,7 @@ Course
 + courseType: CourseType
 + retailPrice: Money
 + furtherInformation: String {URL}
++ draftMode: boolean
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -149,12 +150,12 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>63</x>
-      <y>350</y>
+      <y>357</y>
       <w>21</w>
-      <h>70</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
