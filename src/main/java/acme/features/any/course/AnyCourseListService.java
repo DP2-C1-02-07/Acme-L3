@@ -36,7 +36,7 @@ public class AnyCourseListService extends AbstractService<Any, Course> {
 	public void load() {
 		Collection<Course> objects;
 
-		objects = this.repository.findAllCourses();
+		objects = this.repository.findAllAvailableCourses();
 
 		super.getBuffer().setData(objects);
 
@@ -48,7 +48,7 @@ public class AnyCourseListService extends AbstractService<Any, Course> {
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "anAbstract", "courseType", "retailPrice", "furtherInformation");
+		tuple = super.unbind(object, "code", "title", "anAbstract");
 
 		super.getResponse().setData(tuple);
 	}
