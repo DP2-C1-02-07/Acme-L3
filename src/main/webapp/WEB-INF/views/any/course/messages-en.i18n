@@ -1,15 +1,12 @@
-any.job.list.label.code = Code
-any.job.list.label.title = Title
-any.job.list.label.anAbstract = Abstract
-any.job.list.label.courseType = Course type
-any.job.list.label.retailPrice = Retail price
-any.job.list.label.furtherInformation = Further information
+any.course.list.label.code = Code
+any.course.list.label.title = Title
+any.course.list.label.anAbstract = Abstract
 
-any.job.form.label.code = Code:
-any.job.form.label.title = Title:
-any.job.form.label.anAbstract = Abstract:
-any.job.form.label.courseType = Course type:
-any.job.form.label.retailPrice = Retail price:
-any.job.form.label.furtherInformation = Further information: (Optional)
+any.course.form.label.code = Code:
+any.course.form.label.title = Title:
+any.course.form.label.anAbstract = Abstract:
+any.course.form.label.courseType = Course type:
+any.course.form.label.retailPrice = Retail price:
+any.course.form.label.furtherInformation = Further information: (Optional)
 
 info.text = · Click on any row to see more details of the corresponding course
