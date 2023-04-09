@@ -42,7 +42,7 @@
     
     
     
-    <wb-module deploy-name="Acme-L3-D02-23.1">
+    <wb-module deploy-name="Acme-L3-D03-D03">
                                                                                                                                                                                                                                                                                                                                                                 
         
         
@@ -245,6 +245,11 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+                                        
+        
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
                                                                                                                                                                                                                                                                                                                                                         
         
         
@@ -288,8 +293,7 @@
         
         
         <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
-                
-        <property name="context-root" value="Acme-L3-D02"/>
+        <property name="context-root" value="Acme-L3-D03"/>
                                                                                                                                                                                                                                                                                                                                                             
     
     
