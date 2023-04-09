@@ -24,6 +24,11 @@ master.menu.anonymous.favourite-link.javnunrui = 29517615J: Nunes Ruiz, Javier
 master.menu.anonymous.favourite-link.julnavrod = 47549618Q: Navarro Rodriguez, Julio
 master.menu.anonymous.favourite-link.manpalpin = 29511597K: Palacios Pineda, Manuel
 master.menu.anonymous.favourite-link.pabmarval = 77924893L: Martínez Valladares, Pablo
+
+# master.menu.authenticated ##################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.all-offers = Todas las ofertas
 master.menu.anonymous.list-courses = Ver cursos
 
 # master.menu.administrator ###################################################
@@ -34,6 +39,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.all-offers = Todas las ofertas
 
 # master.menu.provider ########################################################
 
@@ -53,5 +59,7 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.auditor = Datos de auditor
+master.menu.user-account.become-auditor = Hazte auditor
 master.menu.user-account.lecturer = Datos de profesor
 master.menu.user-account.become-lecturer = Hazte profesor

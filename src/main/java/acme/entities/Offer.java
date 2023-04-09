@@ -42,8 +42,6 @@ public class Offer extends AbstractEntity {
 	@Length(max = 100)
 	protected String			summary;
 
-	// availabilityPeriod custom constraint will be added as soon as possible
-
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				availabilityStart;
@@ -51,8 +49,6 @@ public class Offer extends AbstractEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				availabilityEnd;
-
-	// price custom constraint will be added as soon as possible
 
 	@Valid
 	@NotNull
