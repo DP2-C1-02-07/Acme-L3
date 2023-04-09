@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-
-
-
-
-
-
+                                                                                                                                                                                
     
     
     
@@ -42,15 +37,13 @@
     
     
     
-
-
+    
+    
+    
+    
+    
     <wb-module deploy-name="Acme-L3-D03-D03">
-
-
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                                
         
         
         
@@ -88,15 +81,13 @@
         
         
         
-
-
+        
+        
+        
+        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-
-
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                        
         
         
         
@@ -133,15 +124,13 @@
         
         
         
-
-
+        
+        
+        
+        
+        
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-
-
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                        
         
         
         
@@ -178,15 +167,13 @@
         
         
         
-
-
+        
+        
+        
+        
+        
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-
-
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                
         
         
         
@@ -222,15 +209,13 @@
         
         
         
-
-
+        
+        
+        
+        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
-
-
-
-
-
-
+                                                                                                                                                                                                                                                
         
         
         
@@ -254,20 +239,18 @@
         
         
         
-
-
+        
+        
+        
+        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-
-
-
-
-
+                                        
+        
+        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
-
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                        
         
         
         
@@ -304,15 +287,14 @@
         
         
         
-
+        
+        
+        
+        
+        
         <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
         <property name="context-root" value="Acme-L3-D03"/>
-
-
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                            
     
     
     
@@ -350,9 +332,49 @@
     
     
     
-
-
+    
+    
+    
+    
+    
     </wb-module>
+                                                                                                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
