@@ -1,0 +1,13 @@
+administrator.offer.form.label.instantiationMoment = Instantiation Moment
+administrator.offer.form.label.heading = Heading
+administrator.offer.form.label.summary = Summary
+administrator.offer.form.label.availabilityStart = Availability period start
+administrator.offer.form.label.availabilityEnd = Availability period end
+administrator.offer.form.label.price = Price
+administrator.offer.form.label.link = Link (Optional)
+administrator.offer.form.button.update = Update
+administrator.offer.form.button.delete = Delete
+administrator.offer.form.button.create = Create
+administrator.offer.post.day-after-instantiation = Availability period must start at least one day after the offer is instantiated
+administrator.offer.post.one-week = Availability period must last for at least one week
+administrator.offer.post.price-positive = Price must be positive

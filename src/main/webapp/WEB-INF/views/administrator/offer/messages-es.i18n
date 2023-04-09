@@ -1,0 +1,13 @@
+administrator.offer.form.label.instantiationMoment = Momento de Instanciación
+administrator.offer.form.label.heading = Estado
+administrator.offer.form.label.summary = Resumen
+administrator.offer.form.label.availabilityStart = Inicio del periodo de validez
+administrator.offer.form.label.availabilityEnd = Fin del periodo de validez
+administrator.offer.form.label.price = Precio
+administrator.offer.form.label.link = Enlace (Opcional)
+administrator.offer.form.button.update = Actualizar
+administrator.offer.form.button.delete = Borrar
+administrator.offer.form.button.create = Crear
+administrator.offer.post.day-after-instantiation = El periodo de validez debe empezar al menos un día más tarde que el momento de instanciación
+administrator.offer.post.one-week = El periodo de validez debe durar al menos una semana
+administrator.offer.post.price-positive = El precio debe ser positivo

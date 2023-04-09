@@ -4,11 +4,11 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-moment code="Instantiation Moment" path="instantiationMoment"/>	
-	<acme:input-textarea code="Heading" path="heading"/>
-	<acme:input-textarea code="Summary" path="summary"/>
-	<acme:input-moment code="Availability Start" path="availabilityStart"/>
-	<acme:input-moment code="Availability End" path="availabilityEnd"/>
-	<acme:input-money code="Price" path="price"/>
-	<acme:input-url code="Link" path="link"/>
+	<acme:input-moment code="authenticated.offer.form.label.instantiationMoment" path="instantiationMoment"/>	
+	<acme:input-textarea code="authenticated.offer.form.label.heading" path="heading"/>
+	<acme:input-textarea code="authenticated.offer.form.label.summary" path="summary"/>
+	<acme:input-moment code="authenticated.offer.form.label.availabilityStart" path="availabilityStart"/>
+	<acme:input-moment code="authenticated.offer.form.label.availabilityEnd" path="availabilityEnd"/>
+	<acme:input-money code="authenticated.offer.form.label.price" path="price"/>
+	<acme:input-url code="authenticated.offer.form.label.link" path="link"/>
 </acme:form>

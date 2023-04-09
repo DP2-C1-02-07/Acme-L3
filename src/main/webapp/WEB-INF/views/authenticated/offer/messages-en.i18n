@@ -1,7 +1,7 @@
-authenticated.offer.form.label.instantiationMoment = Instantiation Moment:
-authenticated.offer.form.label.heading = Heading:
-authenticated.offer.form.label.summary = Summary:
+authenticated.offer.form.label.instantiationMoment = Instantiation Moment
+authenticated.offer.form.label.heading = Heading
+authenticated.offer.form.label.summary = Summary
 authenticated.offer.form.label.availabilityStart = Availability period start
-authenticated.offer.list.label.availabilityEnd = Availability period end
-authenticated.offer.list.label.price = Price
-authenticated.offer.list.label.link = Link (Optional)
+authenticated.offer.form.label.availabilityEnd = Availability period end
+authenticated.offer.form.label.price = Price
+authenticated.offer.form.label.link = Link (Optional)
