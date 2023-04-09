@@ -19,18 +19,20 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		  	<acme:menu-suboption code="master.menu.anonymous.carnero-vergel-manuel" action="http://www.google.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.javnunrui" action="https://www.jdsports.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.julnavrod" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.manpalpin" action="https://www.twitch.tv/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.pabmarval" action="https://twitter.com/home"/>
-
+			<acme:menu-suboption code="master.menu.anonymous.list-courses" action="/any/course/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.all-offers" action="/authenticated/offer/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-courses" action="/any/course/list"/>
+			<acme:menu-suboption code="All Offers" action="/authenticated/offer/list"/>
+			<acme:menu-suboption code="All Notes" action="/authenticated/note/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -64,6 +66,8 @@
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-lecturer" action="/authenticated/lecturer/create" access="!hasRole('Lecturer')"/>
+			<acme:menu-suboption code="master.menu.user-account.lecturer" action="/authenticated/lecturer/update" access="hasRole('Lecturer')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>

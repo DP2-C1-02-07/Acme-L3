@@ -1,16 +1,18 @@
 
-package acme.forms;
+package acme.entities;
 
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import acme.framework.data.AbstractForm;
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class SystemConfiguration extends AbstractForm {
+@Entity
+public class SystemConfiguration extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 

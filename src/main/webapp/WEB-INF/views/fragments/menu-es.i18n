@@ -16,8 +16,8 @@ master.menu.sign-in = Entrar
 master.menu.sign-out = Salir
 
 # master.menu.anonymous #######################################################
-master.menu.anonymous = Anonimo
 
+master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.carnero-vergel-manuel= 05980389k: Carnero Vergel, Manuel
 master.menu.anonymous.favourite-link.javnunrui = 29517615J: Nunes Ruiz, Javier
@@ -29,7 +29,7 @@ master.menu.anonymous.favourite-link.pabmarval = 77924893L: Martínez Valladares
 
 master.menu.authenticated = Autenticado
 master.menu.authenticated.all-offers = Todas las ofertas
-
+master.menu.anonymous.list-courses = Ver cursos
 
 # master.menu.administrator ###################################################
 
@@ -61,3 +61,5 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.auditor = Datos de auditor
 master.menu.user-account.become-auditor = Hazte auditor
+master.menu.user-account.lecturer = Datos de profesor
+master.menu.user-account.become-lecturer = Hazte profesor
