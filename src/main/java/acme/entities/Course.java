@@ -46,14 +46,15 @@ public class Course extends AbstractEntity {
 	@NotNull
 	protected CourseType		courseType;
 
-	// Custom constraint retailPrice as soon as possible in Service
+	// Custom retailPrice constraint in the validate method of the LecturerCourseCreateService and LecturerCourseUpdateService
+	@NotNull
 	@Valid
 	protected Money				retailPrice;
 
 	@URL
 	protected String			furtherInformation;
-	
-	protected boolean draftMode;
+
+	protected boolean			draftMode;
 
 	// Derived attributes -----------------------------------------------------
 
