@@ -1,0 +1,20 @@
+lecturer.course.list.label.code = Código
+lecturer.course.list.label.title = Título
+lecturer.course.list.label.anAbstract = Abstracto
+
+lecturer.course.list.button.create = Crear
+
+lecturer.course.form.label.code = Código:
+lecturer.course.form.label.title = Título:
+lecturer.course.form.label.anAbstract = Abstracto:
+lecturer.course.form.label.courseType = Tipo curso:
+lecturer.course.form.label.retailPrice = Precio de venta al por menor:
+lecturer.course.form.label.furtherInformation = Más información: (Opcional)
+
+lecturer.course.form.button.update = Actualizar
+lecturer.course.form.button.create = Crear
+lecturer.course.form.button.delete = Borrar
+
+info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente
+
+lecturer.course.form.error.duplicated = Ya hay un curso con este código
