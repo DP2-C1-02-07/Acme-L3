@@ -18,3 +18,4 @@ lecturer.course.form.button.delete = Delete
 info.text = · Click on any row to see more details of the corresponding course
 
 lecturer.course.form.error.duplicated = There is already a course with this code
+lecturer.course.form.error.retail-price = The retail price must be positive or nought
