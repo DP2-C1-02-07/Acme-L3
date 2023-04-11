@@ -68,3 +68,5 @@ master.menu.user-account.auditor = Datos de auditor
 master.menu.user-account.become-auditor = Hazte auditor
 master.menu.user-account.lecturer = Datos de profesor
 master.menu.user-account.become-lecturer = Hazte profesor
+master.menu.user-account.become-company = Hazte una compañía
+master.menu.user-account.company = Datos de compañía
