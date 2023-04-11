@@ -9,4 +9,6 @@ any.course.form.label.courseType = Course type:
 any.course.form.label.retailPrice = Retail price:
 any.course.form.label.furtherInformation = Further information: (Optional)
 
+authenticated.practica.form.button = View associated practica
+
 info.text = · Click on any row to see more details of the corresponding course

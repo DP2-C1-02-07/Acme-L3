@@ -45,6 +45,8 @@ public class Practicum extends AbstractEntity {
 	@NotNull
 	protected Double			estimatedTime;
 
+	protected boolean			draftMode;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
@@ -52,4 +54,9 @@ public class Practicum extends AbstractEntity {
 	@Valid
 	@ManyToOne
 	protected Company			company;
+
+	@NotNull
+	@Valid
+	@ManyToOne
+	protected Course			course;
 }
