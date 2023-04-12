@@ -26,7 +26,7 @@ Lecturer
       <x>525</x>
       <y>252</y>
       <w>210</w>
-      <h>105</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -38,6 +38,7 @@ Lecture
 + body: String {NotBlank, Length(1, 100)}
 + type: Type
 + furtherInformation: String {URL}
++ draftMode: boolean
 </panel_attributes>
     <additional_attributes/>
   </element>
