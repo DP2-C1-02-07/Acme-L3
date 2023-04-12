@@ -10,4 +10,6 @@
 	<acme:input-textbox code="any.course.form.label.courseType" path="courseType"/>
 	<acme:input-money code="any.course.form.label.retailPrice" path="retailPrice"/>
 	<acme:input-url code="any.course.form.label.furtherInformation" path="furtherInformation"/>
+	
+	<acme:button code="authenticated.practica.form.button" action="/authenticated/practicum/list?courseId=${id}"/>
 </acme:form>
