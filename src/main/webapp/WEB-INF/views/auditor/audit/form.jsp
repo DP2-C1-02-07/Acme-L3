@@ -13,7 +13,7 @@
 			<acme:input-select code="auditor.audit.form.label.course" path="course" choices="${courses}"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
-			<acme:input-textbox code="auditor.audit.form.label.course" path="${course.code}" readonly="true"/>
+			<acme:input-select code="auditor.audit.form.label.course" path="course" choices="${courses}" readonly="true"/>
 		</jstl:when>
 	</jstl:choose>
 	

@@ -76,6 +76,6 @@ public class Audit extends AbstractEntity {
 
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne
 	protected Course			course;
 }
