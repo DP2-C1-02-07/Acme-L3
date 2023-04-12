@@ -56,6 +56,11 @@ master.menu.consumer.favourite-link = Enlace favorito
 master.menu.lecturer = Profesor
 master.menu.lecturer.my-courses = Ver mis cursos
 
+# master.menu.company ###########################################################
+
+master.menu.company = Compañía
+master.menu.company.practicum = Ver mis prácticas
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

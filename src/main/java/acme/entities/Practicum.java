@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -43,6 +44,7 @@ public class Practicum extends AbstractEntity {
 	protected String			goals;
 
 	@NotNull
+	@Positive
 	protected Double			estimatedTime;
 
 	protected boolean			draftMode;

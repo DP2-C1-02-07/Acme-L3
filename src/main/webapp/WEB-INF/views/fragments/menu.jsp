@@ -56,6 +56,10 @@
 		<acme:menu-option code="master.menu.lecturer" access="hasRole('Lecturer')">
 			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/lecturer/course/list-mine"/>			
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.company" access="hasRole('Company')">
+			<acme:menu-suboption code="master.menu.company.practicum" action="/company/practicum/list"/>			
+		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>

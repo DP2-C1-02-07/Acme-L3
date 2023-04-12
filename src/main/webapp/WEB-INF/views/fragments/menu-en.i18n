@@ -59,6 +59,11 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.lecturer = Lecturer
 master.menu.lecturer.my-courses = List my courses
 
+# master.menu.company ###########################################################
+
+master.menu.company = Company
+master.menu.company.practicum = List my practica
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
