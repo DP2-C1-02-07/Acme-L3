@@ -20,12 +20,12 @@ public class AuthenticatedAssistantUpdateService extends AbstractService<Authent
 	@Autowired
 	protected AuthenticatedAssistantRepository repository;
 
+	// AbstractService interface ----------------------------------------------
+
 
 	@Override
 	public void authorise() {
-		boolean status;
-		status = !super.getRequest().getPrincipal().hasRole(Assistant.class);
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
