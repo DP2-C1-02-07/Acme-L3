@@ -74,3 +74,5 @@ master.menu.user-account.lecturer = Lecturer data
 master.menu.user-account.become-lecturer = Become a lecturer
 master.menu.user-account.become-company = Become a company
 master.menu.user-account.company = Company data
+master.menu.user-account.assistant = Assistant data
+master.menu.user-account.become-assistant = Become a assistant
