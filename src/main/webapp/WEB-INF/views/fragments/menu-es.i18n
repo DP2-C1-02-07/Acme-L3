@@ -40,6 +40,7 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.all-offers = Todas las ofertas
+master.menu.administrator.banner-list = Lista de banners
 
 # master.menu.provider ########################################################
 
