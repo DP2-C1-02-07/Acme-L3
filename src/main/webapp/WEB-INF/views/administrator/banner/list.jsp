@@ -12,3 +12,5 @@
 	<acme:list-column code="administrator.banner.form.label.documentLink" path="documentLink"/>
 	
 </acme:list>
+
+<acme:button code="administrator.banner.form.button.create" action="/administrator/banner/create"/>
