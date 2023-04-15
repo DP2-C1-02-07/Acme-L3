@@ -17,13 +17,13 @@ public class LecturerDashboard extends AbstractForm {
 
 	Integer						totalNumberOfTheoryLectures;
 	Integer						totalNumberOfHandsOnLectures;
-	double						averageLearningTimeOfLectures;
-	double						deviationLearningTimeOfLectures;
-	double						minimumLearningTimeOfLectures;
-	double						maximumLearningTimeOfLectures;
-	double						averageLearningTimeOfCourses;
-	double						deviationLearningTimeOfCourses;
-	double						minimumLearningTimeOfCourses;
-	double						maximumLearningTimeOfCourses;
+	Double						averageLearningTimeOfLectures;
+	Double						deviationLearningTimeOfLectures;
+	Double						minimumLearningTimeOfLectures;
+	Double						maximumLearningTimeOfLectures;
+	Double						averageLearningTimeOfCourses;
+	Double						deviationLearningTimeOfCourses;
+	Double						minimumLearningTimeOfCourses;
+	Double						maximumLearningTimeOfCourses;
 
 }
