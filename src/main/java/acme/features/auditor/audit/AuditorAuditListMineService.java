@@ -1,5 +1,5 @@
 
-package acme.features.auditor;
+package acme.features.auditor.audit;
 
 import java.util.Collection;
 
@@ -43,7 +43,7 @@ public class AuditorAuditListMineService extends AbstractService<Auditor, Audit>
 	@Override
 	public void unbind(final Audit object) {
 		assert object != null;
-		final Tuple tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints");
+		final Tuple tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
 		super.getResponse().setData(tuple);
 	}
 }

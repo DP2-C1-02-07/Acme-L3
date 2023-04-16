@@ -44,6 +44,8 @@ public class Audit extends AbstractEntity {
 	@Length(max = 100)
 	protected String			weakPoints;
 
+	protected boolean			draftMode;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Implementada más adelante
@@ -76,6 +78,6 @@ public class Audit extends AbstractEntity {
 
 	@NotNull
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	protected Course			course;
 }

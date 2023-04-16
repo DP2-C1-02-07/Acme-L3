@@ -1,5 +1,5 @@
 
-package acme.features.auditor;
+package acme.features.auditor.audit;
 
 import java.util.Collection;
 
@@ -52,9 +52,8 @@ public class AuditorAuditShowService extends AbstractService<Auditor, Audit> {
 	public void unbind(final Audit object) {
 		assert object != null;
 		final Collection<Course> courses = this.repository.findAllCourses();
-		final SelectChoices choices;
-		choices = SelectChoices.from(courses, "code", object.getCourse());
-		final Tuple tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints");
+		final SelectChoices choices = SelectChoices.from(courses, "code", object.getCourse());
+		final Tuple tuple = super.unbind(object, "code", "conclusion", "strongPoints", "weakPoints", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 

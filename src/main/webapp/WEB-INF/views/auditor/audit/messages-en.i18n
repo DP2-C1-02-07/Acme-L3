@@ -7,3 +7,4 @@ auditor.audit.form.label.course = Course
 auditor.audit.form.button.update = Update
 auditor.audit.form.button.delete = Delete
 auditor.audit.form.button.create = Create
+auditor.audit.form.button.publish = Publish

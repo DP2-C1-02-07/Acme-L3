@@ -1,5 +1,5 @@
 
-package acme.features.auditor;
+package acme.features.auditor.audit;
 
 import javax.annotation.PostConstruct;
 
@@ -30,12 +30,16 @@ public class AuditorAuditController extends AbstractController<Auditor, Audit> {
 	@Autowired
 	protected AuditorAuditDeleteService		deleteService;
 
+	@Autowired
+	protected AuditorAuditPublishService	publishService;
+
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addCustomCommand("list-mine", "list", this.listMineService);
+		super.addCustomCommand("publish", "update", this.publishService);
 
 		super.addBasicCommand("show", this.showService);
 		super.addBasicCommand("create", this.createService);
