@@ -36,6 +36,7 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.all-offers = All offers
+master.menu.administrator.banner-list = Banner List
 
 
 # master.menu.authenticated ##################################################
@@ -58,6 +59,7 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.lecturer = Lecturer
 master.menu.lecturer.my-courses = List my courses
+master.menu.lecturer.dashboard = Dashboard
 
 # master.menu.auditor ##########################################################
 
@@ -78,3 +80,5 @@ master.menu.user-account.lecturer = Lecturer data
 master.menu.user-account.become-lecturer = Become a lecturer
 master.menu.user-account.become-company = Become a company
 master.menu.user-account.company = Company data
+master.menu.user-account.assistant = Assistant data
+master.menu.user-account.become-assistant = Become a assistant

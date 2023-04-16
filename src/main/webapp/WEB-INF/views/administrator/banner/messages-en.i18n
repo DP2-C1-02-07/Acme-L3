@@ -1,0 +1,12 @@
+administrator.banner.form.label.instantiationMoment = Instantation Moment
+administrator.banner.form.label.displayStartMoment = Display Start Moment
+administrator.banner.form.label.displayEndMoment = Display End Moment
+administrator.banner.form.label.pictureLink = Picture
+administrator.banner.form.label.slogan = Slogan
+administrator.banner.form.label.documentLink = Document Link
+administrator.banner.form.button.update = Update
+administrator.banner.form.button.delete = Delete
+administrator.banner.form.button.create = Create
+administrator.banner.post.after-instantiation = Display period must start after the banner is instantiated
+administrator.banner.post.one-week = Availability period must last for at least one week
+administrator.banner.post.price-positive = Price must be positive
