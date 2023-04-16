@@ -39,10 +39,13 @@
 			<acme:menu-suboption code="master.menu.administrator.all-offers" action="/administrator/offer/list"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.banner-list" action="/administrator/banner/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
@@ -54,7 +57,8 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.lecturer" access="hasRole('Lecturer')">
-			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/lecturer/course/list-mine"/>			
+			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/lecturer/course/list-mine"/>
+			<acme:menu-suboption code="master.menu.lecturer.dashboard" action="/lecturer/lecturer-dashboard/show"/>			
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.company" access="hasRole('Company')">
@@ -78,6 +82,9 @@
 			<acme:menu-suboption code="master.menu.user-account.lecturer" action="/authenticated/lecturer/update" access="hasRole('Lecturer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-company" action="/authenticated/company/create" access="!hasRole('Company')"/>
 			<acme:menu-suboption code="master.menu.user-account.company" action="/authenticated/company/update" access="hasRole('Company')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-assistant" action="/authenticated/assistant/create" access="!hasRole('Assistant')"/>
+			<acme:menu-suboption code="master.menu.user-account.assistant" action="/authenticated/assistant/update" access="hasRole('Assistant')"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>

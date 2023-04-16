@@ -1,0 +1,12 @@
+administrator.banner.form.label.instantiationMoment = Momento de instanciación
+administrator.banner.form.label.displayStartMoment = Comienzo de muestra
+administrator.banner.form.label.displayEndMoment = Final de muestra
+administrator.banner.form.label.pictureLink = Imagen
+administrator.banner.form.label.slogan = Slogan
+administrator.banner.form.label.documentLink = Enlace a documento
+administrator.banner.form.button.update = Actualizar
+administrator.banner.form.button.delete = Borrar
+administrator.banner.form.button.create = Crear
+administrator.banner.post.after-instantiation = El periodo de muestra debe empezar más tarde que el momento de instanciación
+administrator.banner.post.one-week = El periodo de muestra debe durar al menos una semana
+administrator.banner.post.price-positive = El precio debe ser positivo
