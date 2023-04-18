@@ -31,7 +31,6 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.all-offers" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-courses" action="/any/course/list"/>
-			<acme:menu-suboption code="All Offers" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="All Notes" action="/authenticated/note/list"/>
 		</acme:menu-option>
 
@@ -56,8 +55,15 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
+
 		<acme:menu-option code="master.menu.lecturer" access="hasRole('Lecturer')">
+			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/lecturer/course/list-mine"/>			
+    </acme:menu-option>
+
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.list-my-audits" action="/auditor/audit/list-mine"/>
 			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/lecturer/course/list-mine"/>
+			<acme:menu-suboption code="master.menu.lecturer.my-lectures" action="/lecturer/lecture/list-mine"/>
 			<acme:menu-suboption code="master.menu.lecturer.dashboard" action="/lecturer/lecturer-dashboard/show"/>			
 		</acme:menu-option>
 		

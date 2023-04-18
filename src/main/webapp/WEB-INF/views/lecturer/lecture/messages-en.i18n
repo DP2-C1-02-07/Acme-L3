@@ -1,0 +1,19 @@
+lecturer.lecture.list.label.title = Title
+lecturer.lecture.list.label.anAbstract = Abstract
+lecturer.lecture.list.label.learningTime = Learning time (Hours)
+
+lecturer.lecture.list.button.create = Create
+
+lecturer.lecture.form.label.title = Title:
+lecturer.lecture.form.label.anAbstract = Abstract:
+lecturer.lecture.form.label.learningTime = Learning time: (Hours)
+lecturer.lecture.form.label.body = Body:
+lecturer.lecture.form.label.type = Type:
+lecturer.lecture.form.label.furtherInformation = Further information: (Optional)
+
+lecturer.lecture.form.button.update = Update
+lecturer.lecture.form.button.delete = Delete
+lecturer.lecture.form.button.publish = Publish
+lecturer.lecture.form.button.create = Create
+
+lecturer.lecture.info.text = · Click on any row to see more details of the corresponding lecture
