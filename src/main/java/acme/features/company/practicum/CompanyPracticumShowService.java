@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.practicum;
+package acme.features.company.practicum;
 
 import java.util.Collection;
 
@@ -9,17 +9,17 @@ import org.springframework.stereotype.Service;
 import acme.entities.Course;
 import acme.entities.Practicum;
 import acme.entities.Session;
-import acme.framework.components.accounts.Authenticated;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
+import acme.roles.Company;
 
 @Service
-public class AuthenticatedPracticaShowService extends AbstractService<Authenticated, Practicum> {
-
+public class CompanyPracticumShowService extends AbstractService<Company, Practicum> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedPracticaRepository repository;
+	protected CompanyPracticumRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -37,11 +37,11 @@ public class AuthenticatedPracticaShowService extends AbstractService<Authentica
 	public void authorise() {
 		boolean status;
 		int practicumId;
-		final Course course;
+		final Practicum practicum;
 
 		practicumId = super.getRequest().getData("id", int.class);
-		course = this.repository.findOneCourseByPracticumId(practicumId);
-		status = course != null && !course.isDraftMode();
+		practicum = this.repository.findOnePracticaById(practicumId);
+		status = practicum != null && super.getRequest().getPrincipal().getActiveRoleId() == practicum.getCompany().getId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -61,6 +61,12 @@ public class AuthenticatedPracticaShowService extends AbstractService<Authentica
 	@Override
 	public void unbind(final Practicum object) {
 		assert object != null;
+		final Collection<Course> courses;
+		final SelectChoices choices;
+
+		courses = this.repository.findAllCourses();
+		choices = SelectChoices.from(courses, "code", object.getCourse());
+
 		final Collection<Session> sessions;
 
 		sessions = this.repository.findSessionsByPracticumId(object.getId());
@@ -68,7 +74,9 @@ public class AuthenticatedPracticaShowService extends AbstractService<Authentica
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "company.name");
+		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "draftMode");
+		tuple.put("course", choices.getSelected().getKey());
+		tuple.put("courses", choices);
 		tuple.put("estimatedTime", estimatedTime);
 
 		super.getResponse().setData(tuple);

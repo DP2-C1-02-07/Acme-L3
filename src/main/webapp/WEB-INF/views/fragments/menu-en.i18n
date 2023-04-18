@@ -62,10 +62,17 @@ master.menu.lecturer.my-courses = List my courses
 master.menu.lecturer.my-lectures = List my lectures
 master.menu.lecturer.dashboard = Dashboard
 
+
+# master.menu.company ###########################################################
+
+master.menu.company = Company
+master.menu.company.practicum = List my practica
+
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = My audits
+
 
 # master.menu.user-account ####################################################
 

@@ -39,7 +39,6 @@ public class AuthenticatedNoteListService extends AbstractService<Authenticated,
 		Date deadline;
 		deadline = MomentHelper.deltaFromCurrentMoment(-30, ChronoUnit.DAYS);
 		final Collection<Note> objects = this.repository.findRecentNotes(deadline);
-		//final Collection<Note> objects = this.repository.findAllNotes();
 		super.getBuffer().setData(objects);
 	}
 

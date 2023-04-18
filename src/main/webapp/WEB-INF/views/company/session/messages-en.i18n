@@ -1,0 +1,29 @@
+company.session.list.label.title = Title
+company.session.list.label.startDate = Start Date
+company.session.list.label.finishDate = Finish Date
+
+
+company.session.list.button.create = Create an ordinary session
+company.session.list.button.create.addendum = Create an addendum session
+
+company.session.form.label.title = Title
+company.session.form.label.abstractThing = Abstract Thing
+company.session.form.label.startDate = Start Date
+company.session.form.label.finishDate = Finish Date
+company.session.form.label.info = More Info
+company.session.form.label.practicum = Practicum
+
+company.session.form.button.update = Update
+company.session.form.button.delete = Delete
+company.session.form.button.publish = Publish
+company.session.form.button.create = Create
+
+company.session.form.message.addendum = IMPORTANT!! THIS IS AN ADDENDUM SESSION
+company.session.form.label.confirmation = Confirmation
+
+company.session.validation.startDate.error.WeekAhead = Error: The Start Date must be at least one week ahead
+company.session.validation.finishDate.error.WeekLong = Error: The Finish Date must be at least one week ahead from the Start Date
+company.session.validation.spam = Error: Spam detected in this field
+company.session.validation.practicum.error.Published = Error: This Practicum has been already published
+company.session.validation.confirmation = Error: You have to confirm the submit
+company.session.validation.practicum.error.AddendumAlreadyExists = Error: Only one addendum session allowed per practicum 

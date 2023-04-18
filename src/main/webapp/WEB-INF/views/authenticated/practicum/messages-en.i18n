@@ -8,5 +8,5 @@ authenticated.practicum.form.label.code = Code
 authenticated.practicum.form.label.title = Title
 authenticated.practicum.form.label.abstractThing = Abstract
 authenticated.practicum.form.label.goals = Goals
-authenticated.practicum.form.label.estimatedTime = Estimated time (in hours)
+authenticated.practicum.form.label.estimatedTime = Estimated time (in hours) (+-10%)
 authenticated.practicum.form.label.company.name = Company Name

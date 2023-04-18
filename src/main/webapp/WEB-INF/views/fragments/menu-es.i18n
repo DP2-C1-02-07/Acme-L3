@@ -59,10 +59,17 @@ master.menu.lecturer.my-courses = Ver mis cursos
 master.menu.lecturer.my-lectures = Ver mis lecciones
 master.menu.lecturer.dashboard = Panel de indicadores
 
+
+# master.menu.company ###########################################################
+
+master.menu.company = Compañía
+master.menu.company.practicum = Ver mis prácticas
+
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = Mis auditorías
+
 
 # master.menu.user-account ####################################################
 
