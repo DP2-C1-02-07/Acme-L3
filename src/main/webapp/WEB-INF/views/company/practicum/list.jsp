@@ -6,7 +6,7 @@
 <acme:list>
 	<acme:list-column code="authenticated.practica.list.label.code" path="code"/>
 	<acme:list-column code="authenticated.practica.list.label.title" path="title"/>
-	<acme:list-column code="authenticated.practica.list.label.estimatedTime" path="estimatedTime"/>
+	<acme:list-column code="authenticated.practica.list.label.abstractThing" path="abstractThing"/>
 </acme:list>
 
 <acme:button code="company.practicum.list.button.create" action="/company/practicum/create"/>

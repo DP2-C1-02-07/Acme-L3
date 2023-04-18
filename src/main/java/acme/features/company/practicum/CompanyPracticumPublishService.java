@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.entities.Session;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -85,6 +86,12 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 	public void perform(final Practicum object) {
 		assert object != null;
 		object.setDraftMode(false);
+
+		final Collection<Session> sessions = this.repository.findSessionsByPracticumId(object.getId());
+		for (final Session s : sessions) {
+			s.setDraftMode(false);
+			this.repository.save(s);
+		}
 
 		this.repository.save(object);
 	}

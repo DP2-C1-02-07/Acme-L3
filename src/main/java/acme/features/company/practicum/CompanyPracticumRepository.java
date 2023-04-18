@@ -21,6 +21,9 @@ public interface CompanyPracticumRepository extends AbstractRepository {
 	@Query("Select p From Practicum p Where p.company.id = :id")
 	Collection<Practicum> findPracticaByCompanyId(int id);
 
+	@Query("Select s From Session s Where s.practicum.id = :id")
+	Collection<Session> findSessionsByPracticumId(int id);
+
 	@Query("Select p From Practicum p Where p.id = :id")
 	Practicum findOnePracticaById(int id);
 

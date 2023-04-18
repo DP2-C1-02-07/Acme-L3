@@ -10,7 +10,7 @@ company.practicum.form.label.code = Código
 company.practicum.form.label.title = Título
 company.practicum.form.label.abstractThing = Resumen
 company.practicum.form.label.goals = Metas
-company.practicum.form.label.estimatedTime = Tiempo estimado (en horas))
+company.practicum.form.label.estimatedTime = Tiempo estimado (en horas) (+-10%)
 company.practicum.form.label.company.name = Nombre de la compañía
 company.practicum.form.label.course = Curso
 
@@ -18,3 +18,5 @@ company.practicum.form.button.update = Actualizar
 company.practicum.form.button.delete = Eliminar
 company.practicum.form.button.publish = Publicar
 company.practicum.form.button.create = Crear
+
+company.practicum.form.button.session.list = Ver sesiones
