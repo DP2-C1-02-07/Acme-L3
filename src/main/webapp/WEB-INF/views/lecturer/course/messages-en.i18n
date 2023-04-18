@@ -11,11 +11,12 @@ lecturer.course.form.label.courseType = Course type:
 lecturer.course.form.label.retailPrice = Retail price:
 lecturer.course.form.label.furtherInformation = Further information: (Optional)
 
+lecturer.course.form.button.lectures = Lectures
 lecturer.course.form.button.update = Update
-lecturer.course.form.button.create = Create
 lecturer.course.form.button.delete = Delete
+lecturer.course.form.button.create = Create
 
-info.text = · Click on any row to see more details of the corresponding course
+lecturer.course.info.text = · Click on any row to see more details of the corresponding course
 
 lecturer.course.form.error.duplicated = There is already a course with this code
 lecturer.course.form.error.retail-price = The retail price must be positive or nought

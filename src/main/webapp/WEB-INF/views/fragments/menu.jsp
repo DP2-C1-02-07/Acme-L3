@@ -63,6 +63,7 @@
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.list-my-audits" action="/auditor/audit/list-mine"/>
 			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/lecturer/course/list-mine"/>
+			<acme:menu-suboption code="master.menu.lecturer.my-lectures" action="/lecturer/lecture/list-mine"/>
 			<acme:menu-suboption code="master.menu.lecturer.dashboard" action="/lecturer/lecturer-dashboard/show"/>			
 		</acme:menu-option>
 	</acme:menu-left>
