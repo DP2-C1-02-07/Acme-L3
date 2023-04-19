@@ -163,8 +163,8 @@ bg=green</panel_attributes>
     <coordinates>
       <x>644</x>
       <y>63</y>
-      <w>210</w>
-      <h>147</h>
+      <w>280</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Form&gt;&gt;
@@ -180,6 +180,10 @@ LecturerDashboard
 + deviationLearningTimeOfCourses: Double
 + minimumLearningTimeOfCourses: Double
 + maximumLearningTimeOfCourses: Double
++ / averageLearningTimeOfCoursesCalc: Double {Transient}
++ / deviationLearningTimeOfCoursesCalc: Double {Transient}
++ / minimumLearningTimeOfCoursesCalc: Double {Transient}
++ / maximumLearningTimeOfCoursesCalc: Double {Transient}
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -239,5 +243,30 @@ Type
 + HANDS_ON
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>735</x>
+      <y>287</y>
+      <w>189</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>all transient attributes are calculated by 
+performing the corresponding algorithm 
+taking as input the list of course times
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>245</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
