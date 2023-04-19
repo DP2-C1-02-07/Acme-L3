@@ -1,6 +1,8 @@
 
 package acme.features.lecturer.lecturerDashboard;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +41,8 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		principal = super.getRequest().getPrincipal();
 		lecturerId = principal.getActiveRoleId();
 
+		List<Double> learningTimeOfCourses;
+
 		LecturerDashboard lecturerDashboard;
 		Integer totalNumberOfTheoryLectures;
 		Integer totalNumberOfHandsOnLectures;
@@ -46,6 +50,12 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		Double deviationLearningTimeOfLectures;
 		Double minimumLearningTimeOfLectures;
 		Double maximumLearningTimeOfLectures;
+		Double averageLearningTimeOfCoursesCalc;
+		Double deviationLearningTimeOfCoursesCalc;
+		Double minimumLearningTimeOfCoursesCalc;
+		Double maximumLearningTimeOfCoursesCalc;
+
+		learningTimeOfCourses = this.repository.learningTimeOfCourses(lecturerId);
 
 		totalNumberOfTheoryLectures = this.repository.totalNumberOfTheoryLectures(lecturerId);
 		totalNumberOfHandsOnLectures = this.repository.totalNumberOfHandsOnLectures(lecturerId);
@@ -55,12 +65,22 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		maximumLearningTimeOfLectures = this.repository.maximumLearningTimeOfLectures(lecturerId);
 
 		lecturerDashboard = new LecturerDashboard();
+
+		averageLearningTimeOfCoursesCalc = lecturerDashboard.averageLearningTimeOfCoursesCalc(learningTimeOfCourses);
+		deviationLearningTimeOfCoursesCalc = lecturerDashboard.deviationLearningTimeOfCoursesCalc(learningTimeOfCourses);
+		minimumLearningTimeOfCoursesCalc = lecturerDashboard.minimumLearningTimeOfCoursesCalc(learningTimeOfCourses);
+		maximumLearningTimeOfCoursesCalc = lecturerDashboard.maximumLearningTimeOfCoursesCalc(learningTimeOfCourses);
+
 		lecturerDashboard.setTotalNumberOfTheoryLectures(totalNumberOfTheoryLectures);
 		lecturerDashboard.setTotalNumberOfHandsOnLectures(totalNumberOfHandsOnLectures);
 		lecturerDashboard.setAverageLearningTimeOfLectures(averageLearningTimeOfLectures);
 		lecturerDashboard.setDeviationLearningTimeOfLectures(deviationLearningTimeOfLectures);
 		lecturerDashboard.setMinimumLearningTimeOfLectures(minimumLearningTimeOfLectures);
 		lecturerDashboard.setMaximumLearningTimeOfLectures(maximumLearningTimeOfLectures);
+		lecturerDashboard.setAverageLearningTimeOfCourses(averageLearningTimeOfCoursesCalc);
+		lecturerDashboard.setDeviationLearningTimeOfCourses(deviationLearningTimeOfCoursesCalc);
+		lecturerDashboard.setMinimumLearningTimeOfCourses(minimumLearningTimeOfCoursesCalc);
+		lecturerDashboard.setMaximumLearningTimeOfCourses(maximumLearningTimeOfCoursesCalc);
 
 		super.getBuffer().setData(lecturerDashboard);
 	}
@@ -70,7 +90,8 @@ public class LecturerDashboardShowService extends AbstractService<Lecturer, Lect
 		Tuple tuple;
 
 		tuple = super.unbind(object, "totalNumberOfTheoryLectures", "totalNumberOfHandsOnLectures", "averageLearningTimeOfLectures", // 
-			"deviationLearningTimeOfLectures", "minimumLearningTimeOfLectures", "maximumLearningTimeOfLectures");
+			"deviationLearningTimeOfLectures", "minimumLearningTimeOfLectures", "maximumLearningTimeOfLectures", //
+			"averageLearningTimeOfCourses", "deviationLearningTimeOfCourses", "minimumLearningTimeOfCourses", "maximumLearningTimeOfCourses");
 
 		super.getResponse().setData(tuple);
 	}
