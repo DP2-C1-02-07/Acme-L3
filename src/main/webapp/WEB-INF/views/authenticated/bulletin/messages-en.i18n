@@ -1,0 +1,5 @@
+authenticated.bulletin.form.label.instantiationMoment = Instantiation Moment
+authenticated.bulletin.form.label.title = Title
+authenticated.bulletin.form.label.message = Message
+authenticated.bulletin.form.label.link = Link
+authenticated.bulletin.form.label.flag = Flag
