@@ -74,6 +74,11 @@ master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = My audits
 
 
+# master.menu.assistant ##########################################################
+
+master.menu.assistant = Assistant
+master.menu.assistant.my-tutorial = My tutorials
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

@@ -1,0 +1,22 @@
+assistant.tutorial.list.label.code = Código
+assistant.tutorial.list.label.title = Título
+assistant.tutorial.list.label.astractTutorial = Ejemplo
+
+assistant.tutorial.list.button.create = Crear
+
+assistant.tutorial.form.label.code = Código:
+assistant.tutorial.form.label.title = Título:
+assistant.tutorial.form.label.abstractTutorial = Ejemplo:
+assistant.tutorial.form.label.goals = Metas:
+assistant.tutorial.form.label.estimatedTotalTime = Tiempo total estimado
+assistant.tutorial.form.label.course = Curso:
+
+
+assistant.tutorial.form.button.update = Actualizar
+assistant.tutorial.form.button.create = Crear
+assistant.tutorial.form.button.delete = Borrar
+assistant.tutorial.form.button.publish = Publicar
+
+info.text = · Pulse en alguna fila para ver más detalles del tutorial correspondiente
+
+assistant.tutorial.form.error.duplicated = Ya hay un tutorial con este código
