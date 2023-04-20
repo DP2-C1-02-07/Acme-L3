@@ -80,12 +80,10 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 	@Override
 	public void validate(final Tutorial object) {
 		assert object != null;
-		int id;
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
-			id = super.getRequest().getData("id", int.class);
 			existing = this.repository.findOneTutorialByCode(object.getCode());
 			super.state(existing == null || existing.getCode().equals(object.getCode()) && existing.getId() == object.getId(), "code", "assistant.tutorial.form.error.duplicated");
 		}
