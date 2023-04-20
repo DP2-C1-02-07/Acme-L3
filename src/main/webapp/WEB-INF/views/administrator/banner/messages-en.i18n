@@ -9,4 +9,5 @@ administrator.banner.form.button.delete = Delete
 administrator.banner.form.button.create = Create
 administrator.banner.post.after-instantiation = Display period must start after the banner is instantiated
 administrator.banner.post.one-week = Availability period must last for at least one week
-administrator.banner.post.price-positive = Price must be positive
+administrator.banner.post.after-display = Display end moment must start after display start moment
+administrator.banner.post.after-update = Display period must start after the banner is updated

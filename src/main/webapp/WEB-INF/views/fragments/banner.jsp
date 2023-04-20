@@ -19,10 +19,25 @@
 	.img-container {
 		text-align: center;
 	}
+	
+	.banner-link {
+		position: absolute;
+		top: 12%;
+		left: 10;
+		transform: translateY(-50%);
+		padding: 10px;
+	}
+	
 </style>
 
 <div class="rounded" style="background: <acme:message code='master.banner.background'/>">
-	<div class="img-container">
-		<img src="images/banner.png" alt="<acme:message code='master.banner.alt'/>" class="img-fluid rounded"/>
-	</div>
+		<div class="img-container">
+			<img src="images/banner.png" alt="<acme:message code='master.banner.alt'/>" class="img-fluid rounded"/>
+		</div>
+</div>
+
+<div class="rounded" style="background: <acme:message code='master.banner.background'/>">
+	<a href="${banner.documentLink}" class="banner-link">>
+		<img src="${banner.pictureLink}" alt="${banner.slogan}" class="img-fluid rounded" style="width: 10%; height: 10%;"/>
+	</a>
 </div>
