@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -38,7 +37,6 @@ public class Lecture extends AbstractEntity {
 	protected String			anAbstract;
 
 	@Digits(integer = 3, fraction = 2)
-	@Min(1)
 	protected double			learningTime;
 
 	@NotBlank
