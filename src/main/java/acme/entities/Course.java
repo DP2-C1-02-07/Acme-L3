@@ -1,8 +1,8 @@
 
 package acme.entities;
 
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.persistence.Column;
@@ -49,7 +49,8 @@ public class Course extends AbstractEntity {
 	@Length(max = 100)
 	protected String			anAbstract;
 
-	// Custom retailPrice constraint in the validate method of the LecturerCourseCreateService and LecturerCourseUpdateService
+	// Custom retailPrice constraint in the validate method of the LecturerCourseCreateService, LecturerCourseUpdateService,
+	// LecturerCoursePublishService. Also maximum value included, defined in the discussion board
 	@NotNull
 	@Valid
 	protected Money				retailPrice;
@@ -63,7 +64,7 @@ public class Course extends AbstractEntity {
 
 
 	@Transient
-	public CourseType courseType(final List<Lecture> lectures) {
+	public CourseType courseType(final Collection<Lecture> lectures) {
 		CourseType result = CourseType.BALANCED;
 
 		if (lectures != null && !lectures.isEmpty()) {

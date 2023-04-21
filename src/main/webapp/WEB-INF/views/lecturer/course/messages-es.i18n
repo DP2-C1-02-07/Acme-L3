@@ -16,9 +16,13 @@ lecturer.course.courseLecture.form.button.create = Añadir lecciones al curso
 lecturer.course.courseLecture.form.button.delete = Borrar lecciones del curso
 lecturer.course.form.button.update = Actualizar
 lecturer.course.form.button.delete = Borrar
+lecturer.course.form.button.publish = Publicar
 lecturer.course.form.button.create = Crear
 
 lecturer.course.info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente
 
 lecturer.course.form.error.duplicated = Ya hay un curso con este código
-lecturer.course.form.error.retail-price = El precio de venta al por menor debe ser positivo o cero
+lecturer.course.form.error.retail-price = El precio de venta al por menor debe ser positivo menor que 1000000 o cero
+lecturer.course.form.error.lectures.empty = No hay lecciones en el curso
+lecturer.course.form.error.lectures.theoretical = Cursos puramente teóricos no permitido
+lecturer.course.form.error.lectures.published = Todas sus lecciones deben haber sido publicadas

@@ -48,7 +48,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void bind(final Course object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "anAbstract", "courseType", "retailPrice", "furtherInformation");
+		super.bind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation");
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
-			super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.form.error.retail-price");
+			super.state(object.getRetailPrice().getAmount() >= 0 && object.getRetailPrice().getAmount() <= 1000000, "retailPrice", "lecturer.course.form.error.retail-price");
 
 		final SpamDetector detector = new SpamDetector();
 
@@ -90,7 +90,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "anAbstract", "courseType", "retailPrice", "furtherInformation", "draftMode");
+		tuple = super.unbind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation", "draftMode");
 
 		super.getResponse().setData(tuple);
 	}

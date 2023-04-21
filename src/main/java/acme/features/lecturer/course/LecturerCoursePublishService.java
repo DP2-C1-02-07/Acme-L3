@@ -15,7 +15,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
 
 @Service
-public class LecturerCourseUpdateService extends AbstractService<Lecturer, Course> {
+public class LecturerCoursePublishService extends AbstractService<Lecturer, Course> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -44,7 +44,7 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 		id = super.getRequest().getData("id", int.class);
 		course = this.repository.findOneCourseById(id);
 		lecturer = course == null ? null : course.getLecturer();
-		status = super.getRequest().getPrincipal().hasRole(lecturer) && course != null && course.isDraftMode();
+		status = course != null && course.isDraftMode() && super.getRequest().getPrincipal().hasRole(lecturer);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -81,6 +81,23 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
 			super.state(object.getRetailPrice().getAmount() >= 0 && object.getRetailPrice().getAmount() <= 1000000, "retailPrice", "lecturer.course.form.error.retail-price");
 
+		Collection<Lecture> lectures;
+		lectures = this.repository.findManyLecturesByCourseId(object.getId());
+
+		if (lectures.isEmpty())
+			super.state(!lectures.isEmpty(), "*", "lecturer.course.form.error.lectures.empty");
+		else {
+			Integer lecturesTheoretical;
+			lecturesTheoretical = this.repository.findManyLecturesByTheoreticalAndCourseId(object.getId());
+			super.state(lecturesTheoretical != null && lecturesTheoretical != lectures.size(), "*", "lecturer.course.form.error.lectures.theoretical");
+
+			Integer lecturesDraftMode;
+			lecturesDraftMode = this.repository.findManyLecturesByDraftModeAndCourseId(object.getId());
+
+			super.state(lecturesDraftMode != null && lecturesDraftMode == lectures.size(), "*", "lecturer.course.form.error.lectures.published");
+
+		}
+
 		final SpamDetector detector = new SpamDetector();
 
 		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
@@ -97,6 +114,7 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 	public void perform(final Course object) {
 		assert object != null;
 
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 
