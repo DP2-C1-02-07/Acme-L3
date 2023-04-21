@@ -42,13 +42,12 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 	@Override
 	public void load() {
 		final Peep object = new Peep();
-		Principal principal;
+		final Principal principal;
 		final int userAccountId;
 		final UserAccount userAccount;
 		Date moment;
 
 		moment = MomentHelper.getCurrentMoment();
-		principal = super.getRequest().getPrincipal();
 		//userAccountId = principal.getAccountId();
 	//	userAccount = this.repository.findOneUserAccountById(userAccountId);
 		 assert object != null;

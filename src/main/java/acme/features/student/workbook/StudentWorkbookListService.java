@@ -35,12 +35,9 @@ public class StudentWorkbookListService extends AbstractService<Student, Workboo
 	@Override
 	public void load() {
 		Collection<Workbook> objects;
-		//Collection<Enrolment> enrolments;
 		Principal principal;
-
-		principal = super.getRequest().getPrincipal();
-		objects = this.repository.findManyWorkbookByStudentId(principal.getActiveRoleId());
-		//objects = this.repository.findManyActivitiesByEnrolmentId(principal.getActiveRoleId());
+	principal = super.getRequest().getPrincipal();
+		objects = this.repository.findWorkbookByStudentId(principal.getActiveRoleId());
 
 		super.getBuffer().setData(objects);
 	}

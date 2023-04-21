@@ -66,6 +66,7 @@
     <acme:menu-option code="master.menu.student" access="hasRole('Student')">
 			<acme:menu-suboption code="master.menu.lecturer.my-courses" action="/student/course/list"/>	
 			<acme:menu-suboption code="master.menu.lecturer.my-enrolments" action="/student/enrolment/list"/>			
+			<acme:menu-suboption code="master.menu.lecturer.my-wk" action="/student/workbook/list"/>			
 					
     </acme:menu-option>
 

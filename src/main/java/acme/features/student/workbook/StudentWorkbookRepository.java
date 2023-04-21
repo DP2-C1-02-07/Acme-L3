@@ -27,7 +27,7 @@ public interface StudentWorkbookRepository extends AbstractRepository {
 	Student findOneStudentById(int id);
 
 	@Query("select a from Workbook a where a.enrolment.student.id = :studentId")
-	Collection<Workbook> findManyWorkbookByStudentId(int studentId);
+	Collection<Workbook> findWorkbookByStudentId(int studentId);
 
 	@Query("select e from Enrolment e where e.student.id = :studentId and e.cardEnd is not null and e.cardHolder is not null")
 	Collection<Enrolment> findFinalisedEnrolmentsByStudentId(int studentId);

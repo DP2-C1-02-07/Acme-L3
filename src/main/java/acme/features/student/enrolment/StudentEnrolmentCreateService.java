@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Course;
 import acme.entities.Enrolment;
 import acme.framework.components.jsp.SelectChoices;
@@ -60,7 +61,6 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 
 		courseId = super.getRequest().getData("course", int.class);
 		course = this.repository.findOneCourseById(courseId);
-		//System.out.println(this.repository.findAllEnrolmentsCodes());
 
 		super.bind(object, "code", "motivation", "goals", "workTime", "cardHolder", "cardEnd");
 		object.setCourse(course);
@@ -78,6 +78,19 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 
 		if (!super.getBuffer().getErrors().hasErrors("cardEnd"))
 			super.state(object.getCardEnd() == "" || object.getCardEnd().matches("^[0-9]{4}$"), "cardNibble", "student.enrolment.form.error.cardEnd");
+
+		
+		
+
+		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean goalshasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
+		super.state(goalshasSpam, "goals", "Error: Spam detected// Spam detectado");
+
+		final boolean motivationehasSpam = !detector.scanString(super.getRequest().getData("motivation", String.class));
+		super.state(motivationehasSpam, "motivation", "Error: Spam detected// Spam detectado");
 
 	}
 

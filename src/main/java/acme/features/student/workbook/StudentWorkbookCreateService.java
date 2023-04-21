@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Enrolment;
 import acme.entities.Workbook;
 import acme.entities.enums.Type;
@@ -41,7 +42,6 @@ public class StudentWorkbookCreateService extends AbstractService<Student, Workb
 		Workbook object;
 
 		object = new Workbook();
-
 		super.getBuffer().setData(object);
 	}
 
@@ -54,9 +54,9 @@ public class StudentWorkbookCreateService extends AbstractService<Student, Workb
 
 		enrolmentId = super.getRequest().getData("enrolment", Integer.class);
 		enrolment = enrolmentId != null ? this.repository.findOneEnrolmentById(enrolmentId) : null;
+		object.setEnrolment(enrolment);
 
 		super.bind(object, "title", "abstractElement", "type", "periodStart", "periodEnd", "link");
-		object.setEnrolment(enrolment);
 
 	}
 
@@ -66,6 +66,19 @@ public class StudentWorkbookCreateService extends AbstractService<Student, Workb
 
 		if (!super.getBuffer().getErrors().hasErrors("periodEnd"))
 			super.state(MomentHelper.isAfter(object.getPeriodEnd(), object.getPeriodStart()), "periodEnd", "student.activity.form.error.periodEnd");
+	
+
+		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean abshasSpam = !detector.scanString(super.getRequest().getData("abstractElement", String.class));
+		super.state(abshasSpam, "abstractElement", "Error: Spam detected// Spam detectado");
+
+		final boolean titlehasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titlehasSpam, "title", "Error: Spam detected// Spam detectado");
+
+	
 	}
 
 	@Override
@@ -81,7 +94,7 @@ public class StudentWorkbookCreateService extends AbstractService<Student, Workb
 
 		int studentId;
 		Collection<Enrolment> enrolments;
-		SelectChoices indicators;
+		SelectChoices types;
 		SelectChoices choices;
 		Tuple tuple;
 
@@ -89,12 +102,12 @@ public class StudentWorkbookCreateService extends AbstractService<Student, Workb
 
 		enrolments = this.repository.findFinalisedEnrolmentsByStudentId(studentId);
 		choices = SelectChoices.from(enrolments, "code", object.getEnrolment());
-		indicators = SelectChoices.from(Type.class, object.getType());
+		types = SelectChoices.from(Type.class, object.getType());
 
 		tuple = super.unbind(object, "title", "abstractElement", "type", "periodStart", "periodEnd", "link");
 		tuple.put("enrolment", choices.getSelected().getKey());
 		tuple.put("enrolments", choices);
-		tuple.put("indicators", indicators);
+		tuple.put("types", types);
 		tuple.put("finalised", true);
 
 		super.getResponse().setData(tuple);

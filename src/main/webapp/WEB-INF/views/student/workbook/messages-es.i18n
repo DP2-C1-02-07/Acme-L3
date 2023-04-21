@@ -1,16 +1,16 @@
-student.activity.list.label.title = Título
-student.activity.list.label.enrolment-code = Código de matrícula
+student.workbook.list.label.title = Título
+student.workbook.list.label.enrolment-code = Matricula
 
-student.activity.form.label.title = Título
-student.activity.form.label.activityAbstract = Abstract
-student.activity.form.label.indicator = Tipo
-student.activity.form.label.periodStart = Comienzo de actividad
-student.activity.form.label.periodEnd = Fin de actividad
-student.activity.form.label.link = Enlace
-student.activity.form.label.enrolment-code = Matrícula a la que pertenece
+student.workbook.form.label.title = Título
+student.workbook.form.label.activityAbstract = Abstract
+student.workbook.form.label.type = Tipo
+student.workbook.form.label.periodStart = Comienzo del workbook
+student.workbook.form.label.periodEnd = Fin del workbook
+student.workbook.form.label.link = Enlace
+student.workbook.form.label.enrolment-code = Matrícula a la que pertenece
 
-student.activity.form.button.update = Actualizar
-student.activity.form.button.delete = Borrar
-student.activity.form.button.create = Registrar actividad
+student.workbook.form.button.update = Actualizar
+student.workbook.form.button.delete = Borrar
+student.workbook.form.button.create = Guardar workbook
 
-student.activity.form.error.periodEnd = El final de la actividad debe ser posterior a su inicio
+student.workbook.form.error.periodEnd = El final es después que el inicio

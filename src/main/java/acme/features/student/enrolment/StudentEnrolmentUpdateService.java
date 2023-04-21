@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Course;
 import acme.entities.Enrolment;
 import acme.framework.components.jsp.SelectChoices;
@@ -96,7 +97,21 @@ public class StudentEnrolmentUpdateService extends AbstractService<Student, Enro
 			super.state(object.getCardHolder() == "" || object.getCardHolder().trim().length() > 0, "cardHolder", "student.enrolment.form.error.cardHolder");
 
 		if (!super.getBuffer().getErrors().hasErrors("cardEnd"))
+		
 			super.state(object.getCardEnd() == "" || object.getCardEnd().matches("^[0-9]{4}$"), "cardEnd", "student.enrolment.form.error.cardNibble");
+	
+	
+		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean goalshasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
+		super.state(goalshasSpam, "goals", "Error: Spam detected// Spam detectado");
+
+		final boolean motivationehasSpam = !detector.scanString(super.getRequest().getData("motivation", String.class));
+		super.state(motivationehasSpam, "motivation", "Error: Spam detected// Spam detectado");
+
+
 	}
 
 	@Override

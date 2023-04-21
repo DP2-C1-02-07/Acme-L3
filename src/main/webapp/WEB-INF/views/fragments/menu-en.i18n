@@ -53,6 +53,8 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.student = Student
 master.menu.user-account.become-student = Become Student!
 master.menu.user-account.student= Student Account
+master.menu.lecturer.my-enrolments = My enrolments!
+master.menu.lecturer.my-wk = My workbooks!
 
 # master.menu.consumer ##########################################################
 

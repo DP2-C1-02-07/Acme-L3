@@ -36,6 +36,9 @@ master.menu.authenticated.lits-bulletin = Todos los buletines.
 master.menu.student = Estudiante
 master.menu.user-account.become-student = Vuelvete Estudiante!
 master.menu.user-account.student= Cuenta Estudiante
+
+master.menu.lecturer.my-enrolments = Mis matriculas!
+master.menu.lecturer.my-wk = Mis workbooks!
 # master.menu.administrator ###################################################
 master.menu.administrator.bulletin = Crear un nuevo buletín
 master.menu.administrator = Administrador

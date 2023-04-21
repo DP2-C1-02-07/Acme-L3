@@ -4,6 +4,7 @@ package acme.features.student.workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Enrolment;
 import acme.entities.Workbook;
 import acme.entities.enums.Type;
@@ -78,6 +79,21 @@ public class StudentWorkbookUpdateService extends AbstractService<Student, Workb
 
 		if (!super.getBuffer().getErrors().hasErrors("periodEnd"))
 			super.state(MomentHelper.isAfter(object.getPeriodEnd(), object.getPeriodStart()), "periodEnd", "student.activity.form.error.periodEnd");
+		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean abshasSpam = !detector.scanString(super.getRequest().getData("abstractElement", String.class));
+		super.state(abshasSpam, "abstractElement", "Error: Spam detected// Spam detectado");
+
+		final boolean titlehasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titlehasSpam, "title", "Error: Spam detected// Spam detectado");
+
+	
+	
+	
+	
+	
 	}
 
 	@Override
@@ -91,14 +107,14 @@ public class StudentWorkbookUpdateService extends AbstractService<Student, Workb
 	public void unbind(final Workbook object) {
 		assert object != null;
 
-		SelectChoices indicators;
+		final SelectChoices types;
 		Tuple tuple;
 
-		indicators = SelectChoices.from(Type.class, object.getType());
+		types = SelectChoices.from(Type.class, object.getType());
 
 		tuple = super.unbind(object, "title", "abstractElement", "type", "periodStart", "periodEnd", "link");
 		tuple.put("enrolment", object.getEnrolment().getCode());
-		tuple.put("indicators", indicators);
+		tuple.put("types", types);
 
 		super.getResponse().setData(tuple);
 
