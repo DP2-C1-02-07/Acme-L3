@@ -1,0 +1,11 @@
+authenticated.tutorial.list.label.code = Código
+authenticated.tutorial.list.label.title = Título
+authenticated.tutorial.list.label.abstractTutorial = Resumen
+authenticated.tutorial.list.label.goals = Metas
+authenticated.tutorial.list.label.estimatedTotalTime = Tiempo estimado (en horas)
+
+authenticated.tutorial.form.label.code = Código
+authenticated.tutorial.form.label.title = Título
+authenticated.tutorial.form.label.abstractThing = Resumen
+authenticated.tutorial.form.label.goals = Metas
+authenticated.tutorial.form.label.estimatedTotalTime = Tiempo estimado (en horas)
