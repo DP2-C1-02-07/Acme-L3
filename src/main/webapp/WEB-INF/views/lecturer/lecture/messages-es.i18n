@@ -17,3 +17,7 @@ lecturer.lecture.form.button.publish = Publicar
 lecturer.lecture.form.button.create = Crear
 
 lecturer.lecture.info.text = · Pulse en alguna fila para ver más detalles de la lección correspondiente
+
+lecturer.lecture.values.type = Valores disponibles para atributo learningTime: HANDS_ON, THEORETICAL
+
+lecturer.lecture.form.error.learning-time = El tiempo de aprendizaje debe ser mayor o igual que 0.01

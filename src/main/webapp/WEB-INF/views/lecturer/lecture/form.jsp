@@ -11,6 +11,8 @@
 	<acme:input-textbox code="lecturer.lecture.form.label.type" path="type"/>
 	<acme:input-url code="lecturer.lecture.form.label.furtherInformation" path="furtherInformation"/>
 	
+	<acme:message code="lecturer.lecture.values.type"/>
+	<br><br>
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="lecturer.lecture.form.button.update" action="/lecturer/lecture/update"/>
