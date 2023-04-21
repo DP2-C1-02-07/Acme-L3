@@ -77,7 +77,7 @@ public class StudentEnrolmentCreateService extends AbstractService<Student, Enro
 			super.state(object.getCardHolder() == "" || object.getCardHolder().trim().length() > 0, "cardHolder", "student.enrolment.form.error.cardHolder");
 
 		if (!super.getBuffer().getErrors().hasErrors("cardEnd"))
-			super.state(object.getCardEnd() == "" || object.getCardEnd().matches("^[0-9]{4}$"), "cardNibble", "student.enrolment.form.error.cardEnd");
+			super.state(object.getCardEnd() == "" || object.getCardEnd().matches("^[0-9]{4}$"), "cardEnd", "student.enrolment.form.error.cardEnd");
 
 		
 		
