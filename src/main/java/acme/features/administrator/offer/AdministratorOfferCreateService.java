@@ -49,12 +49,20 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 
 		final SpamDetector detector = new SpamDetector();
 
-		final boolean dayAfterInstantiation = object.getAvailabilityStart().getTime() - object.getInstantiationMoment().getTime() >= 86400000;
-		final boolean oneWeek = object.getAvailabilityEnd().getTime() - object.getAvailabilityStart().getTime() >= 604800000;
-		final boolean pricePositive = object.getPrice().getAmount() > 0.0;
-		super.state(dayAfterInstantiation, "*", "administrator.offer.post.day-after-instantiation");
-		super.state(oneWeek, "*", "administrator.offer.post.one-week");
-		super.state(pricePositive, "*", "administrator.offer.post.price-positive");
+		if (!super.getBuffer().getErrors().hasErrors("availabilityStart") && !super.getBuffer().getErrors().hasErrors("instantiationMoment")) {
+			final boolean dayAfterInstantiation = object.getAvailabilityStart().getTime() - object.getInstantiationMoment().getTime() >= 86400000;
+			super.state(dayAfterInstantiation, "*", "administrator.offer.post.day-after-instantiation");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("availabilityStart") && !super.getBuffer().getErrors().hasErrors("availabilityEnd")) {
+			final boolean oneWeek = object.getAvailabilityEnd().getTime() - object.getAvailabilityStart().getTime() >= 604800000;
+			super.state(oneWeek, "*", "administrator.offer.post.one-week");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("price")) {
+			final boolean pricePositive = object.getPrice().getAmount() > 0.0;
+			super.state(pricePositive, "*", "administrator.offer.post.price-positive");
+		}
 
 		final boolean headingHasSpam = !detector.scanString(super.getRequest().getData("heading", String.class));
 		super.state(headingHasSpam, "heading", "javax.validation.constraints.HasSpam.message");
