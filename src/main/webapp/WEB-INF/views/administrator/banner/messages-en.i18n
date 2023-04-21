@@ -11,3 +11,5 @@ administrator.banner.post.after-instantiation = Display period must start after 
 administrator.banner.post.one-week = Availability period must last for at least one week
 administrator.banner.post.after-display = Display end moment must start after display start moment
 administrator.banner.post.after-update = Display period must start after the banner is updated
+
+javax.validation.constraints.HasSpam.message = The message contains spam 

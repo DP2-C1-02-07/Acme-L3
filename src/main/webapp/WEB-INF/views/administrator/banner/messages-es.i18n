@@ -12,3 +12,5 @@ administrator.banner.post.one-week = El periodo de visualización debe durar al 
 administrator.banner.post.after-display = El final de visualización debe ser posterior al comienzo
 administrator.banner.post.after-update = El periodo de visualización debe empezar más tarde que el momento de actualización
 
+javax.validation.constraints.HasSpam.message = El mensaje contiene spam
+
