@@ -39,11 +39,14 @@ public class Enrolment extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goals;
 
-	//Debido al momento del desarrollo en el que nos encontramos, workTime debería calcularse a raíz deç
-	//las horas acumuladas en Course, pero debido a como esán diseñadas las entidades ahora mismo, decidimos
-	//esperar y setear workTime en un futuro servicio, en lugar de en una propiedad derivada.
 	@NotNull
 	protected Double				workTime;
+
+	@Length(max = 75)
+	protected String			cardHolder;
+
+	@Length(max = 4)
+	protected String			cardEnd;
 
 
 	// Derived attributes -----------------------------------------------------
@@ -56,10 +59,10 @@ public class Enrolment extends AbstractEntity {
 	protected Student			student;
 	
 	
-	//@NotNull
-	//@Valid
-	//@OneToOne(optional=false)
-	//protected Course			course	;
+	@NotNull
+	@Valid
+	@ManyToOne(optional=false)
+	protected Course			course	;
 	
 
 

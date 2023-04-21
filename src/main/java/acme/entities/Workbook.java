@@ -44,7 +44,12 @@ public class Workbook extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date				time;
+	protected Date				periodEnd;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				periodStart;
+	
 	
 
 	@URL

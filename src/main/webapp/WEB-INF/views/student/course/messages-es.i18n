@@ -1,0 +1,14 @@
+any.course.list.label.code = Código
+any.course.list.label.title = Título
+any.course.list.label.anAbstract = Abstracto
+
+any.course.form.label.code = Código:
+any.course.form.label.title = Título:
+any.course.form.label.anAbstract = Abstracto:
+any.course.form.label.courseType = Tipo curso:
+any.course.form.label.retailPrice = Precio de venta al por menor:
+any.course.form.label.furtherInformation = Más información: (Opcional)
+
+authenticated.practica.form.button = Ver prácticas asociadas
+
+info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente 
