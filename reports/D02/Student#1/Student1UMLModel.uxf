@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>35</y>
+      <x>315</x>
+      <y>70</y>
       <w>231</w>
       <h>84</h>
     </coordinates>
@@ -23,10 +23,10 @@ Lecturer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>252</y>
+      <x>511</x>
+      <y>287</y>
       <w>210</w>
-      <h>105</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -38,14 +38,15 @@ Lecture
 + body: String {NotBlank, Length(1, 100)}
 + type: Type
 + furtherInformation: String {URL}
++ draftMode: boolean
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>14</x>
-      <y>252</y>
+      <x>0</x>
+      <y>287</y>
       <w>280</w>
       <h>112</h>
     </coordinates>
@@ -66,8 +67,8 @@ Course
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>21</x>
-      <y>35</y>
+      <x>7</x>
+      <y>70</y>
       <w>133</w>
       <h>70</h>
     </coordinates>
@@ -84,8 +85,8 @@ CourseType
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>147</x>
-      <y>112</y>
+      <x>133</x>
+      <y>147</y>
       <w>259</w>
       <h>154</h>
     </coordinates>
@@ -97,8 +98,8 @@ m2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>497</x>
-      <y>112</y>
+      <x>483</x>
+      <y>147</y>
       <w>168</w>
       <h>154</h>
     </coordinates>
@@ -111,8 +112,8 @@ m2=1..*
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>21</x>
-      <y>168</y>
+      <x>7</x>
+      <y>203</y>
       <w>98</w>
       <h>35</h>
     </coordinates>
@@ -124,8 +125,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>63</x>
-      <y>196</y>
+      <x>49</x>
+      <y>231</y>
       <w>21</w>
       <h>70</h>
     </coordinates>
@@ -135,8 +136,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>14</x>
-      <y>406</y>
+      <x>0</x>
+      <y>441</y>
       <w>119</w>
       <h>49</h>
     </coordinates>
@@ -149,8 +150,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>63</x>
-      <y>357</y>
+      <x>49</x>
+      <y>392</y>
       <w>21</w>
       <h>63</h>
     </coordinates>
@@ -160,10 +161,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>658</x>
-      <y>28</y>
-      <w>210</w>
-      <h>147</h>
+      <x>644</x>
+      <y>63</y>
+      <w>280</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Form&gt;&gt;
@@ -171,22 +172,26 @@ LecturerDashboard
 --
 + totalNumberOfTheoryLectures: Integer
 + totalNumberOfHandsOnLectures: Integer
-+ averageLearningTimeOfLectures: double
-+ deviationLearningTimeOfLectures: double
-+ minimumLearningTimeOfLectures: double
-+ maximumLearningTimeOfLectures: double
-+ averageLearningTimeOfCourses: double
-+ deviationLearningTimeOfCourses: double
-+ minimumLearningTimeOfCourses: double
-+ maximumLearningTimeOfCourses: double
++ averageLearningTimeOfLectures: Double
++ deviationLearningTimeOfLectures: Double
++ minimumLearningTimeOfLectures: Double
++ maximumLearningTimeOfLectures: Double
++ averageLearningTimeOfCourses: Double
++ deviationLearningTimeOfCourses: Double
++ minimumLearningTimeOfCourses: Double
++ maximumLearningTimeOfCourses: Double
++ / averageLearningTimeOfCoursesCalc: Double {Transient}
++ / deviationLearningTimeOfCoursesCalc: Double {Transient}
++ / minimumLearningTimeOfCoursesCalc: Double {Transient}
++ / maximumLearningTimeOfCoursesCalc: Double {Transient}
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>364</x>
-      <y>294</y>
+      <x>350</x>
+      <y>329</y>
       <w>91</w>
       <h>35</h>
     </coordinates>
@@ -199,8 +204,8 @@ CourseLecture
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>301</y>
+      <x>434</x>
+      <y>336</y>
       <w>91</w>
       <h>28</h>
     </coordinates>
@@ -212,8 +217,8 @@ m2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>301</y>
+      <x>273</x>
+      <y>336</y>
       <w>91</w>
       <h>28</h>
     </coordinates>
@@ -225,8 +230,8 @@ m2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>175</x>
-      <y>35</y>
+      <x>161</x>
+      <y>70</y>
       <w>133</w>
       <h>63</h>
     </coordinates>
@@ -238,5 +243,30 @@ Type
 + HANDS_ON
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>735</x>
+      <y>287</y>
+      <w>189</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>all transient attributes are calculated by 
+performing the corresponding algorithm 
+taking as input the list of course times
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>245</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>

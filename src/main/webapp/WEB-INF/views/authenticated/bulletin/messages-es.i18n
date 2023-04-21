@@ -1,0 +1,5 @@
+authenticated.bulletin.form.label.instantiationMoment = Fecha de creación
+authenticated.bulletin.form.label.title = Título
+authenticated.bulletin.form.label.message = Mensaje
+authenticated.bulletin.form.label.link = Link
+authenticated.bulletin.form.label.flag = Bandera

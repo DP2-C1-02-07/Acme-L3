@@ -1,0 +1,24 @@
+lecturer.course.list.label.code = Código
+lecturer.course.list.label.title = Título
+lecturer.course.list.label.anAbstract = Abstracto
+
+lecturer.course.list.button.create = Crear
+
+lecturer.course.form.label.code = Código:
+lecturer.course.form.label.title = Título:
+lecturer.course.form.label.anAbstract = Abstracto:
+lecturer.course.form.label.courseType = Tipo curso:
+lecturer.course.form.label.retailPrice = Precio de venta al por menor:
+lecturer.course.form.label.furtherInformation = Más información: (Opcional)
+
+lecturer.course.form.button.lectures = Lecciones
+lecturer.course.courseLecture.form.button.create = Añadir lecciones al curso
+lecturer.course.courseLecture.form.button.delete = Borrar lecciones del curso
+lecturer.course.form.button.update = Actualizar
+lecturer.course.form.button.delete = Borrar
+lecturer.course.form.button.create = Crear
+
+lecturer.course.info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente
+
+lecturer.course.form.error.duplicated = Ya hay un curso con este código
+lecturer.course.form.error.retail-price = El precio de venta al por menor debe ser positivo o cero

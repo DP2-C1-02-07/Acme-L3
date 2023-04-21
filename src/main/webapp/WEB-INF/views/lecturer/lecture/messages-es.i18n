@@ -1,0 +1,19 @@
+lecturer.lecture.list.label.title = Título
+lecturer.lecture.list.label.anAbstract = Abstracto
+lecturer.lecture.list.label.learningTime = Tiempo aprendizaje (Horas)
+
+lecturer.lecture.list.button.create = Crear
+
+lecturer.lecture.form.label.title = Título:
+lecturer.lecture.form.label.anAbstract = Abstracto:
+lecturer.lecture.form.label.learningTime = Tiempo aprendizaje: (Horas)
+lecturer.lecture.form.label.body = Cuerpo:
+lecturer.lecture.form.label.type = Tipo:
+lecturer.lecture.form.label.furtherInformation = Más información: (Opcional)
+
+lecturer.lecture.form.button.update = Actualizar
+lecturer.lecture.form.button.delete = Borrar
+lecturer.lecture.form.button.publish = Publicar
+lecturer.lecture.form.button.create = Crear
+
+lecturer.lecture.info.text = · Pulse en alguna fila para ver más detalles de la lección correspondiente

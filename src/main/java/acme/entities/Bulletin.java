@@ -13,6 +13,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.enums.Flags;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,8 +41,8 @@ public class Bulletin extends AbstractEntity {
 	@Length(max = 100)
 	protected String			message;
 
-	
-	protected boolean			flag;
+	@NotNull
+	protected Flags			flag;
 
 	@URL
 	protected String			link;

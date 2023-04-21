@@ -36,13 +36,14 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.all-offers = All offers
+master.menu.administrator.banner-list = Banner List
 
 
 # master.menu.authenticated ##################################################
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-offers = All offers
-
+master.menu.authenticated.lits-bulletin = All bulletins
 
 # master.menu.provider ########################################################
 
@@ -53,6 +54,30 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.lecturer ##########################################################
+
+master.menu.lecturer = Lecturer
+master.menu.lecturer.my-courses = List my courses
+master.menu.lecturer.my-lectures = List my lectures
+master.menu.lecturer.dashboard = Dashboard
+
+
+# master.menu.company ###########################################################
+
+master.menu.company = Company
+master.menu.company.practicum = List my practica
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audits = My audits
+
+
+# master.menu.assistant ##########################################################
+
+master.menu.assistant = Assistant
+master.menu.assistant.my-tutorial = My tutorials
 
 # master.menu.user-account ####################################################
 
@@ -66,3 +91,7 @@ master.menu.user-account.auditor = Auditor data
 master.menu.user-account.become-auditor = Become an auditor
 master.menu.user-account.lecturer = Lecturer data
 master.menu.user-account.become-lecturer = Become a lecturer
+master.menu.user-account.become-company = Become a company
+master.menu.user-account.company = Company data
+master.menu.user-account.assistant = Assistant data
+master.menu.user-account.become-assistant = Become a assistant

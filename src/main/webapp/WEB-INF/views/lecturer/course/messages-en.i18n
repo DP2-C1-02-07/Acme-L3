@@ -1,0 +1,24 @@
+lecturer.course.list.label.code = Code
+lecturer.course.list.label.title = Title
+lecturer.course.list.label.anAbstract = Abstract
+
+lecturer.course.list.button.create = Create
+
+lecturer.course.form.label.code = Code:
+lecturer.course.form.label.title = Title:
+lecturer.course.form.label.anAbstract = Abstract:
+lecturer.course.form.label.courseType = Course type:
+lecturer.course.form.label.retailPrice = Retail price:
+lecturer.course.form.label.furtherInformation = Further information: (Optional)
+
+lecturer.course.form.button.lectures = Lectures
+lecturer.course.courseLecture.form.button.create = Add lectures to course
+lecturer.course.courseLecture.form.button.delete = Delete lectures from course
+lecturer.course.form.button.update = Update
+lecturer.course.form.button.delete = Delete
+lecturer.course.form.button.create = Create
+
+lecturer.course.info.text = · Click on any row to see more details of the corresponding course
+
+lecturer.course.form.error.duplicated = There is already a course with this code
+lecturer.course.form.error.retail-price = The retail price must be positive or nought
