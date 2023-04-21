@@ -4,6 +4,7 @@ package acme.features.authenticated.auditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.accounts.UserAccount;
@@ -52,6 +53,20 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 	@Override
 	public void validate(final Auditor object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean firmHasSpam = !detector.scanString(super.getRequest().getData("firm", String.class));
+		super.state(firmHasSpam, "firm", "javax.validation.constraints.HasSpam.message");
+
+		final boolean professionalIdHasSpam = !detector.scanString(super.getRequest().getData("professionalId", String.class));
+		super.state(professionalIdHasSpam, "professionalId", "javax.validation.constraints.HasSpam.message");
+
+		final boolean certificationsHasSpam = !detector.scanString(super.getRequest().getData("certifications", String.class));
+		super.state(certificationsHasSpam, "certifications", "javax.validation.constraints.HasSpam.message");
+
+		final boolean linkHasSpam = !detector.scanString(super.getRequest().getData("link", String.class));
+		super.state(linkHasSpam, "link", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

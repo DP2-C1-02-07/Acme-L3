@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Audit;
 import acme.entities.Course;
 import acme.framework.components.jsp.SelectChoices;
@@ -66,29 +67,16 @@ public class AuditorAuditPublishService extends AbstractService<Auditor, Audit> 
 	public void validate(final Audit object) {
 		assert object != null;
 
-		//		if (!super.getBuffer().getErrors().hasErrors("deadline")) {
-		//			Date minimumDeadline;
-		//
-		//			minimumDeadline = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
-		//			super.state(MomentHelper.isAfter(object.getDeadline(), minimumDeadline), "deadline", "employer.job.form.error.too-close");
-		//		}
-		//
-		//		if (!super.getBuffer().getErrors().hasErrors("reference")) {
-		//			Job existing;
-		//
-		//			existing = this.repository.findOneJobByReference(object.getReference());
-		//			super.state(existing == null || existing.equals(object), "reference", "employer.job.form.error.duplicated");
-		//		}
-		//
-		//		if (!super.getBuffer().getErrors().hasErrors("salary"))
-		//			super.state(object.getSalary().getAmount() > 0, "salary", "employer.job.form.error.negative-salary");
-		//
-		//		{
-		//			Double workLoad;
-		//
-		//			workLoad = this.repository.computeWorkLoadByJobId(object.getId());
-		//			super.state(workLoad != null && workLoad == 100.0, "*", "employer.job.form.error.bad-work-load");
-		//		}
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean conclusionHasSpam = !detector.scanString(super.getRequest().getData("conclusion", String.class));
+		super.state(conclusionHasSpam, "conclusion", "javax.validation.constraints.HasSpam.message");
+
+		final boolean strongPointsHasSpam = !detector.scanString(super.getRequest().getData("strongPoints", String.class));
+		super.state(strongPointsHasSpam, "strongPoints", "javax.validation.constraints.HasSpam.message");
+
+		final boolean weakPointsHasSpam = !detector.scanString(super.getRequest().getData("weakPoints", String.class));
+		super.state(weakPointsHasSpam, "weakPoints", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

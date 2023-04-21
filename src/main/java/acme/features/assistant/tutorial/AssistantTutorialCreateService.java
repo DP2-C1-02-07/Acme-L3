@@ -81,6 +81,8 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		boolean validTime;
 		final SpamDetector detector = new SpamDetector();
 
+		final SpamDetector detector = new SpamDetector();
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
@@ -91,6 +93,7 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 			validTime = object.getEstimatedTotalTime() >= 0.;
 			super.state(validTime, "estimatedTotalTime", "assistant.tutorial.form.error.valid-time");
 		}
+
 		final boolean codehasSpam = !detector.scanString(super.getRequest().getData("code", String.class));
 		super.state(codehasSpam, "code", "javax.validation.constraints.HasSpam.message");
 

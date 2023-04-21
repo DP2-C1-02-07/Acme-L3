@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Audit;
 import acme.entities.Course;
 import acme.framework.components.jsp.SelectChoices;
@@ -60,6 +61,17 @@ public class AuditorAuditCreateService extends AbstractService<Auditor, Audit> {
 	@Override
 	public void validate(final Audit object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean conclusionHasSpam = !detector.scanString(super.getRequest().getData("conclusion", String.class));
+		super.state(conclusionHasSpam, "conclusion", "javax.validation.constraints.HasSpam.message");
+
+		final boolean strongPointsHasSpam = !detector.scanString(super.getRequest().getData("strongPoints", String.class));
+		super.state(strongPointsHasSpam, "strongPoints", "javax.validation.constraints.HasSpam.message");
+
+		final boolean weakPointsHasSpam = !detector.scanString(super.getRequest().getData("weakPoints", String.class));
+		super.state(weakPointsHasSpam, "weakPoints", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

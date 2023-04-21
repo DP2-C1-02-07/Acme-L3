@@ -106,7 +106,6 @@ public class AssistantTutorialPublishService extends AbstractService<Assistant, 
 
 		final boolean goalshasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
 		super.state(goalshasSpam, "goals", "javax.validation.constraints.HasSpam.message");
-
 	}
 
 	@Override

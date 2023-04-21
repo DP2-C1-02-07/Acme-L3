@@ -4,6 +4,7 @@ package acme.features.administrator.offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
@@ -45,12 +46,24 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 	@Override
 	public void validate(final Offer object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
 		final boolean dayAfterInstantiation = object.getAvailabilityStart().getTime() - object.getInstantiationMoment().getTime() >= 86400000;
 		final boolean oneWeek = object.getAvailabilityEnd().getTime() - object.getAvailabilityStart().getTime() >= 604800000;
 		final boolean pricePositive = object.getPrice().getAmount() > 0.0;
 		super.state(dayAfterInstantiation, "*", "administrator.offer.post.day-after-instantiation");
 		super.state(oneWeek, "*", "administrator.offer.post.one-week");
 		super.state(pricePositive, "*", "administrator.offer.post.price-positive");
+
+		final boolean headingHasSpam = !detector.scanString(super.getRequest().getData("heading", String.class));
+		super.state(headingHasSpam, "heading", "javax.validation.constraints.HasSpam.message");
+
+		final boolean summaryHasSpam = !detector.scanString(super.getRequest().getData("summary", String.class));
+		super.state(summaryHasSpam, "summary", "javax.validation.constraints.HasSpam.message");
+
+		final boolean linkHasSpam = !detector.scanString(super.getRequest().getData("link", String.class));
+		super.state(linkHasSpam, "link", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

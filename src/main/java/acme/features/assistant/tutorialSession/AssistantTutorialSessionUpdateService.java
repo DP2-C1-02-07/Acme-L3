@@ -83,6 +83,8 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		actualDate = MomentHelper.getCurrentMoment();
 		final SpamDetector detector = new SpamDetector();
 
+		final SpamDetector detector = new SpamDetector();
+
 		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
 			validStartDate = MomentHelper.isLongEnough(actualDate, object.getStartDate(), 1, ChronoUnit.DAYS);
 			super.state(validStartDate, "startDate", "assistant.tutorial.session.form.error.startDate-before-actualDate");
