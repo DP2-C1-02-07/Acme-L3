@@ -15,6 +15,7 @@ package acme.features.authenticated.provider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
@@ -46,9 +47,9 @@ public class AuthenticatedProviderUpdateService extends AbstractService<Authenti
 
 	@Override
 	public void load() {
-		Provider	object;
-		Principal	principal;
-		int			userAccountId;
+		Provider object;
+		Principal principal;
+		int userAccountId;
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
@@ -67,6 +68,14 @@ public class AuthenticatedProviderUpdateService extends AbstractService<Authenti
 	@Override
 	public void validate(final Provider object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean companyHasSpam = !detector.scanString(super.getRequest().getData("company", String.class));
+		super.state(companyHasSpam, "company", "javax.validation.constraints.HasSpam.message");
+
+		final boolean sectorHasSpam = !detector.scanString(super.getRequest().getData("sector", String.class));
+		super.state(sectorHasSpam, "sector", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

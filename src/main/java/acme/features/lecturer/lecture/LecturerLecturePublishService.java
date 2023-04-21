@@ -4,6 +4,7 @@ package acme.features.lecturer.lecture;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Lecture;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -65,6 +66,20 @@ public class LecturerLecturePublishService extends AbstractService<Lecturer, Lec
 	@Override
 	public void validate(final Lecture object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titleHasSpam, "title", "javax.validation.constraints.HasSpam.message");
+
+		final boolean anAbstractHasSpam = !detector.scanString(super.getRequest().getData("anAbstract", String.class));
+		super.state(anAbstractHasSpam, "anAbstract", "javax.validation.constraints.HasSpam.message");
+
+		final boolean furtherInformationHasSpam = !detector.scanString(super.getRequest().getData("furtherInformation", String.class));
+		super.state(furtherInformationHasSpam, "furtherInformation", "javax.validation.constraints.HasSpam.message");
+
+		final boolean bodyHasSpam = !detector.scanString(super.getRequest().getData("body", String.class));
+		super.state(bodyHasSpam, "body", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

@@ -1,6 +1,8 @@
 
 package acme.entities;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -42,21 +44,32 @@ public class Practicum extends AbstractEntity {
 	@Length(max = 100)
 	protected String			goals;
 
-	@NotNull
-	protected Double			estimatedTime;
-
 	protected boolean			draftMode;
 
+
 	// Derived attributes -----------------------------------------------------
+	public Double estimatedTime(final Collection<Session> sessions) {
+		double estimatedTime = 0.;
+		if (sessions.size() > 0)
+			for (final Session element : sessions) {
+				final long durationInMilliseconds = element.getFinishDate().getTime() - element.getStartDate().getTime();
+				final double durationInHours = durationInMilliseconds / (1000.0 * 60 * 60);
+				estimatedTime = estimatedTime + durationInHours;
+			}
+
+		return estimatedTime;
+
+	}
+
 
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
-	@ManyToOne
-	protected Company			company;
+	@ManyToOne(optional = false)
+	protected Company	company;
 
 	@NotNull
 	@Valid
-	@ManyToOne
-	protected Course			course;
+	@ManyToOne(optional = false)
+	protected Course	course;
 }

@@ -1,8 +1,14 @@
 lecturer.dashboard.form.title.general-indicators = General indicators
 
+lecturer.dashboard.form.info = Time indicators in hours
+
 lecturer.dashboard.form.label.total-number-theory-lectures = Total number of theory lectures
 lecturer.dashboard.form.label.total-number-hands-on-lectures = Total number of hands-on lectures
-lecturer.dashboard.form.label.average-learning-time-lectures = Average learning time of lectures (Hours)
-lecturer.dashboard.form.label.deviation-learning-time-lectures = Deviation learning time of lectures (Hours)
-lecturer.dashboard.form.label.minimum-learning-time-lectures = Minimum learning time of lectures (Hours)
-lecturer.dashboard.form.label.maximum-learning-time-lectures = Maximum learning time of lectures (Hours)
+lecturer.dashboard.form.label.average-learning-time-lectures = Average learning time of lectures
+lecturer.dashboard.form.label.deviation-learning-time-lectures = Deviation learning time of lectures
+lecturer.dashboard.form.label.minimum-learning-time-lectures = Minimum learning time of lectures
+lecturer.dashboard.form.label.maximum-learning-time-lectures = Maximum learning time of lectures
+lecturer.dashboard.form.label.average-learning-time-courses = Average learning time of courses
+lecturer.dashboard.form.label.deviation-learning-time-courses = Deviation learning time of courses
+lecturer.dashboard.form.label.minimum-learning-time-courses = Minimum learning time of courses
+lecturer.dashboard.form.label.maximum-learning-time-courses = Maximum learning time of courses

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.entities.Session;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -59,9 +60,15 @@ public class AuthenticatedPracticaListService extends AbstractService<Authentica
 	public void unbind(final Practicum object) {
 		assert object != null;
 
+		final Collection<Session> sessions;
+
+		sessions = this.repository.findSessionsByPracticumId(object.getId());
+		final Double estimatedTime = object.estimatedTime(sessions);
+
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "estimatedTime");
+		tuple = super.unbind(object, "code", "title", "abstractThing", "goals");
+		tuple.put("estimatedTime", estimatedTime);
 
 		super.getResponse().setData(tuple);
 	}

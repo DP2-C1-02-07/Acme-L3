@@ -1,0 +1,26 @@
+assistant.tutorial.list.label.code = Code
+assistant.tutorial.list.label.title = Title
+assistant.tutorial.list.label.abstractTutorial = Abstract
+assistant.tutorial.list.label.estimatedTotalTime = Estimated time (hours)
+
+assistant.tutorial.list.button.create = Create
+
+assistant.tutorial.form.label.code = Code:
+assistant.tutorial.form.label.title = Title:
+assistant.tutorial.form.label.abstractTutorial = Abstract:
+assistant.tutorial.form.label.goals = Goals:
+assistant.tutorial.form.label.estimatedTotalTime = Estimated time (hours):
+assistant.tutorial.form.label.course = Course:
+
+assistant.tutorial.form.button.update = Update
+assistant.tutorial.form.button.create = Create
+assistant.tutorial.form.button.delete = Delete
+assistant.tutorial.form.button.publish = Publish
+assistant.tutorial.form.button.sessions = Sessions
+
+
+info.text = · Click on any row to see more details of the corresponding tutorial
+
+assistant.tutorial.form.error.duplicated = There is already a tutorial with this code
+assistant.tutorial.form.error.valid-time = Time cannot be negative
+assistant.tutorial.form.error.no-sessions = Cannot publish a tutorial without sessions

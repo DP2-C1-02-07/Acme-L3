@@ -47,6 +47,10 @@ public class Session extends AbstractEntity {
 	@URL
 	protected String			info;
 
+	boolean						draftMode;
+
+	boolean						addendum;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
@@ -55,4 +59,5 @@ public class Session extends AbstractEntity {
 	@Valid
 	@ManyToOne
 	protected Practicum			practicum;
+
 }

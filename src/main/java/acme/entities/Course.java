@@ -1,9 +1,14 @@
 
 package acme.entities;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -13,6 +18,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.enums.CourseType;
+import acme.entities.enums.Type;
 import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Lecturer;
@@ -43,9 +49,6 @@ public class Course extends AbstractEntity {
 	@Length(max = 100)
 	protected String			anAbstract;
 
-	@NotNull
-	protected CourseType		courseType;
-
 	// Custom retailPrice constraint in the validate method of the LecturerCourseCreateService and LecturerCourseUpdateService
 	@NotNull
 	@Valid
@@ -58,11 +61,46 @@ public class Course extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
+
+	@Transient
+	public CourseType courseType(final List<Lecture> lectures) {
+		CourseType result = CourseType.BALANCED;
+
+		if (lectures != null && !lectures.isEmpty()) {
+			final Map<Type, Integer> map = new HashMap<>();
+
+			for (final Lecture l : lectures) {
+				final Type type = l.getType();
+				if (map.containsKey(type))
+					map.put(type, map.get(type) + 1);
+				else
+					map.put(type, 1);
+			}
+
+			if (map.containsKey(Type.HANDS_ON) && map.containsKey(Type.THEORETICAL))
+				if (map.get(Type.HANDS_ON) > map.get(Type.THEORETICAL))
+					result = CourseType.HANDS_ON;
+				else if (map.get(Type.HANDS_ON) < map.get(Type.THEORETICAL))
+					result = CourseType.THEORETICAL;
+				else
+					result = CourseType.BALANCED;
+
+			if (!map.containsKey(Type.HANDS_ON) && map.containsKey(Type.THEORETICAL))
+				result = CourseType.THEORETICAL;
+			if (map.containsKey(Type.HANDS_ON) && !map.containsKey(Type.THEORETICAL))
+				result = CourseType.HANDS_ON;
+
+		}
+
+		return result;
+	}
+
 	// Relationships ----------------------------------------------------------
+
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Lecturer			lecturer;
+	protected Lecturer lecturer;
 
 }

@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Note;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.UserAccount;
@@ -67,6 +68,20 @@ public class AuthenticatedNoteCreateService extends AbstractService<Authenticate
 	@Override
 	public void validate(final Note object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean titlehasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titlehasSpam, "title", "Error: Spam detected// Spam detectado");
+
+		final boolean messagehasSpam = !detector.scanString(super.getRequest().getData("message", String.class));
+		super.state(messagehasSpam, "message", "Error: Spam detected// Spam detectado");
+
+		final boolean emailhasSpam = !detector.scanString(super.getRequest().getData("email", String.class));
+		super.state(emailhasSpam, "email", "Error: Spam detected// Spam detectado");
+
+		final boolean linkhasSpam = !detector.scanString(super.getRequest().getData("link", String.class));
+		super.state(linkhasSpam, "link", "Error: Spam detected// Spam detectado");
 
 		boolean confirmation;
 
