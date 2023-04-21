@@ -25,3 +25,4 @@ info.text = · Pulse en alguna fila para ver más detalles del tutorial correspo
 
 assistant.tutorial.form.error.duplicated = Ya hay un tutorial con este código
 assistant.tutorial.form.error.valid-time = El tiempo no puede ser negativo
+assistant.tutorial.form.error.no-sessions = No puedes publicar un tutorial sin sesiones asociadas
