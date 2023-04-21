@@ -32,7 +32,10 @@ master.menu.authenticated.all-offers = Todas las ofertas
 master.menu.anonymous.list-courses = Ver cursos
 master.menu.authenticated.lits-bulletin = Todos los buletines.
 
-
+# master.menu.student ##################################################
+master.menu.student = Estudiante
+master.menu.user-account.become-student = Vuelvete Estudiante!
+master.menu.user-account.student= Cuenta Estudiante
 # master.menu.administrator ###################################################
 master.menu.administrator.bulletin = Crear un nuevo buletín
 master.menu.administrator = Administrador
