@@ -36,6 +36,8 @@ public class Lecture extends AbstractEntity {
 	@Length(max = 100)
 	protected String			anAbstract;
 
+	// Custom learningTime constraint in the validate method of the LecturerLectureCreateService, LecturerLectureUpdateService,
+	// LecturerLecturePublishService
 	@Digits(integer = 3, fraction = 2)
 	protected double			learningTime;
 

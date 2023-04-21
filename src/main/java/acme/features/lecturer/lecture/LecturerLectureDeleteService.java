@@ -1,9 +1,12 @@
 
 package acme.features.lecturer.lecture;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.CourseLecture;
 import acme.entities.Lecture;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -70,6 +73,10 @@ public class LecturerLectureDeleteService extends AbstractService<Lecturer, Lect
 	@Override
 	public void perform(final Lecture object) {
 		assert object != null;
+
+		Collection<CourseLecture> courseLecture;
+		courseLecture = this.repository.findManyCourseLectureByLectureId(object.getId());
+		this.repository.deleteAll(courseLecture);
 
 		this.repository.delete(object);
 	}

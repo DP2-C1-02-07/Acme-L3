@@ -67,6 +67,9 @@ public class LecturerLectureUpdateService extends AbstractService<Lecturer, Lect
 	public void validate(final Lecture object) {
 		assert object != null;
 
+		if (!super.getBuffer().getErrors().hasErrors("learningTime"))
+			super.state(object.getLearningTime() >= 0.01, "learningTime", "lecturer.lecture.form.error.learning-time");
+
 		final SpamDetector detector = new SpamDetector();
 
 		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));

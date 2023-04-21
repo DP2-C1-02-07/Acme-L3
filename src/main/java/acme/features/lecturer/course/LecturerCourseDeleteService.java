@@ -10,6 +10,10 @@ import acme.entities.Audit;
 import acme.entities.AuditingRecords;
 import acme.entities.Course;
 import acme.entities.CourseLecture;
+import acme.entities.Enrolment;
+import acme.entities.Tutorial;
+import acme.entities.TutorialSession;
+import acme.entities.Workbook;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -80,13 +84,39 @@ public class LecturerCourseDeleteService extends AbstractService<Lecturer, Cours
 		courseLecture = this.repository.findManyCourseLectureByCourseId(object.getId());
 		this.repository.deleteAll(courseLecture);
 
-		Collection<AuditingRecords> auditingRecords;
-		auditingRecords = this.repository.findManyAuditingRecordsByAuditId(object.getId());
-		this.repository.deleteAll(auditingRecords);
-
 		Collection<Audit> audits;
 		audits = this.repository.findManyAuditsByCourseId(object.getId());
+
+		for (final Audit a : audits) {
+			Collection<AuditingRecords> auditingRecords;
+			auditingRecords = this.repository.findManyAuditingRecordsByAuditId(a.getId());
+			this.repository.deleteAll(auditingRecords);
+
+		}
 		this.repository.deleteAll(audits);
+
+		Collection<Tutorial> tutorials;
+		tutorials = this.repository.findManyTutorialsByCourseId(object.getId());
+
+		for (final Tutorial t : tutorials) {
+			Collection<TutorialSession> tutorialSessions;
+			tutorialSessions = this.repository.findManyTutorialSessionsByTutorialId(t.getId());
+			this.repository.deleteAll(tutorialSessions);
+
+		}
+
+		this.repository.deleteAll(tutorials);
+
+		Collection<Enrolment> enrolments;
+		enrolments = this.repository.findManyEnrolmentsByCourseId(object.getId());
+
+		for (final Enrolment e : enrolments) {
+			Collection<Workbook> workbooks;
+			workbooks = this.repository.findManyWorkbooksByEnrolmentId(e.getId());
+			this.repository.deleteAll(workbooks);
+
+		}
+		this.repository.deleteAll(enrolments);
 
 		this.repository.delete(object);
 	}
