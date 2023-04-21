@@ -7,6 +7,7 @@
 	<acme:list-column code="assistant.tutorial.list.label.code" path="code"/>
 	<acme:list-column code="assistant.tutorial.list.label.title" path="title"/>
 	<acme:list-column code="assistant.tutorial.list.label.abstractTutorial" path="abstractTutorial"/>
+	<acme:list-column code="assistant.tutorial.list.label.estimatedTotalTime" path="estimatedTotalTime"/>
 	
 </acme:list>
 <acme:message code="info.text"/>

@@ -30,6 +30,8 @@ master.menu.anonymous.favourite-link.pabmarval = 77924893L: Martínez Valladares
 master.menu.authenticated = Autenticado
 master.menu.authenticated.all-offers = Todas las ofertas
 master.menu.anonymous.list-courses = Ver cursos
+master.menu.authenticated.lits-bulletin = Todos los buletines.
+
 
 # master.menu.administrator ###################################################
 

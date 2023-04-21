@@ -43,7 +43,7 @@ master.menu.administrator.banner-list = Banner List
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-offers = All offers
-
+master.menu.authenticated.lits-bulletin = All bulletins
 
 # master.menu.provider ########################################################
 
