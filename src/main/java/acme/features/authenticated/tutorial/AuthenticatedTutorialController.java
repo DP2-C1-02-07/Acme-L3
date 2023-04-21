@@ -16,10 +16,10 @@ public class AuthenticatedTutorialController extends AbstractController<Authenti
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedTutorialListService listService;
+	protected AuthenticatedTutorialListService	listService;
 
-	//@Autowired
-	//protected AuthenticatedTutorialShowService	showService;
+	@Autowired
+	protected AuthenticatedTutorialShowService	showService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -27,7 +27,7 @@ public class AuthenticatedTutorialController extends AbstractController<Authenti
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
-		//super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("show", this.showService);
 	}
 
 }
