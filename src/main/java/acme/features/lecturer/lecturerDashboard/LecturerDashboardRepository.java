@@ -29,6 +29,6 @@ public interface LecturerDashboardRepository extends AbstractRepository {
 	@Query("select max(l.learningTime) from Lecture l where l.lecturer.id = :lecturerId")
 	Double maximumLearningTimeOfLectures(int lecturerId);
 
-	@Query("select sum(l.learningTime) from Lecture l join CourseLecture cl on l = cl.lecture join Course c on cl.course = c where c.lecturer.id = :lecturerId group by c")
+	@Query("select sum(l.learningTime) from Lecture l left join CourseLecture cl on l = cl.lecture left join Course c on cl.course = c where c.lecturer.id = :lecturerId group by c")
 	List<Double> learningTimeOfCourses(int lecturerId);
 }
