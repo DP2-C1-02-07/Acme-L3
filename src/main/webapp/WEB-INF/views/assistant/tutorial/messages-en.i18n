@@ -23,3 +23,4 @@ info.text = · Click on any row to see more details of the corresponding tutoria
 
 assistant.tutorial.form.error.duplicated = There is already a tutorial with this code
 assistant.tutorial.form.error.valid-time = Time cannot be negative
+assistant.tutorial.form.error.no-sessions = Cannot publish a tutorial without sessions

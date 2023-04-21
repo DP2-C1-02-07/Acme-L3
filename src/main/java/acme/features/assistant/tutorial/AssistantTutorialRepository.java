@@ -39,4 +39,7 @@ public interface AssistantTutorialRepository extends AbstractRepository {
 	@Query("Select c from Course c where c.draftMode = false")
 	Collection<Course> findNotDraftModeCourses();
 
+	@Query("Select ts from TutorialSession ts where ts.tutorial.id = :tutorialId")
+	Collection<TutorialSession> findManyTutorialSessionByTutorialId(int tutorialId);
+
 }

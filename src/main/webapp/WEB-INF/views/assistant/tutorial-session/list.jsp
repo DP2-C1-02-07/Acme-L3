@@ -11,4 +11,4 @@
 </acme:list>
 
 
-<acme:button test="${!showCreate}" code="assistant.tutorial.session.list.button.create" action="/assistant/tutorial-session/create?masterId=${masterId}"/>
+<acme:button test="${showCreate}" code="assistant.tutorial.session.list.button.create" action="/assistant/tutorial-session/create?masterId=${masterId}"/>
