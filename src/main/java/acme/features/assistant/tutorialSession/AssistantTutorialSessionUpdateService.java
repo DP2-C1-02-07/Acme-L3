@@ -8,6 +8,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Tutorial;
 import acme.entities.TutorialSession;
 import acme.entities.enums.TutorialSessionType;
@@ -81,6 +82,8 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		final boolean maxDuration;
 		actualDate = MomentHelper.getCurrentMoment();
 
+		final SpamDetector detector = new SpamDetector();
+
 		if (!super.getBuffer().getErrors().hasErrors("startDate")) {
 			validStartDate = MomentHelper.isLongEnough(actualDate, object.getStartDate(), 1, ChronoUnit.DAYS);
 			super.state(validStartDate, "startDate", "assistant.tutorial.session.form.error.startDate-before-actualDate");
@@ -97,6 +100,15 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			validStartDate = MomentHelper.isAfter(object.getFinishDate(), object.getStartDate());
 			super.state(validStartDate, "finishDate", "assistant.tutorial.session.form.error.finishDate-before-startDate");
 		}
+
+		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titleHasSpam, "title", "javax.validation.constraints.HasSpam.message");
+
+		final boolean abstractSessionHasSpam = !detector.scanString(super.getRequest().getData("abstractSession", String.class));
+		super.state(abstractSessionHasSpam, "abstractSession", "javax.validation.constraints.HasSpam.message");
+
+		final boolean goalsHasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
+		super.state(goalsHasSpam, "goals", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

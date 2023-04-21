@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Course;
 import acme.entities.Practicum;
 import acme.entities.Session;
@@ -80,6 +81,16 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 	public void validate(final Practicum object) {
 		assert object != null;
 
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titleHasSpam, "title", "javax.validation.constraints.HasSpam.message");
+
+		final boolean abstractThingHasSpam = !detector.scanString(super.getRequest().getData("abstractThing", String.class));
+		super.state(abstractThingHasSpam, "abstractThing", "javax.validation.constraints.HasSpam.message");
+
+		final boolean goalsHasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
+		super.state(goalsHasSpam, "goals", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

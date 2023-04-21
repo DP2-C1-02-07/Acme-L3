@@ -4,6 +4,7 @@ package acme.features.authenticated.assistant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.accounts.UserAccount;
@@ -59,6 +60,20 @@ public class AuthenticatedAssistantCreateService extends AbstractService<Authent
 	@Override
 	public void validate(final Assistant object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean supervisorHasSpam = !detector.scanString(super.getRequest().getData("supervisor", String.class));
+		super.state(supervisorHasSpam, "supervisor", "javax.validation.constraints.HasSpam.message");
+
+		final boolean expertiseFieldsHasSpam = !detector.scanString(super.getRequest().getData("expertiseFields", String.class));
+		super.state(expertiseFieldsHasSpam, "expertiseFields", "javax.validation.constraints.HasSpam.message");
+
+		final boolean resumeHasSpam = !detector.scanString(super.getRequest().getData("resume", String.class));
+		super.state(resumeHasSpam, "resume", "javax.validation.constraints.HasSpam.message");
+
+		final boolean linkHasSpam = !detector.scanString(super.getRequest().getData("link", String.class));
+		super.state(linkHasSpam, "link", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override
