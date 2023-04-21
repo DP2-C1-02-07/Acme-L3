@@ -79,7 +79,6 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 	public void validate(final Tutorial object) {
 		assert object != null;
 		boolean validTime;
-		final SpamDetector detector = new SpamDetector();
 
 		final SpamDetector detector = new SpamDetector();
 
