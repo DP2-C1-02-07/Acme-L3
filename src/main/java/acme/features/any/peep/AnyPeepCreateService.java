@@ -1,8 +1,7 @@
 
 package acme.features.any.peep;
 
-import java.sql.Date;
-import java.time.LocalDate;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +9,10 @@ import org.springframework.stereotype.Service;
 import acme.components.SpamDetector;
 import acme.entities.Peep;
 import acme.framework.components.accounts.Any;
+import acme.framework.components.accounts.Principal;
+import acme.framework.components.accounts.UserAccount;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
 
 @Service
@@ -39,10 +41,23 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 
 	@Override
 	public void load() {
-		Peep object ;
-		 object= new Peep();
+		final Peep object = new Peep();
+		Principal principal;
+		final int userAccountId;
+		final UserAccount userAccount;
+		Date moment;
+
+		moment = MomentHelper.getCurrentMoment();
+		principal = super.getRequest().getPrincipal();
+		//userAccountId = principal.getAccountId();
+	//	userAccount = this.repository.findOneUserAccountById(userAccountId);
 		 assert object != null;
-		 object.setInstantiationMoment(Date.valueOf(LocalDate.now().minusYears(1)));
+
+			object.setInstantiationMoment(moment);
+			object.setTitle("");
+			object.setMessage("");
+			object.setEmail("");
+			object.setLink("");
 		 boolean status;
 			status = super.getRequest().getPrincipal().isAnonymous();
 		 if(status) {

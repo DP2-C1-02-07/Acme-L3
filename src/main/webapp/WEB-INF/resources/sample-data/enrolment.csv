@@ -1,4 +1,4 @@
-key,code,motivation,goals,workTime,key:student
-enrolment-01,XYZ1000,a,a,4.6,student-01
-enrolment-02,XYZ1001,a,a,4.6,student-02
-enrolment-03,XYZ1002,a,a,4.6,student-01
+key,code,motivation,goals,workTime,key:student,key:course
+enrolment-01,XYZ1000,a,a,4.6,student-01,course-01
+enrolment-02,XYZ1001,a,a,4.6,student-02,course-03
+enrolment-03,XYZ1002,a,a,4.6,student-01,course-02
