@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.Course;
 import acme.entities.Tutorial;
 import acme.framework.components.jsp.SelectChoices;
@@ -79,6 +80,8 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 		assert object != null;
 		boolean validTime;
 
+		final SpamDetector detector = new SpamDetector();
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
@@ -89,6 +92,15 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 			validTime = object.getEstimatedTotalTime() >= 0.;
 			super.state(validTime, "estimatedTotalTime", "assistant.tutorial.form.error.valid-time");
 		}
+
+		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titleHasSpam, "title", "javax.validation.constraints.HasSpam.message");
+
+		final boolean abstractTutorialHasSpam = !detector.scanString(super.getRequest().getData("abstractTutorial", String.class));
+		super.state(abstractTutorialHasSpam, "abstractTutorial", "javax.validation.constraints.HasSpam.message");
+
+		final boolean goalsHasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
+		super.state(goalsHasSpam, "goals", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

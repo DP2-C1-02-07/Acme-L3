@@ -4,6 +4,7 @@ package acme.features.authenticated.lecturer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.models.Tuple;
@@ -56,6 +57,20 @@ public class AuthenticatedLecturerUpdateService extends AbstractService<Authenti
 	@Override
 	public void validate(final Lecturer object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean almaMaterHasSpam = !detector.scanString(super.getRequest().getData("almaMater", String.class));
+		super.state(almaMaterHasSpam, "almaMater", "javax.validation.constraints.HasSpam.message");
+
+		final boolean resumeHasSpam = !detector.scanString(super.getRequest().getData("resume", String.class));
+		super.state(resumeHasSpam, "resume", "javax.validation.constraints.HasSpam.message");
+
+		final boolean qualificationsHasSpam = !detector.scanString(super.getRequest().getData("qualifications", String.class));
+		super.state(qualificationsHasSpam, "qualifications", "javax.validation.constraints.HasSpam.message");
+
+		final boolean furtherInformationHasSpam = !detector.scanString(super.getRequest().getData("furtherInformation", String.class));
+		super.state(furtherInformationHasSpam, "furtherInformation", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override
