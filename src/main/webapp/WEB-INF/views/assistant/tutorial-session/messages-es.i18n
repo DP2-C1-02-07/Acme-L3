@@ -17,6 +17,9 @@ assistant.tutorial.session.form.button.create = Crear
 assistant.tutorial.session.form.button.delete = Borrar
 assistant.tutorial.session.form.button.publish = Publicar
 
-info.text = · Pulse en alguna fila para ver más detalles del tutorial correspondiente
+info.text = · Pulse en alguna fila para ver más detalles de la Sesión correspondiente
 
-assistant.tutorial.form.error.duplicated = Ya hay un tutorial con este código
+assistant.tutorial.session.form.error.startDate-before-actualDate = La sesión debe comenzar al menos un día después al de hoy
+assistant.tutorial.session.form.error.durationMin = La sesión debe durar al menos una hora
+assistant.tutorial.session.form.error.durationMax = La sesión debe durar menos de cinco horas
+assistant.tutorial.session.form.error.finishDate-before-startDate = La fecha final debe ser posterior a la fecha inicial

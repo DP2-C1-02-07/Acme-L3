@@ -1,6 +1,7 @@
 assistant.tutorial.list.label.code = Código
 assistant.tutorial.list.label.title = Título
 assistant.tutorial.list.label.astractTutorial = Ejemplo
+assistant.tutorial.list.label.estimatedTotalTime = Tiempo total estimado (horas)
 
 assistant.tutorial.list.button.create = Crear
 
@@ -8,7 +9,7 @@ assistant.tutorial.form.label.code = Código:
 assistant.tutorial.form.label.title = Título:
 assistant.tutorial.form.label.abstractTutorial = Resumen:
 assistant.tutorial.form.label.goals = Metas:
-assistant.tutorial.form.label.estimatedTotalTime = Tiempo total estimado
+assistant.tutorial.form.label.estimatedTotalTime = Tiempo total estimado (horas):
 assistant.tutorial.form.label.course = Curso:
 
 
@@ -22,3 +23,4 @@ assistant.tutorial.form.button.sessions = Sesiones
 info.text = · Pulse en alguna fila para ver más detalles del tutorial correspondiente
 
 assistant.tutorial.form.error.duplicated = Ya hay un tutorial con este código
+assistant.tutorial.form.error.valid-time = El tiempo no puede ser negativo

@@ -77,12 +77,17 @@ public class AssistantTutorialCreateService extends AbstractService<Assistant, T
 	@Override
 	public void validate(final Tutorial object) {
 		assert object != null;
+		boolean validTime;
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
 			existing = this.repository.findOneTutorialByCode(object.getCode());
 			super.state(existing == null, "code", "assistant.tutorial.form.error.duplicated");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("estimatedTotalTime")) {
+			validTime = object.getEstimatedTotalTime() >= 0.;
+			super.state(validTime, "estimatedTotalTime", "assistant.tutorial.form.error.valid-time");
 		}
 	}
 

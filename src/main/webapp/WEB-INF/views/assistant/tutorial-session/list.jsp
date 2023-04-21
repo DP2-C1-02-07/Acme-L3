@@ -8,9 +8,7 @@
 	<acme:list-column code="assistant.tutorial.session.list.label.type" path="sessionType"/>
 	<acme:list-column code="assistant.tutorial.session.list.label.startDate" path="startDate"/>
 	<acme:list-column code="assistant.tutorial.session.list.label.finishDate" path="finishDate"/>
-	
 </acme:list>
-<acme:message code="info.text"/>
 
-<br><br>
-<acme:button test="{showCreate}" code="assistant.tutorial.session.list.button.create" action="/assistant/tutorial-session/create?masterId=${masterId}"/>
+
+<acme:button test="${!showCreate}" code="assistant.tutorial.session.list.button.create" action="/assistant/tutorial-session/create?masterId=${masterId}"/>
