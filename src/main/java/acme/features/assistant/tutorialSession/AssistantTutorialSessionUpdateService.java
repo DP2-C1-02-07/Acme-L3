@@ -81,7 +81,6 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		boolean minDuration;
 		final boolean maxDuration;
 		actualDate = MomentHelper.getCurrentMoment();
-		final SpamDetector detector = new SpamDetector();
 
 		final SpamDetector detector = new SpamDetector();
 
