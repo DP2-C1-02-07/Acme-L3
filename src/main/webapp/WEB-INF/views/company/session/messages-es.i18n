@@ -1,0 +1,29 @@
+company.session.list.label.title = Título
+company.session.list.label.startDate = Fecha de inicio
+company.session.list.label.finishDate = Fecha de fin
+
+
+company.practicum.list.button.create = Crear una sesión ordinaria
+company.session.list.button.create.addendum = Crear una sesión de anexo
+
+company.session.form.label.title = Título
+company.session.form.label.abstractThing = Resumen
+company.session.form.label.startDate = Fecha de inicio
+company.session.form.label.finishDate = Fecha de fin
+company.session.form.label.info = Más información
+company.session.form.label.practicum = Práctica
+
+company.session.form.button.update = Actualizar
+company.session.form.button.delete = Eliminar
+company.session.form.button.publish = Publicar
+company.session.form.button.create = Crear
+
+company.session.form.message.addendum = ¡¡IMPORTANTE!! ESTO ES UNA SESIÓN DE ANEXO
+company.session.form.label.confirmation = Confirmación
+
+company.session.validation.startDate.error.WeekAhead = Error: La Fecha de Inicio debe comenzar al menos una semana después del momento actual
+company.session.validation.finishDate.error.WeekLong = Error: La Fecha de Fin debe establecerse al menos una semana después de la Fecha de Inicio
+company.session.validation.spam = Error: Spam detectado en este campo
+company.session.validation.practicum.error.Published = Error: Esta práctica ya ha sido publicada
+company.session.validation.confirmation = Error: Debe confirmar la entrega
+company.session.validation.practicum.error.AddendumAlreadyExists = Error: Sólo una sesión de anexo permitida por práctica

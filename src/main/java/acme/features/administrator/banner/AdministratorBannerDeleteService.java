@@ -17,7 +17,7 @@ public class AdministratorBannerDeleteService extends AbstractService<Administra
 	@Autowired
 	protected AdministratorBannerRepository repository;
 
-	// AbstractService<Employer, Company> -------------------------------------
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override

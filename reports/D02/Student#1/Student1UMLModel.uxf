@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>315</x>
-      <y>70</y>
+      <y>161</y>
       <w>231</w>
       <h>84</h>
     </coordinates>
@@ -24,7 +24,7 @@ Lecturer
     <id>UMLClass</id>
     <coordinates>
       <x>511</x>
-      <y>287</y>
+      <y>378</y>
       <w>210</w>
       <h>112</h>
     </coordinates>
@@ -46,7 +46,7 @@ Lecture
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>287</y>
+      <y>378</y>
       <w>280</w>
       <h>112</h>
     </coordinates>
@@ -57,10 +57,10 @@ Course
 + code: String {Pattern([A-Z]{1,3}[0-9]{3}), NotBlank, Unique}
 + title: String {NotBlank, Length(1, 75)}
 + anAbstract: String {NotBlank, Length(1, 100)}
-+ courseType: CourseType
 + retailPrice: Money
 + furtherInformation: String {URL}
 + draftMode: boolean
++ / courseType: CourseType {Transient}
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -68,7 +68,7 @@ Course
     <id>UMLClass</id>
     <coordinates>
       <x>7</x>
-      <y>70</y>
+      <y>161</y>
       <w>133</w>
       <h>70</h>
     </coordinates>
@@ -86,7 +86,7 @@ CourseType
     <id>Relation</id>
     <coordinates>
       <x>133</x>
-      <y>147</y>
+      <y>238</y>
       <w>259</w>
       <h>154</h>
     </coordinates>
@@ -99,7 +99,7 @@ m2=1..*</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>483</x>
-      <y>147</y>
+      <y>238</y>
       <w>168</w>
       <h>154</h>
     </coordinates>
@@ -113,7 +113,7 @@ m2=1..*
     <id>UMLNote</id>
     <coordinates>
       <x>7</x>
-      <y>203</y>
+      <y>294</y>
       <w>98</w>
       <h>35</h>
     </coordinates>
@@ -126,7 +126,7 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>49</x>
-      <y>231</y>
+      <y>322</y>
       <w>21</w>
       <h>70</h>
     </coordinates>
@@ -137,7 +137,7 @@ bg=green</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>0</x>
-      <y>441</y>
+      <y>532</y>
       <w>119</w>
       <h>49</h>
     </coordinates>
@@ -151,7 +151,7 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>49</x>
-      <y>392</y>
+      <y>483</y>
       <w>21</w>
       <h>63</h>
     </coordinates>
@@ -162,9 +162,9 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>644</x>
-      <y>63</y>
-      <w>210</w>
-      <h>147</h>
+      <y>154</y>
+      <w>280</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Form&gt;&gt;
@@ -180,6 +180,10 @@ LecturerDashboard
 + deviationLearningTimeOfCourses: Double
 + minimumLearningTimeOfCourses: Double
 + maximumLearningTimeOfCourses: Double
++ / averageLearningTimeOfCoursesCalc: Double {Transient}
++ / deviationLearningTimeOfCoursesCalc: Double {Transient}
++ / minimumLearningTimeOfCoursesCalc: Double {Transient}
++ / maximumLearningTimeOfCoursesCalc: Double {Transient}
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -187,7 +191,7 @@ LecturerDashboard
     <id>UMLClass</id>
     <coordinates>
       <x>350</x>
-      <y>329</y>
+      <y>420</y>
       <w>91</w>
       <h>35</h>
     </coordinates>
@@ -201,7 +205,7 @@ CourseLecture
     <id>Relation</id>
     <coordinates>
       <x>434</x>
-      <y>336</y>
+      <y>427</y>
       <w>91</w>
       <h>28</h>
     </coordinates>
@@ -214,7 +218,7 @@ m2=1..*</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>273</x>
-      <y>336</y>
+      <y>427</y>
       <w>91</w>
       <h>28</h>
     </coordinates>
@@ -227,7 +231,7 @@ m2=1..*</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>161</x>
-      <y>70</y>
+      <y>161</y>
       <w>133</w>
       <h>63</h>
     </coordinates>
@@ -239,5 +243,59 @@ Type
 + HANDS_ON
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>735</x>
+      <y>378</y>
+      <w>189</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>all transient attributes are calculated by 
+performing the corresponding algorithm 
+taking as input the list of course times
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>336</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>140</x>
+      <y>532</y>
+      <w>133</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>courseType
+taking the list of lectures as 
+input, it is compared which 
+type of lectures predominate 
+or if it is the same amount, 
+or if one type is contained 
+and not the other
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>483</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>

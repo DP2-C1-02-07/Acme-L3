@@ -4,6 +4,7 @@ package acme.features.authenticated.company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.accounts.Principal;
 import acme.framework.components.accounts.UserAccount;
@@ -64,6 +65,20 @@ public class AuthenticatedCompanyCreateService extends AbstractService<Authentic
 	@Override
 	public void validate(final Company object) {
 		assert object != null;
+
+		final SpamDetector detector = new SpamDetector();
+
+		final boolean nameHasSpam = !detector.scanString(super.getRequest().getData("name", String.class));
+		super.state(nameHasSpam, "name", "javax.validation.constraints.HasSpam.message");
+
+		final boolean vatHasSpam = !detector.scanString(super.getRequest().getData("vat", String.class));
+		super.state(vatHasSpam, "vat", "javax.validation.constraints.HasSpam.message");
+
+		final boolean summaryHasSpam = !detector.scanString(super.getRequest().getData("summary", String.class));
+		super.state(summaryHasSpam, "summary", "javax.validation.constraints.HasSpam.message");
+
+		final boolean infoHasSpam = !detector.scanString(super.getRequest().getData("info", String.class));
+		super.state(infoHasSpam, "info", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

@@ -12,6 +12,8 @@ lecturer.course.form.label.retailPrice = Precio de venta al por menor:
 lecturer.course.form.label.furtherInformation = Más información: (Opcional)
 
 lecturer.course.form.button.lectures = Lecciones
+lecturer.course.courseLecture.form.button.create = Añadir lecciones al curso
+lecturer.course.courseLecture.form.button.delete = Borrar lecciones del curso
 lecturer.course.form.button.update = Actualizar
 lecturer.course.form.button.delete = Borrar
 lecturer.course.form.button.create = Crear

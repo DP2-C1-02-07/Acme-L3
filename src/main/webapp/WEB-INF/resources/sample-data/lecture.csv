@@ -1,12 +1,16 @@
 key,title,an-abstract,learning-time,body,type,further-information,draft-mode,key:lecturer
-lecture-01,Data types in programming,Important lecture,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,http://lectureinfo.com,false,lecturer-01
-lecture-02,d,Important lecture,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,http://lectureinfo.com,false,lecturer-02
-lecture-03,Data types in programmingssssssssssssssssssssssssssssssssssssssssssssssssss,Important lecture,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,http://lectureinfo.com,true,lecturer-03
-lecture-04,Data types in programming,Important lecture,12.25,We will see the basic data types in programming in Java and C,THEORETICAL,http://lectureinfo.com,true,lecturer-04
-lecture-05,Data types in programming,Important lecture,2.50,w,THEORETICAL,http://lectureinfo.com,false,lecturer-05
-lecture-06,Data types in programming,Important lecture,2.50,We will see the basic data types in programming in Java and Csssssssssssssssssssssssssssssssssssssss,THEORETICAL,http://lectureinfo.com,true,lecturer-06
+lecture-01,Data types in programming t1,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,false,lecturer-01
+lecture-02,d,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,false,lecturer-02
+lecture-03,Data types in programmingssssssssssssssssssssssssssssssssssssssssssssssssss,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,true,lecturer-03
+lecture-04,Data types in programming,Important lecture,12.25,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,true,lecturer-04
+lecture-05,Data types in programming,Important lecture,2.50,w,HANDS_ON,http://lectureinfo.com,false,lecturer-05
+lecture-06,Data types in programming,Important lecture,2.50,We will see the basic data types in programming in Java and Csssssssssssssssssssssssssssssssssssssss,HANDS_ON,http://lectureinfo.com,true,lecturer-06
 lecture-07,Data types in programming,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,true,lecturer-07
-lecture-08,Data types in programming,Important lecture,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,https://lectureinformation.com,false,lecturer-01
-lecture-09,Data types in programming,Important lecture,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,null,false,lecturer-01
-lecture-10,Data types in programming,i,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,http://lectureinfo.com,false,lecturer-01
-lecture-11,Data types in programming,Important lecturesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,http://lectureinfo.com,false,lecturer-01
+lecture-08,Data types in programming t2,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,https://lectureinformation.com,false,lecturer-01
+lecture-09,Data types in programming t3,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,null,false,lecturer-01
+lecture-10,Data types in programming t4,i,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,false,lecturer-01
+lecture-11,Data types in programming t5,Important lecturesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss,8.00,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com,false,lecturer-01
+lecture-12,Use of stream,Important lecture,0.01,We will see everything related to stream in java,THEORETICAL,http://lectureinfo.com,false,lecturer-01
+lecture-13,用谷歌云部署应用程序,重要的教训,2.50,Мы увидим все о развертывании приложений,THEORETICAL,http://lectureinfo.com,false,lecturer-02
+lecture-14,用先进的谷歌云部署应用程序,重要的教训,2.50,Мы увидим все о развертывании приложений,THEORETICAL,http://lectureinfo.com,false,lecturer-02
+lecture-15,用先进的谷歌云部署应用程序,重要的教训,2.50,Увидим практику по развертыванию приложений,HANDS_ON,http://lectureinfo.com,false,lecturer-02

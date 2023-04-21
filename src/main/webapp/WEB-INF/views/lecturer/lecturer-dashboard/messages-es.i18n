@@ -1,8 +1,14 @@
 lecturer.dashboard.form.title.general-indicators = Indicadores generales
 
+lecturer.dashboard.form.info = Indicadores de tiempo en horas
+
 lecturer.dashboard.form.label.total-number-theory-lectures = Número total de lecciones teóricas
 lecturer.dashboard.form.label.total-number-hands-on-lectures = Número total de lecciones prácticas
-lecturer.dashboard.form.label.average-learning-time-lectures = Tiempo medio de aprendizaje de las lecciones (Horas)
-lecturer.dashboard.form.label.deviation-learning-time-lectures = Desviación del tiempo de aprendizaje de las lecciones (Horas)
-lecturer.dashboard.form.label.minimum-learning-time-lectures = Tiempo mínimo de aprendizaje de las lecciones (Horas)
-lecturer.dashboard.form.label.maximum-learning-time-lectures = Tiempo máximo de aprendizaje de las lecciones (Horas)
+lecturer.dashboard.form.label.average-learning-time-lectures = Tiempo medio de aprendizaje de las lecciones
+lecturer.dashboard.form.label.deviation-learning-time-lectures = Desviación del tiempo de aprendizaje de las lecciones
+lecturer.dashboard.form.label.minimum-learning-time-lectures = Tiempo mínimo de aprendizaje de las lecciones
+lecturer.dashboard.form.label.maximum-learning-time-lectures = Tiempo máximo de aprendizaje de las lecciones
+lecturer.dashboard.form.label.average-learning-time-courses = Tiempo medio de aprendizaje de los cursos
+lecturer.dashboard.form.label.deviation-learning-time-courses = Desviación del tiempo de aprendizaje de los cursos
+lecturer.dashboard.form.label.minimum-learning-time-courses = Tiempo mínimo de aprendizaje de los cursos
+lecturer.dashboard.form.label.maximum-learning-time-courses = Tiempo máximo de aprendizaje de los cursos

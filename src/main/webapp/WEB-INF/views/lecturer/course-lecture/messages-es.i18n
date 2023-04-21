@@ -1,0 +1,5 @@
+lecturer.courseLecture.form.label.course.code = Código del curso
+lecturer.courseLecture.form.label.lecture.create = Lecciones a añadir
+lecturer.courseLecture.form.label.lecture.delete = Lecciones a eliminar
+lecturer.courseLecture.form.button.create = Añadir lección
+lecturer.courseLecture.form.button.delete = Borrar lección
