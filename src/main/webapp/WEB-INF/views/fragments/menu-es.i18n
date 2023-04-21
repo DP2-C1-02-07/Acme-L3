@@ -34,7 +34,7 @@ master.menu.authenticated.lits-bulletin = Todos los buletines.
 
 
 # master.menu.administrator ###################################################
-
+master.menu.administrator.bulletin = Crear un nuevo buletín
 master.menu.administrator = Administrador
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
@@ -61,10 +61,22 @@ master.menu.lecturer.my-courses = Ver mis cursos
 master.menu.lecturer.my-lectures = Ver mis lecciones
 master.menu.lecturer.dashboard = Panel de indicadores
 
+
+# master.menu.company ###########################################################
+
+master.menu.company = Compañía
+master.menu.company.practicum = Ver mis prácticas
+
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = Mis auditorías
+
+
+# master.menu.assistant ##########################################################
+
+master.menu.assistant = Asistente
+master.menu.assistant.my-tutorial = Mis tutoriales
 
 # master.menu.user-account ####################################################
 

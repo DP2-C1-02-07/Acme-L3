@@ -37,6 +37,7 @@ master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.all-offers = All offers
 master.menu.administrator.banner-list = Banner List
+master.menu.administrator.bulletin = Create a new bulletin
 
 
 # master.menu.authenticated ##################################################
@@ -44,7 +45,6 @@ master.menu.administrator.banner-list = Banner List
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-offers = All offers
 master.menu.authenticated.lits-bulletin = All bulletins
-
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
@@ -62,10 +62,22 @@ master.menu.lecturer.my-courses = List my courses
 master.menu.lecturer.my-lectures = List my lectures
 master.menu.lecturer.dashboard = Dashboard
 
+
+# master.menu.company ###########################################################
+
+master.menu.company = Company
+master.menu.company.practicum = List my practica
+
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = My audits
+
+
+# master.menu.assistant ##########################################################
+
+master.menu.assistant = Assistant
+master.menu.assistant.my-tutorial = My tutorials
 
 # master.menu.user-account ####################################################
 
