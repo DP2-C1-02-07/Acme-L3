@@ -1,7 +1,8 @@
 assistant.tutorial.list.label.code = Código
 assistant.tutorial.list.label.title = Título
-assistant.tutorial.list.label.astractTutorial = Ejemplo
+assistant.tutorial.list.label.astractTutorial = Resumen
 assistant.tutorial.list.label.estimatedTotalTime = Tiempo total estimado (horas)
+
 
 assistant.tutorial.list.button.create = Crear
 

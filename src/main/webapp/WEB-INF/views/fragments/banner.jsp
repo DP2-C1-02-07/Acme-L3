@@ -25,7 +25,6 @@
 		top: 12%;
 		left: 10;
 		transform: translateY(-50%);
-		display: block;
 		padding: 10px;
 	}
 	

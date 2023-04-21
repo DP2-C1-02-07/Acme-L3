@@ -77,6 +77,7 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 		assert object != null;
 		boolean validTime;
 
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
