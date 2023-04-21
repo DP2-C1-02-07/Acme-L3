@@ -31,6 +31,7 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.all-offers = Todas las ofertas
 master.menu.anonymous.list-courses = Ver cursos
 master.menu.authenticated.lits-bulletin = Todos los buletines.
+master.menu.authenticated.tutorials = Todos los tutoriales
 
 # master.menu.student ##################################################
 master.menu.student = Estudiante

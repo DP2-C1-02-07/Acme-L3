@@ -1,0 +1,19 @@
+authenticated.tutorial.list.label.code = Código
+authenticated.tutorial.list.label.title = Título
+authenticated.tutorial.list.label.abstractTutorial = Resumen
+authenticated.tutorial.list.label.goals = Metas
+authenticated.tutorial.list.label.estimatedTotalTime = Tiempo estimado (en horas)
+authenticated.tutorial.list.label.title-course = Curso
+
+authenticated.tutorial.form.label.code = Código:
+authenticated.tutorial.form.label.title = Título:
+authenticated.tutorial.form.label.title-course = Curso al que pertenece:
+authenticated.tutorial.form.label.assistant-supervisor = Supervisor:
+authenticated.tutorial.form.label.assistant-fields = Campos especializados:
+authenticated.tutorial.form.label.abstractTutorial = Resumen:
+authenticated.tutorial.form.label.assistant-resume = Currículum:
+authenticated.tutorial.form.label.assistant-info = Información adicional:
+
+authenticated.tutorial.form.label.goals = Metas:
+authenticated.tutorial.form.label.estimatedTotalTime = Tiempo estimado (en horas):
+authenticated.tutorial.form.label.assistant = Datos del Asistente
