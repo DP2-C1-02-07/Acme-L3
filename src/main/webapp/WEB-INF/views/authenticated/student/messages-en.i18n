@@ -1,0 +1,8 @@
+authenticated.lecturer.form.label.link = Link
+
+authenticated.lecturer.form.label.statement= Statement
+authenticated.lecturer.form.label.weakFeatures=  Weak Features
+authenticated.lecturer.form.label.strongFeatures= Strong Features
+
+authenticated.lecturer.form.button.create = Register
+authenticated.lecturer.form.button.update = Update
