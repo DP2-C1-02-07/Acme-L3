@@ -77,30 +77,26 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 	public void validate(final Tutorial object) {
 		assert object != null;
 		boolean validTime;
-
 		final SpamDetector detector = new SpamDetector();
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Tutorial existing;
 
 			existing = this.repository.findOneTutorialByCode(object.getCode());
-			super.state(existing == null || existing.getCode().equals(object.getCode()) && existing.getId() == object.getId(), "code", "assistant.tutorial.form.error.duplicated");
+			super.state(existing == null, "code", "assistant.tutorial.form.error.duplicated");
 		}
-
 		if (!super.getBuffer().getErrors().hasErrors("estimatedTotalTime")) {
 			validTime = object.getEstimatedTotalTime() >= 0.;
 			super.state(validTime, "estimatedTotalTime", "assistant.tutorial.form.error.valid-time");
-
 		}
+		final boolean codehasSpam = !detector.scanString(super.getRequest().getData("code", String.class));
+		super.state(codehasSpam, "code", "javax.validation.constraints.HasSpam.message");
 
-		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
-		super.state(titleHasSpam, "title", "javax.validation.constraints.HasSpam.message");
+		final boolean abstractTutorialhasSpam = !detector.scanString(super.getRequest().getData("abstractTutorial", String.class));
+		super.state(abstractTutorialhasSpam, "abstractTutorial", "javax.validation.constraints.HasSpam.message");
 
-		final boolean abstractTutorialHasSpam = !detector.scanString(super.getRequest().getData("abstractTutorial", String.class));
-		super.state(abstractTutorialHasSpam, "abstractTutorial", "javax.validation.constraints.HasSpam.message");
-
-		final boolean goalsHasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
-		super.state(goalsHasSpam, "goals", "javax.validation.constraints.HasSpam.message");
+		final boolean goalshasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
+		super.state(goalshasSpam, "goals", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

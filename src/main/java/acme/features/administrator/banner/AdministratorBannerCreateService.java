@@ -90,8 +90,8 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 		final boolean documentLinkhasSpam = !detector.scanString(super.getRequest().getData("documentLink", String.class));
 		super.state(documentLinkhasSpam, "documentLink", "javax.validation.constraints.HasSpam.message");
 
-		final boolean slogan = !detector.scanString(super.getRequest().getData("slogan", String.class));
-		super.state(slogan, "slogan", "javax.validation.constraints.HasSpam.message");
+		final boolean sloganhasSpam = !detector.scanString(super.getRequest().getData("slogan", String.class));
+		super.state(sloganhasSpam, "slogan", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override

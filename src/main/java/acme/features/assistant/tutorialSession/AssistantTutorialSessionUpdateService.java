@@ -81,6 +81,7 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		boolean minDuration;
 		final boolean maxDuration;
 		actualDate = MomentHelper.getCurrentMoment();
+		final SpamDetector detector = new SpamDetector();
 
 		final SpamDetector detector = new SpamDetector();
 
@@ -101,14 +102,11 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 			super.state(validStartDate, "finishDate", "assistant.tutorial.session.form.error.finishDate-before-startDate");
 		}
 
-		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
-		super.state(titleHasSpam, "title", "javax.validation.constraints.HasSpam.message");
+		final boolean titlehasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titlehasSpam, "title", "javax.validation.constraints.HasSpam.message");
 
-		final boolean abstractSessionHasSpam = !detector.scanString(super.getRequest().getData("abstractSession", String.class));
-		super.state(abstractSessionHasSpam, "abstractSession", "javax.validation.constraints.HasSpam.message");
-
-		final boolean goalsHasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
-		super.state(goalsHasSpam, "goals", "javax.validation.constraints.HasSpam.message");
+		final boolean abstractSessionhasSpam = !detector.scanString(super.getRequest().getData("abstractSession", String.class));
+		super.state(abstractSessionhasSpam, "abstractSession", "javax.validation.constraints.HasSpam.message");
 	}
 
 	@Override
@@ -118,13 +116,18 @@ public class AssistantTutorialSessionUpdateService extends AbstractService<Assis
 		Tutorial tutorial;
 		double totalHours;
 		double sessionHours;
+		double validFormatSessionHours;
 		Duration sessionDuration;
+		String formattedSessionHours;
 
 		tutorial = object.getTutorial();
 		totalHours = 0.;
 		sessionDuration = MomentHelper.computeDuration(object.getStartDate(), object.getFinishDate());
 		sessionHours = sessionDuration.getSeconds() / 3600.;
-		totalHours = sessionHours + tutorial.getEstimatedTotalTime();
+		formattedSessionHours = String.format("%.2f", sessionHours);
+		validFormatSessionHours = Double.parseDouble(formattedSessionHours);
+
+		totalHours = validFormatSessionHours + tutorial.getEstimatedTotalTime();
 
 		tutorial.setEstimatedTotalTime(totalHours);
 

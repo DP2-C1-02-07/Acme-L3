@@ -84,13 +84,18 @@ public class AssistantTutorialSessionDeleteService extends AbstractService<Assis
 		Tutorial tutorial;
 		double totalHours;
 		double sessionHours;
+		double validFormatSessionHours;
 		Duration sessionDuration;
+		String formattedSessionHours;
 
 		tutorial = object.getTutorial();
 		totalHours = 0.;
 		sessionDuration = MomentHelper.computeDuration(object.getStartDate(), object.getFinishDate());
 		sessionHours = sessionDuration.getSeconds() / 3600.;
-		totalHours = tutorial.getEstimatedTotalTime() - sessionHours;
+		formattedSessionHours = String.format("%.2f", sessionHours);
+		validFormatSessionHours = Double.parseDouble(formattedSessionHours);
+
+		totalHours = tutorial.getEstimatedTotalTime() - validFormatSessionHours;
 
 		tutorial.setEstimatedTotalTime(totalHours);
 
