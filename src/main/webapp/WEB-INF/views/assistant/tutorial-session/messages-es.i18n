@@ -1,0 +1,22 @@
+assistant.tutorial.session.list.label.title = Título
+assistant.tutorial.session.list.label.type = Tipo
+assistant.tutorial.session.list.label.startDate = Fecha de comienzo
+assistant.tutorial.session.list.label.finishDate = Fecha de finalización
+
+assistant.tutorial.session.list.button.create = Crear
+
+assistant.tutorial.session.form.label.title = Título:
+assistant.tutorial.session.form.label.abstractSession = Resumen:
+assistant.tutorial.session.form.label.finishDate = Fecha de finalización:
+assistant.tutorial.session.form.label.startDate = Fecha de comienzo:
+assistant.tutorial.session.form.label.type = Tipo:
+
+
+assistant.tutorial.session.form.button.update = Actualizar
+assistant.tutorial.session.form.button.create = Crear
+assistant.tutorial.session.form.button.delete = Borrar
+assistant.tutorial.session.form.button.publish = Publicar
+
+info.text = · Pulse en alguna fila para ver más detalles del tutorial correspondiente
+
+assistant.tutorial.form.error.duplicated = Ya hay un tutorial con este código
