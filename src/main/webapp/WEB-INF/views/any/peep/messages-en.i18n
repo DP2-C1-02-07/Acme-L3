@@ -1,0 +1,22 @@
+any.course.list.label.code = Code
+any.course.list.label.title = Title
+any.course.list.label.anAbstract = Abstract
+
+any.course.form.label.code = Code:
+any.course.form.label.title = Title:
+any.course.form.label.anAbstract = Abstract:
+any.course.form.label.courseType = Course type:
+any.course.form.label.retailPrice = Retail price:
+any.course.form.label.furtherInformation = Further information: (Optional)
+any.peep.form.label.instantiationMoment= InstantiationMoment
+any.peep.form.label.message = Message
+any.peep.form.label.nick = Nick
+any.peep.form.label.link = Link
+any.peep.form.label.email = Email
+administrator.offer.form.button.create = Create
+authenticated.practica.form.button = View associated practica
+
+any.peep.form.label.title= Title
+
+
+info.text = · Click on any row to see more details of the corresponding course

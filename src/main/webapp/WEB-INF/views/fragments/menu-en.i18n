@@ -41,7 +41,7 @@ master.menu.administrator.bulletin = Create a new bulletin
 
 
 # master.menu.authenticated ##################################################
-
+master.menu.anonymous.list-peeps= All peeps
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-offers = All offers
 master.menu.authenticated.lits-bulletin = All bulletins

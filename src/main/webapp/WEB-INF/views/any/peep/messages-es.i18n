@@ -1,0 +1,20 @@
+any.course.list.label.code = Código
+any.course.list.label.title = Título
+any.course.list.label.anAbstract = Abstracto
+
+any.course.form.label.code = Código:
+any.course.form.label.title = Título:
+any.course.form.label.anAbstract = Abstracto:
+any.course.form.label.courseType = Tipo curso:
+any.course.form.label.retailPrice = Precio de venta al por menor:
+any.course.form.label.furtherInformation = Más información: (Opcional)
+any.peep.form.label.instantiationMoment= Fecha de creación
+any.peep.form.label.message = Mensaje
+any.peep.form.label.nick = Nick
+any.peep.form.label.link = Link
+any.peep.form.label.email = Email
+administrator.offer.form.button.create = Create
+authenticated.practica.form.button = Ver prácticas asociadas
+any.peep.form.label.title= Título
+administrator.offer.form.button.create = Crear
+info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente 
