@@ -1,0 +1,9 @@
+authenticated.lecturer.form.label.link = Link
+
+authenticated.lecturer.form.label.statement= Declaración
+authenticated.lecturer.form.label.weakFeatures=  Puntos Débiles
+authenticated.lecturer.form.label.strongFeatures= Puntos Fuertes
+
+
+authenticated.lecturer.form.button.create = Registrar
+authenticated.lecturer.form.button.update = Actualizar
