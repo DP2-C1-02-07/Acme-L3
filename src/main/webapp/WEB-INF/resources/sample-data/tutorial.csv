@@ -1,10 +1,10 @@
 key,code,title,abstract-tutorial,goals,estimated-total-time,draft-mode,key:course,key:assistant
-tutorial-01,TUT001,Cómo crear un blog en WordPress en 30 minutos,Crea un blog con WordPress en 30 min: fácil y rápido para principiantes,"goal 1, goal 2",1.46,true,course-01,assistant-01
-tutorial-02,TUT002,Cómo preparar un smoothie de frutas tropicales en casa,asbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractabs,goal 1,1.23,true,course-02,assistant-02
-tutorial-04,TUT004,Cómo cocinar una cena gourmet en casa,Cocina una cena gourmet fácilmente: recetas sencillas y deliciosas,"goal 4,goal 5",2.73,false,course-02,assistant-04
+tutorial-01,TUT001,Cómo crear un blog en WordPress en 30 minutos,Crea un blog con WordPress en 30 min: fácil y rápido para principiantes,"goal 1, goal 2",5.46,true,course-01,assistant-01
+tutorial-02,TUT002,Cómo preparar un smoothie de frutas tropicales en casa,asbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractasbtractabs,goal 1,5.23,true,course-02,assistant-02
+tutorial-04,TUT004,Cómo cocinar una cena gourmet en casa,Cocina una cena gourmet fácilmente: recetas sencillas y deliciosas,"goal 4,goal 5",3.73,false,course-02,assistant-04
 tutorial-05,TUT005,Cómo diseñar un logotipo en Adobe Illustrator,Diseña un logotipo en Adobe Illustrator: una guía paso a paso,"goal 4,goal 2",9.83,false,course-04,assistant-04
 tutorial-06,TUT006,Introducción a la programación en Python,Aprende a programar en Python: una guía introductoria para principiantes,"goal 1,goal 2",3.45,false,course-01,assistant-01
-tutorial-07,TUT007,Tutorial de yoga para principiantes,Tutorial de yoga para principiantes: posturas y respiración básicas,goal 2,1.32,false,course-03,assistant-02
-tutorial-08,TUT008,Consejos para mejorar tu productividad en el trabajo,Consejos para mejorar tu productividad en el trabajo,goal 1,0.52,true,course-05,assistant-03
-tutorial-09,TUT009,Tutorial de maquillaje para piel perfecta,Tutorial de maquillaje para piel perfecta: trucos para una apariencia radiante,goal 4,1.15,false,course-06,assistant-04
+tutorial-07,TUT007,Tutorial de yoga para principiantes,Tutorial de yoga para principiantes: posturas y respiración básicas,goal 2,4.32,false,course-03,assistant-02
+tutorial-08,TUT008,Consejos para mejorar tu productividad en el trabajo,Consejos para mejorar tu productividad en el trabajo,goal 1,2.52,true,course-05,assistant-03
+tutorial-09,TUT009,Tutorial de maquillaje para piel perfecta,Tutorial de maquillaje para piel perfecta: trucos para una apariencia radiante,goal 4,0.15,false,course-06,assistant-04
 tutorial-10,TUT010,Introducción a la edición de video en Premiere Pro,Edición de video con Premiere Pro: una introducción para principiantes,goal 1,2.12,true,course-05,assistant-01
