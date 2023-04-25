@@ -18,7 +18,6 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.carnero-vergel-manuel= 05980389k: Carnero Vergel, Manuel
 master.menu.anonymous.favourite-link.javnunrui = 29517615J: Nunes Ruiz, Javier
 master.menu.anonymous.favourite-link.julnavrod = 47549618Q: Navarro Rodriguez, Julio
@@ -26,6 +25,7 @@ master.menu.anonymous.favourite-link.manpalpin = 29511597K: Palacios Pineda, Man
 master.menu.anonymous.favourite-link.pabmarval = 77924893L: Martínez Valladares, Pablo
 
 # master.menu.authenticated ##################################################
+
 master.menu.anonymous.list-peeps= Ver Vistazos
 master.menu.authenticated = Autenticado
 master.menu.authenticated.all-offers = Todas las ofertas
@@ -34,14 +34,16 @@ master.menu.authenticated.lits-bulletin = Todos los buletines.
 master.menu.authenticated.tutorials = Todos los tutoriales
 
 # master.menu.student ##################################################
+
 master.menu.student = Estudiante
 master.menu.user-account.become-student = Vuelvete Estudiante!
 master.menu.user-account.student= Cuenta Estudiante
-
 master.menu.lecturer.my-enrolments = Mis matriculas!
 master.menu.lecturer.my-wk = Mis workbooks!
+
 # master.menu.administrator ###################################################
-master.menu.administrator.bulletin = Crear un nuevo buletín
+
+master.menu.administrator.bulletin = Crear un nuevo boletín
 master.menu.administrator = Administrador
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
@@ -50,6 +52,7 @@ master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.all-offers = Todas las ofertas
 master.menu.administrator.banner-list = Lista de banners
+master.menu.administrator.system-configuration = Configuración del sistema
 
 # master.menu.provider ########################################################
 
@@ -68,7 +71,6 @@ master.menu.lecturer.my-courses = Ver mis cursos
 master.menu.lecturer.my-lectures = Ver mis lecciones
 master.menu.lecturer.dashboard = Panel de indicadores
 
-
 # master.menu.company ###########################################################
 
 master.menu.company = Compañía
@@ -78,7 +80,6 @@ master.menu.company.practicum = Ver mis prácticas
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = Mis auditorías
-
 
 # master.menu.assistant ##########################################################
 
