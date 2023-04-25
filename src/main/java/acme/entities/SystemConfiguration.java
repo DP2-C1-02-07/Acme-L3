@@ -21,10 +21,15 @@ public class SystemConfiguration extends AbstractEntity {
 	// Attributes -------------------------------------------------------
 
 	@NotBlank
+	@Pattern(regexp = "^[A-Z]{3}$")
 	public String				systemCurrency;
 
 	@NotBlank
 	@Pattern(regexp = "^[A-Z]{3}(,[A-Z]{3})*$")
 	public String				acceptedCurrencies;
+
+	// Derived attributes -----------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 }
