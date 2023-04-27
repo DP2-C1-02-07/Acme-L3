@@ -10,6 +10,7 @@ lecturer.course.form.label.anAbstract = Abstracto:
 lecturer.course.form.label.courseType = Tipo curso:
 lecturer.course.form.label.retailPrice = Precio de venta al por menor:
 lecturer.course.form.label.furtherInformation = Más información: (Opcional)
+lecturer.course.form.label.targetRetailPrice = Precio de venta al por menor según moneda del sistema:
 
 lecturer.course.form.button.lectures = Lecciones
 lecturer.course.courseLecture.form.button.create = Añadir lecciones al curso
@@ -23,6 +24,8 @@ lecturer.course.info.text = · Pulse en alguna fila para ver más detalles del c
 
 lecturer.course.form.error.duplicated = Ya hay un curso con este código
 lecturer.course.form.error.retail-price = El precio de venta al por menor debe ser positivo menor que 1000000 o cero
+lecturer.course.form.error.retail-price.currencies = Moneda no aceptada en la configuración del sistema
 lecturer.course.form.error.lectures.empty = No hay lecciones en el curso
 lecturer.course.form.error.lectures.theoretical = Cursos puramente teóricos no permitido
 lecturer.course.form.error.lectures.published = Todas sus lecciones deben haber sido publicadas
+lecturer.course.money-exchange.form.label.api-error = Lo sentimos, no se pudo hacer el cambio

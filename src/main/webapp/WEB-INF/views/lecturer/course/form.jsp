@@ -13,10 +13,12 @@
 	<jstl:choose>
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:input-textbox code="lecturer.course.form.label.courseType" path="courseType" readonly = "true"/>
+			<acme:input-money code="lecturer.course.form.label.targetRetailPrice" path="targetRetailPrice" readonly="true"/>
 			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?courseId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:input-textbox code="lecturer.course.form.label.courseType" path="courseType" readonly = "true"/>
+			<acme:input-money code="lecturer.course.form.label.targetRetailPrice" path="targetRetailPrice" readonly="true"/>
 			<acme:button code="lecturer.course.form.button.lectures" action="/lecturer/lecture/list?courseId=${id}"/>
 			<acme:button code="lecturer.course.courseLecture.form.button.create" action="/lecturer/course-lecture/create?courseId=${id}"/>
 			<acme:button code="lecturer.course.courseLecture.form.button.delete" action="/lecturer/course-lecture/delete?courseId=${id}"/>

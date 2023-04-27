@@ -8,7 +8,10 @@ any.course.form.label.anAbstract = Abstracto:
 any.course.form.label.courseType = Tipo curso:
 any.course.form.label.retailPrice = Precio de venta al por menor:
 any.course.form.label.furtherInformation = Más información: (Opcional)
+any.course.form.label.targetRetailPrice = Precio de venta al por menor según moneda del sistema:
 
 authenticated.practica.form.button = Ver prácticas asociadas
 
-info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente 
+info.text = · Pulse en alguna fila para ver más detalles del curso correspondiente
+
+any.course.money-exchange.form.label.api-error = Lo sentimos, no se pudo hacer el cambio
