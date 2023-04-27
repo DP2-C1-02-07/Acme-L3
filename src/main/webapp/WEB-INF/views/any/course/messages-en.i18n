@@ -8,7 +8,10 @@ any.course.form.label.anAbstract = Abstract:
 any.course.form.label.courseType = Course type:
 any.course.form.label.retailPrice = Retail price:
 any.course.form.label.furtherInformation = Further information: (Optional)
+any.course.form.label.targetRetailPrice = Retail price according to system currency:
 
 authenticated.practica.form.button = View associated practica
 
 info.text = · Click on any row to see more details of the corresponding course
+
+any.course.money-exchange.form.label.api-error = Sorry, couldn't perform the exchange

@@ -11,6 +11,7 @@
 	<acme:list-column code="administrator.offer.form.label.availabilityEnd" path="availabilityEnd"/>
 	<acme:list-column code="administrator.offer.form.label.price" path="price"/>
 	<acme:list-column code="administrator.offer.form.label.link" path="link"/>
+	<acme:list-column code="administrator.offer.form.label.targetPrice" path="targetPrice"/>
 </acme:list>
 
 <acme:button code="administrator.offer.form.button.create" action="/administrator/offer/create"/>

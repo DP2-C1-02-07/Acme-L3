@@ -14,6 +14,7 @@
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
+			<acme:input-money code="administrator.offer.form.label.targetPrice" path="targetPrice" readonly="true"/>
 			<acme:submit code="administrator.offer.form.button.update" action="/administrator/offer/update"/>
 			<acme:submit code="administrator.offer.form.button.delete" action="/administrator/offer/delete"/>
 		</jstl:when>

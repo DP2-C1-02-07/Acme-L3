@@ -11,4 +11,5 @@
 	<acme:list-column code="authenticated.offer.form.label.availabilityEnd" path="availabilityEnd"/>
 	<acme:list-column code="authenticated.offer.form.label.price" path="price"/>
 	<acme:list-column code="authenticated.offer.form.label.link" path="link"/>
+	<acme:list-column code="authenticated.offer.form.label.targetPrice" path="targetPrice"/>
 </acme:list>

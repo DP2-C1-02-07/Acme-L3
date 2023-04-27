@@ -15,6 +15,7 @@ import acme.entities.Lecture;
 import acme.entities.Tutorial;
 import acme.entities.TutorialSession;
 import acme.entities.Workbook;
+import acme.framework.components.datatypes.Money;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Lecturer;
 
@@ -62,5 +63,14 @@ public interface LecturerCourseRepository extends AbstractRepository {
 
 	@Query("select wb from Workbook wb where wb.enrolment.id = :enrolmentId")
 	Collection<Workbook> findManyWorkbooksByEnrolmentId(int enrolmentId);
+
+	@Query("select sc.systemCurrency from SystemConfiguration sc")
+	String findSystemCurrencyBySystemConfiguration();
+
+	@Query("select sc.acceptedCurrencies from SystemConfiguration sc")
+	String findAcceptedCurrenciesBySystemConfiguration();
+
+	@Query("select c.retailPrice from Course c where c.id = :id")
+	Money findRetailPriceByCourseId(int id);
 
 }

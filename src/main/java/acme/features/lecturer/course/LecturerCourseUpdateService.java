@@ -1,6 +1,7 @@
 
 package acme.features.lecturer.course;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import acme.components.SpamDetector;
 import acme.entities.Course;
 import acme.entities.Lecture;
 import acme.entities.enums.CourseType;
+import acme.framework.components.datatypes.Money;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -78,8 +80,15 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 			super.state(existing == null || existing.equals(object), "code", "lecturer.course.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
+		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
 			super.state(object.getRetailPrice().getAmount() >= 0 && object.getRetailPrice().getAmount() <= 1000000, "retailPrice", "lecturer.course.form.error.retail-price");
+
+			final Money retailPrice = super.getRequest().getData("retailPrice", Money.class);
+			final String retailPriceCurrency = retailPrice.getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrenciesBySystemConfiguration();
+			final String[] valores = acceptedCurrencies.split(",");
+			super.state(Arrays.asList(valores).contains(retailPriceCurrency), "retailPrice", "lecturer.course.form.error.retail-price.currencies");
+		}
 
 		final SpamDetector detector = new SpamDetector();
 

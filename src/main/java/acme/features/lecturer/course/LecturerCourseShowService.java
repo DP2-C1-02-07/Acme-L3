@@ -5,11 +5,15 @@ import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
+import acme.components.ExchangeRate;
 import acme.entities.Course;
 import acme.entities.Lecture;
 import acme.entities.enums.CourseType;
+import acme.framework.components.datatypes.Money;
 import acme.framework.components.models.Tuple;
+import acme.framework.helpers.StringHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
 
@@ -69,12 +73,64 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 
 		final CourseType courseType = object.courseType(lectures);
 
+		Money retailPrice;
+		Money targetRetailPrice;
+		String targetCurrency;
+
+		retailPrice = this.repository.findRetailPriceByCourseId(object.getId());
+		targetCurrency = this.repository.findSystemCurrencyBySystemConfiguration();
+		targetRetailPrice = this.moneyExchangeCalc(retailPrice, targetCurrency);
+		super.state(targetRetailPrice != null, "*", "lecturer.course.money-exchange.form.label.api-error");
+
 		Tuple tuple;
 
 		tuple = super.unbind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation", "draftMode");
 		tuple.put("courseType", courseType);
+		tuple.put("targetRetailPrice", targetRetailPrice);
 
 		super.getResponse().setData(tuple);
+	}
+
+	// Ancillary methods ------------------------------------------------------
+
+	public Money moneyExchangeCalc(final Money retailPrice, final String targetCurrency) {
+		assert retailPrice != null;
+		assert !StringHelper.isBlank(targetCurrency);
+
+		RestTemplate api;
+		ExchangeRate record;
+		String retailPriceCurrency;
+		Double retailPriceAmount;
+		Double targetRetailPriceAmount;
+		Double rate;
+		Money targetRetailPrice;
+
+		try {
+			api = new RestTemplate();
+
+			retailPriceCurrency = retailPrice.getCurrency();
+			retailPriceAmount = retailPrice.getAmount();
+
+			record = api.getForObject( //
+				"https://api.exchangerate.host/latest?base={0}&symbols={1}", //
+				ExchangeRate.class, //
+				retailPriceCurrency, //
+				targetCurrency //
+			);
+
+			assert record != null;
+			rate = record.getRates().get(targetCurrency);
+			targetRetailPriceAmount = rate * retailPriceAmount;
+
+			targetRetailPrice = new Money();
+			targetRetailPrice.setAmount(targetRetailPriceAmount);
+			targetRetailPrice.setCurrency(targetCurrency);
+
+		} catch (final Throwable oops) {
+			targetRetailPrice = null;
+		}
+
+		return targetRetailPrice;
 	}
 
 }

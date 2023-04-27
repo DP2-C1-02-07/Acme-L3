@@ -5,3 +5,6 @@ authenticated.offer.form.label.availabilityStart = Inicio del periodo de validez
 authenticated.offer.form.label.availabilityEnd = Fin del periodo de validez
 authenticated.offer.form.label.price = Precio
 authenticated.offer.form.label.link = Enlace (Opcional)
+authenticated.offer.form.label.targetPrice = Precio según moneda del sistema
+
+authenticated.offer.money-exchange.form.label.api-error = Lo sentimos, no se pudo hacer el cambio
