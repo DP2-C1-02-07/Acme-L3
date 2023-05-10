@@ -8,6 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-D01	Acme L3 version with the requirements of deliverable 1 implemented
-D02 Acme L3 version with the previous requirements and requirements of deliverable 2 implemented
-D03 Acme L3 version with the previous requirements and requirements of deliverable 3 implemented
+D01	Acme L3 version with the requirements of deliverable 1 (introduction) implemented
+D02 Acme L3 version with the previous requirements and requirements of deliverable 2 (data models) implemented
+D03 Acme L3 version with the previous requirements and requirements of deliverable 3 (implementing features) implemented
+D04 Acme L3 version with the previous requirements and requirements of deliverable 4 (formal testing) implemented
