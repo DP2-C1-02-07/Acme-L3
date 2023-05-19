@@ -54,16 +54,6 @@ master.menu.administrator.all-offers = Todas las ofertas
 master.menu.administrator.banner-list = Lista de banners
 master.menu.administrator.system-configuration = Configuración del sistema
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-
 # master.menu.lecturer ##########################################################
 
 master.menu.lecturer = Profesor
@@ -90,10 +80,6 @@ master.menu.assistant.my-tutorial = Mis tutoriales
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.auditor = Datos de auditor
 master.menu.user-account.become-auditor = Hazte auditor
 master.menu.user-account.lecturer = Datos de profesor
