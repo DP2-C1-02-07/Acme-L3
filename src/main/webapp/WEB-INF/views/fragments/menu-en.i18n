@@ -46,11 +46,6 @@ master.menu.authenticated.all-offers = All offers
 master.menu.authenticated.lits-bulletin = All bulletins
 master.menu.authenticated.tutorials = All tutorials
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-
 # master.menu.student ##################################################
 
 master.menu.student = Student
@@ -58,11 +53,6 @@ master.menu.user-account.become-student = Become Student!
 master.menu.user-account.student= Student Account
 master.menu.lecturer.my-enrolments = My enrolments!
 master.menu.lecturer.my-wk = My workbooks!
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.lecturer ##########################################################
 
@@ -90,10 +80,6 @@ master.menu.assistant.my-tutorial = My tutorials
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.auditor = Auditor data
 master.menu.user-account.become-auditor = Become an auditor
 master.menu.user-account.lecturer = Lecturer data
