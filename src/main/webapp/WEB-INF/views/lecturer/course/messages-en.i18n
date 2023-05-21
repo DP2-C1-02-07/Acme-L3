@@ -24,7 +24,7 @@ lecturer.course.info.text = · Click on any row to see more details of the corre
 
 lecturer.course.form.error.duplicated = There is already a course with this code
 lecturer.course.form.error.retail-price = The retail price must be positive less than 1000000 or nought
-lecturer.course.form.error.retail-price.currencies = Currency not accepted in system configuration
+lecturer.course.form.error.retail-price.currencies = Currency not accepted in system configuration. Accepted currencies
 lecturer.course.form.error.lectures.empty = There are no lessons in the course
 lecturer.course.form.error.lectures.theoretical = Purely theoretical courses not allowed
 lecturer.course.form.error.lectures.published = All of its lectures must have been published

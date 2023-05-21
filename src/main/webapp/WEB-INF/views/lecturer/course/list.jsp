@@ -6,7 +6,8 @@
 <acme:list>
 	<acme:list-column code="lecturer.course.list.label.code" path="code"/>
 	<acme:list-column code="lecturer.course.list.label.title" path="title"/>
-	<acme:list-column code="lecturer.course.list.label.anAbstract" path="anAbstract"/>	
+	<acme:list-column code="lecturer.course.list.label.anAbstract" path="anAbstract"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 <acme:message code="lecturer.course.info.text"/>
 

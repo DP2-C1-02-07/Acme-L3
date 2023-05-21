@@ -49,8 +49,15 @@ public class LecturerLectureListMineService extends AbstractService<Lecturer, Le
 		assert object != null;
 
 		Tuple tuple;
+		String payload;
 
 		tuple = super.unbind(object, "title", "anAbstract", "learningTime");
+		payload = String.format(//
+			"%s; %s; %s", //
+			object.getBody(), //
+			object.getType(), //
+			object.getFurtherInformation());
+		tuple.put("payload", payload);
 
 		super.getResponse().setData(tuple);
 	}

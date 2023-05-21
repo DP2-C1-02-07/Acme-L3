@@ -2,6 +2,7 @@
 package acme.features.administrator.offer;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -73,7 +74,9 @@ public class AdministratorOfferUpdateService extends AbstractService<Administrat
 			final String priceCurrency = price.getCurrency();
 			final String acceptedCurrencies = this.repository.findAcceptedCurrenciesBySystemConfiguration();
 			final String[] valores = acceptedCurrencies.split(",");
-			super.state(Arrays.asList(valores).contains(priceCurrency), "price", "administrator.offer.form.error.price.currencies");
+			final List<String> lsValores = Arrays.asList(valores);
+			super.state(lsValores.contains(priceCurrency), "price", "administrator.offer.form.error.price.currencies");
+			super.state(lsValores.contains(priceCurrency), "price", acceptedCurrencies);
 		}
 
 		final boolean headingHasSpam = !detector.scanString(super.getRequest().getData("heading", String.class));
