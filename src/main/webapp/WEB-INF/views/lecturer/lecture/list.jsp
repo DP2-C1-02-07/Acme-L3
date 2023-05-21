@@ -7,6 +7,7 @@
 	<acme:list-column code="lecturer.lecture.list.label.title" path="title"/>	
 	<acme:list-column code="lecturer.lecture.list.label.anAbstract" path="anAbstract"/>
 	<acme:list-column code="lecturer.lecture.list.label.learningTime" path="learningTime"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 <acme:message code="lecturer.lecture.info.text"/>
 

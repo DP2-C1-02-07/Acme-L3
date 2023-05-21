@@ -2,6 +2,7 @@
 package acme.features.lecturer.course;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -72,7 +73,9 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 			final String retailPriceCurrency = retailPrice.getCurrency();
 			final String acceptedCurrencies = this.repository.findAcceptedCurrenciesBySystemConfiguration();
 			final String[] valores = acceptedCurrencies.split(",");
-			super.state(Arrays.asList(valores).contains(retailPriceCurrency), "retailPrice", "lecturer.course.form.error.retail-price.currencies");
+			final List<String> lsValores = Arrays.asList(valores);
+			super.state(lsValores.contains(retailPriceCurrency), "retailPrice", "lecturer.course.form.error.retail-price.currencies");
+			super.state(lsValores.contains(retailPriceCurrency), "retailPrice", acceptedCurrencies);
 		}
 
 		final SpamDetector detector = new SpamDetector();
