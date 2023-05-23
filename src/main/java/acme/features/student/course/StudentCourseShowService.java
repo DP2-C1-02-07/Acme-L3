@@ -31,9 +31,6 @@ public class StudentCourseShowService extends AbstractService<Student, Course> {
 
 	@Override
 	public void authorise() {
-		final boolean status;
-		final int id;
-
 
 		super.getResponse().setAuthorised(true);
 	}

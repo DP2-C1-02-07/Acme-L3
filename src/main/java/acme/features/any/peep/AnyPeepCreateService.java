@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.components.SpamDetector;
 import acme.entities.Peep;
 import acme.framework.components.accounts.Any;
-import acme.framework.components.accounts.Principal;
-import acme.framework.components.accounts.UserAccount;
 import acme.framework.components.models.Tuple;
 import acme.framework.helpers.MomentHelper;
 import acme.framework.services.AbstractService;
@@ -34,7 +32,6 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 
 	@Override
 	public void authorise() {
-	
 
 		super.getResponse().setAuthorised(true);
 	}
@@ -42,36 +39,33 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 	@Override
 	public void load() {
 		final Peep object = new Peep();
-		final Principal principal;
-		final int userAccountId;
-		final UserAccount userAccount;
 		Date moment;
 
 		moment = MomentHelper.getCurrentMoment();
 		//userAccountId = principal.getAccountId();
-	//	userAccount = this.repository.findOneUserAccountById(userAccountId);
-		 assert object != null;
+		//	userAccount = this.repository.findOneUserAccountById(userAccountId);
+		assert object != null;
 
-			object.setInstantiationMoment(moment);
-			object.setTitle("");
-			object.setMessage("");
-			object.setEmail("");
-			object.setLink("");
-		 boolean status;
-			status = super.getRequest().getPrincipal().isAnonymous();
-		 if(status) {
-		 object.setNick("");}
-		 else {
-			 object.setNick(super.getRequest().getPrincipal().getUsername());
-		 }
+		object.setInstantiationMoment(moment);
+		object.setTitle("");
+		object.setMessage("");
+		object.setEmail("");
+		object.setLink("");
+		boolean status;
+		status = super.getRequest().getPrincipal().isAnonymous();
+		if (status) {
+			object.setNick("");
+		} else {
+			object.setNick(super.getRequest().getPrincipal().getUsername());
+		}
 		super.getBuffer().setData(object);
-		
+
 	}
 
 	@Override
 	public void bind(final Peep object) {
-		
-		super.bind(object, "title" , "instantiationMoment", "nick", "message" , "link", "email");
+
+		super.bind(object, "title", "instantiationMoment", "nick", "message", "link", "email");
 		;
 	}
 
@@ -90,21 +84,19 @@ public class AnyPeepCreateService extends AbstractService<Any, Peep> {
 		final boolean linkhasSpam = !detector.scanString(super.getRequest().getData("link", String.class));
 		super.state(linkhasSpam, "link", "Error: Spam detected// Spam detectado");
 
-
-	
 	}
 
 	@Override
 	public void perform(final Peep object) {
 
-
-		this.repository.save(object);	}
+		this.repository.save(object);
+	}
 
 	@Override
 	public void unbind(final Peep object) {
 		assert object != null;
-		
-		final Tuple tuple = super.unbind(object, "title" , "instantiationMoment", "nick", "message" , "link", "email");
+
+		final Tuple tuple = super.unbind(object, "title", "instantiationMoment", "nick", "message", "link", "email");
 
 		super.getResponse().setData(tuple);
 	}
