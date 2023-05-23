@@ -1,0 +1,14 @@
+any.course.list.label.code = Code
+any.course.list.label.title = Title
+any.course.list.label.anAbstract = Abstract
+
+any.course.form.label.code = Code:
+any.course.form.label.title = Title:
+any.course.form.label.anAbstract = Abstract:
+any.course.form.label.courseType = Course type:
+any.course.form.label.retailPrice = Retail price:
+any.course.form.label.furtherInformation = Further information: (Optional)
+
+authenticated.practica.form.button = View associated practica
+
+info.text = · Click on any row to see more details of the corresponding course

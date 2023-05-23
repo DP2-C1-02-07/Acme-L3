@@ -1,0 +1,6 @@
+authenticated.bulletin.form.label.instantiationMoment = Fecha de creación
+authenticated.bulletin.form.label.title = Título
+authenticated.bulletin.form.label.message = Mensaje
+authenticated.bulletin.form.label.link = Link
+assistant.tutorial.form.label.flag = Bandera (Valores: CRITICAL, NOT_CRITICAL)
+Confirm = Confirmar

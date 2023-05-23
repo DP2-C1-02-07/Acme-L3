@@ -83,7 +83,7 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 			Tutorial existing;
 
 			existing = this.repository.findOneTutorialByCode(object.getCode());
-			super.state(existing == null, "code", "assistant.tutorial.form.error.duplicated");
+			super.state(existing == null || existing.getCode().equals(object.getCode()) && existing.getId() == object.getId(), "code", "assistant.tutorial.form.error.duplicated");
 		}
 		if (!super.getBuffer().getErrors().hasErrors("estimatedTotalTime")) {
 			validTime = object.getEstimatedTotalTime() >= 0.;
@@ -91,6 +91,9 @@ public class AssistantTutorialUpdateService extends AbstractService<Assistant, T
 		}
 		final boolean codehasSpam = !detector.scanString(super.getRequest().getData("code", String.class));
 		super.state(codehasSpam, "code", "javax.validation.constraints.HasSpam.message");
+
+		final boolean titlehasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
+		super.state(titlehasSpam, "title", "javax.validation.constraints.HasSpam.message");
 
 		final boolean abstractTutorialhasSpam = !detector.scanString(super.getRequest().getData("abstractTutorial", String.class));
 		super.state(abstractTutorialhasSpam, "abstractTutorial", "javax.validation.constraints.HasSpam.message");

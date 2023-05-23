@@ -5,3 +5,6 @@ authenticated.offer.form.label.availabilityStart = Availability period start
 authenticated.offer.form.label.availabilityEnd = Availability period end
 authenticated.offer.form.label.price = Price
 authenticated.offer.form.label.link = Link (Optional)
+authenticated.offer.form.label.targetPrice = Price according to system currency
+
+authenticated.offer.money-exchange.form.label.api-error = Sorry, couldn't perform the exchange

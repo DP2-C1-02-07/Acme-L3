@@ -1,12 +1,16 @@
 
 package acme.features.administrator.offer;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.SpamDetector;
 import acme.entities.Offer;
 import acme.framework.components.accounts.Administrator;
+import acme.framework.components.datatypes.Money;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
@@ -62,6 +66,14 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 		if (!super.getBuffer().getErrors().hasErrors("price")) {
 			final boolean pricePositive = object.getPrice().getAmount() > 0.0;
 			super.state(pricePositive, "*", "administrator.offer.post.price-positive");
+
+			final Money price = super.getRequest().getData("price", Money.class);
+			final String priceCurrency = price.getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrenciesBySystemConfiguration();
+			final String[] valores = acceptedCurrencies.split(",");
+			final List<String> lsValores = Arrays.asList(valores);
+			super.state(lsValores.contains(priceCurrency), "price", "administrator.offer.form.error.price.currencies");
+			super.state(lsValores.contains(priceCurrency), "price", acceptedCurrencies);
 		}
 
 		final boolean headingHasSpam = !detector.scanString(super.getRequest().getData("heading", String.class));

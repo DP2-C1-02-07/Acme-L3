@@ -17,3 +17,5 @@ lecturer.lecture.form.button.publish = Publish
 lecturer.lecture.form.button.create = Create
 
 lecturer.lecture.info.text = · Click on any row to see more details of the corresponding lecture
+
+lecturer.lecture.form.error.learning-time = Learning time must be greater than or equal to 0.01

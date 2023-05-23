@@ -1,0 +1,14 @@
+student.workbook.list.label.title = Title
+student.workbook.list.label.enrolment-code = Enrolment code
+
+student.workbook.form.label.title = Title
+student.workbook.form.label.activityAbstract =  Abstract Element
+student.workbook.form.label.type = Type
+student.workbook.form.label.periodStart = Start of workbook
+student.workbook.form.label.periodEnd = End of workbook
+student.workbook.form.label.link = link
+student.workbook.form.label.enrolment-code = Enrolment 
+student.workbook.form.button.update = Update
+student.workbook.form.button.delete = Delete
+student.workbook.form.button.create = Register workbook
+student.workbook.form.error.periodEnd = The end shall be after its start

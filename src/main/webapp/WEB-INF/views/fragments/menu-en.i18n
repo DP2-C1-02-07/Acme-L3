@@ -18,14 +18,12 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.carnero-vergel-manuel= 05980389k: Carnero Vergel, Manuel
 master.menu.anonymous.favourite-link.javnunrui = 29517615J: Nunes Ruiz, Javier
 master.menu.anonymous.favourite-link.julnavrod = 47549618Q: Navarro Rodriguez, Julio
 master.menu.anonymous.favourite-link.manpalpin = 29511597K: Palacios Pineda, Manuel
 master.menu.anonymous.favourite-link.pabmarval = 77924893L: Martínez Valladares, Pablo
 master.menu.anonymous.list-courses = List courses
-
 
 # master.menu.administrator ###################################################
 
@@ -37,23 +35,24 @@ master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.all-offers = All offers
 master.menu.administrator.banner-list = Banner List
-
+master.menu.administrator.system-configuration = System Configuration
+master.menu.administrator.bulletin = Create a new bulletin
 
 # master.menu.authenticated ##################################################
 
+master.menu.anonymous.list-peeps = All peeps
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-offers = All offers
 master.menu.authenticated.lits-bulletin = All bulletins
+master.menu.authenticated.tutorials = All tutorials
 
-# master.menu.provider ########################################################
+# master.menu.student ##################################################
 
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
+master.menu.student = Student
+master.menu.user-account.become-student = Become Student!
+master.menu.user-account.student= Student Account
+master.menu.lecturer.my-enrolments = My enrolments!
+master.menu.lecturer.my-wk = My workbooks!
 
 # master.menu.lecturer ##########################################################
 
@@ -61,7 +60,6 @@ master.menu.lecturer = Lecturer
 master.menu.lecturer.my-courses = List my courses
 master.menu.lecturer.my-lectures = List my lectures
 master.menu.lecturer.dashboard = Dashboard
-
 
 # master.menu.company ###########################################################
 
@@ -73,7 +71,6 @@ master.menu.company.practicum = List my practica
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audits = My audits
 
-
 # master.menu.assistant ##########################################################
 
 master.menu.assistant = Assistant
@@ -83,10 +80,6 @@ master.menu.assistant.my-tutorial = My tutorials
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.auditor = Auditor data
 master.menu.user-account.become-auditor = Become an auditor
 master.menu.user-account.lecturer = Lecturer data

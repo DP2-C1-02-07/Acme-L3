@@ -1,11 +1,15 @@
 
 package acme.features.lecturer.course;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.SpamDetector;
 import acme.entities.Course;
+import acme.framework.components.datatypes.Money;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -48,7 +52,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	public void bind(final Course object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "anAbstract", "courseType", "retailPrice", "furtherInformation");
+		super.bind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation");
 	}
 
 	@Override
@@ -62,8 +66,17 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 			super.state(existing == null, "code", "lecturer.course.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
-			super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.form.error.retail-price");
+		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
+			super.state(object.getRetailPrice().getAmount() >= 0 && object.getRetailPrice().getAmount() <= 1000000, "retailPrice", "lecturer.course.form.error.retail-price");
+
+			final Money retailPrice = super.getRequest().getData("retailPrice", Money.class);
+			final String retailPriceCurrency = retailPrice.getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrenciesBySystemConfiguration();
+			final String[] valores = acceptedCurrencies.split(",");
+			final List<String> lsValores = Arrays.asList(valores);
+			super.state(lsValores.contains(retailPriceCurrency), "retailPrice", "lecturer.course.form.error.retail-price.currencies");
+			super.state(lsValores.contains(retailPriceCurrency), "retailPrice", acceptedCurrencies);
+		}
 
 		final SpamDetector detector = new SpamDetector();
 
@@ -90,7 +103,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "anAbstract", "courseType", "retailPrice", "furtherInformation", "draftMode");
+		tuple = super.unbind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation", "draftMode");
 
 		super.getResponse().setData(tuple);
 	}

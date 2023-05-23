@@ -1,11 +1,18 @@
 
 package acme.features.lecturer.course;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.SpamDetector;
 import acme.entities.Course;
+import acme.entities.Lecture;
+import acme.entities.enums.CourseType;
+import acme.framework.components.datatypes.Money;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -74,8 +81,17 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 			super.state(existing == null || existing.equals(object), "code", "lecturer.course.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("retailPrice"))
-			super.state(object.getRetailPrice().getAmount() >= 0, "retailPrice", "lecturer.course.form.error.retail-price");
+		if (!super.getBuffer().getErrors().hasErrors("retailPrice")) {
+			super.state(object.getRetailPrice().getAmount() >= 0 && object.getRetailPrice().getAmount() <= 1000000, "retailPrice", "lecturer.course.form.error.retail-price");
+
+			final Money retailPrice = super.getRequest().getData("retailPrice", Money.class);
+			final String retailPriceCurrency = retailPrice.getCurrency();
+			final String acceptedCurrencies = this.repository.findAcceptedCurrenciesBySystemConfiguration();
+			final String[] valores = acceptedCurrencies.split(",");
+			final List<String> lsValores = Arrays.asList(valores);
+			super.state(lsValores.contains(retailPriceCurrency), "retailPrice", "lecturer.course.form.error.retail-price.currencies");
+			super.state(lsValores.contains(retailPriceCurrency), "retailPrice", acceptedCurrencies);
+		}
 
 		final SpamDetector detector = new SpamDetector();
 
@@ -100,9 +116,16 @@ public class LecturerCourseUpdateService extends AbstractService<Lecturer, Cours
 	public void unbind(final Course object) {
 		assert object != null;
 
+		Collection<Lecture> lectures;
+
+		lectures = this.repository.findManyLecturesByCourseId(object.getId());
+
+		final CourseType courseType = object.courseType(lectures);
+
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "anAbstract", "courseType", "retailPrice", "furtherInformation", "draftMode");
+		tuple = super.unbind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation", "draftMode");
+		tuple.put("courseType", courseType);
 
 		super.getResponse().setData(tuple);
 	}

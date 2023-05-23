@@ -51,9 +51,13 @@ public class LecturerCourseLectureDeleteService extends AbstractService<Lecturer
 	public void load() {
 		CourseLecture object;
 		int courseId;
+		Course course;
 
 		courseId = super.getRequest().getData("courseId", int.class);
-		object = this.repository.findOneCourseLectureByCourseId(courseId);
+		course = this.repository.findOneCourseById(courseId);
+
+		object = new CourseLecture();
+		object.setCourse(course);
 
 		super.getBuffer().setData(object);
 	}
@@ -85,7 +89,9 @@ public class LecturerCourseLectureDeleteService extends AbstractService<Lecturer
 	public void perform(final CourseLecture object) {
 		assert object != null;
 
-		this.repository.delete(object);
+		final CourseLecture cl = this.repository.findOneCourseLectureByCourseAndLecture(object.getCourse(), object.getLecture());
+
+		this.repository.delete(cl);
 	}
 
 	@Override
