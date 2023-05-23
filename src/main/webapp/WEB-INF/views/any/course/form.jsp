@@ -12,5 +12,7 @@
 	<acme:input-textbox code="any.course.form.label.courseType" path="courseType"/>
 	<acme:input-money code="any.course.form.label.targetRetailPrice" path="targetRetailPrice" readonly="true"/>
 	
-	<acme:button code="authenticated.practica.form.button" action="/authenticated/practicum/list?courseId=${id}"/>
+	<jstl:if test="${authorised == true}">
+		<acme:button code="authenticated.practica.form.button" action="/authenticated/practicum/list?courseId=${id}"/>
+	</jstl:if>
 </acme:form>
