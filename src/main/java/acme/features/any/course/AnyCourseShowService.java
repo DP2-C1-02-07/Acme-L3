@@ -11,6 +11,7 @@ import acme.components.ExchangeRate;
 import acme.entities.Course;
 import acme.entities.Lecture;
 import acme.entities.enums.CourseType;
+import acme.framework.components.accounts.Anonymous;
 import acme.framework.components.accounts.Any;
 import acme.framework.components.datatypes.Money;
 import acme.framework.components.models.Tuple;
@@ -80,9 +81,12 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 		targetRetailPrice = this.moneyExchangeCalc(retailPrice, targetCurrency);
 		super.state(targetRetailPrice != null, "*", "any.course.money-exchange.form.label.api-error");
 
+		final boolean authorised = !super.getRequest().getPrincipal().hasRole(Anonymous.class);
+
 		Tuple tuple;
 
 		tuple = super.unbind(object, "code", "title", "anAbstract", "retailPrice", "furtherInformation", "draftMode");
+		tuple.put("authorised", authorised);
 		tuple.put("courseType", courseType);
 		tuple.put("targetRetailPrice", targetRetailPrice);
 
