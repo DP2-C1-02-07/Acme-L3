@@ -48,28 +48,7 @@ public class Audit extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	// Implementada más adelante
-
-	//	@NotNull
-	//	protected String			mark;
-
-	//	@NotNull
-	//	public String mark() {
-	//		String marks = "N/A";
-	//		if (!this.auditingRecords.isEmpty())
-	//			for (int i = 0; i < this.auditingRecords.size(); i++)
-	//				if (i == 0)
-	//					marks = this.auditingRecords.get(i).getMark().toString();
-	//				else
-	//					marks = marks + ", " + this.auditingRecords.get(i).getMark().toString();
-	//		return marks;
-	//
-	//	}
-
 	// Relationships ----------------------------------------------------------
-
-	//	@OneToMany(mappedBy = "audit")
-	//	private List<AuditingRecords>	auditingRecords;
 
 	@NotNull
 	@Valid
