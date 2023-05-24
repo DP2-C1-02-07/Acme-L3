@@ -8,12 +8,14 @@
 	<acme:input-textarea code="auditor.audit.form.label.conclusion" path="conclusion"/>
 	<acme:input-textarea code="auditor.audit.form.label.strongPoints" path="strongPoints"/>
 	<acme:input-textarea code="auditor.audit.form.label.weakPoints" path="weakPoints"/>
+	
 	<jstl:choose>
 		<jstl:when test="${_command == 'create'}">
 			<acme:input-select code="auditor.audit.form.label.course" path="course" choices="${courses}"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
 			<acme:input-select code="auditor.audit.form.label.course" path="course" choices="${courses}" readonly="true"/>
+			<acme:input-textbox code="auditor.audit.form.label.marks" path="marks" readonly="true"/>
 		</jstl:when>
 	</jstl:choose>
 	
