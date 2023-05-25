@@ -9,7 +9,7 @@ assistant.tutorial.session.form.label.title = Título:
 assistant.tutorial.session.form.label.abstractSession = Resumen:
 assistant.tutorial.session.form.label.finishDate = Fecha de finalización:
 assistant.tutorial.session.form.label.startDate = Fecha de comienzo:
-assistant.tutorial.session.form.label.type = Tipo:
+assistant.tutorial.session.form.label.info = Link a más información(Opcional):
 
 
 assistant.tutorial.session.form.button.update = Actualizar

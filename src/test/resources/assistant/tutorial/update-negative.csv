@@ -1,0 +1,4 @@
+tutorialRecordIndex,course,code,title,goals,abstractTutorial
+0,Programming introduction,TUT001,Test de actualización con valores incorrectos porque el titulo supera los 75 caracteres marcados como maximo,goal,abstract
+0,Programming introduction,--,test,"goal 1",abstract)
+0,Programming introduction,TUT015,test,"goal 1", (supera los 100 caracteres para que de error)Blog en WordPress: Crea en 30 min. Guía fácil y rápida para principiantes

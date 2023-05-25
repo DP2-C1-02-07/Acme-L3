@@ -11,7 +11,7 @@ assistant.tutorial.session.form.label.title = Title:
 assistant.tutorial.session.form.label.abstractSession = Abstract:
 assistant.tutorial.session.form.label.finishDate = Finish Date:
 assistant.tutorial.session.form.label.startDate = Start Date:
-assistant.tutorial.session.form.label.type = Type:
+assistant.tutorial.session.form.label.info = Information Link(Optional):
 
 assistant.tutorial.session.form.button.update = Update
 assistant.tutorial.session.form.button.create = Create

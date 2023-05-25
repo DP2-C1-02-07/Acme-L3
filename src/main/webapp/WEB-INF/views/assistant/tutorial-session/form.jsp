@@ -8,6 +8,8 @@
 	<acme:input-textarea code="assistant.tutorial.session.form.label.abstractSession" path="abstractSession"/>
 	<acme:input-moment code="assistant.tutorial.session.form.label.startDate" path="startDate"/>
 	<acme:input-moment code="assistant.tutorial.session.form.label.finishDate" path="finishDate"/>
+	<acme:input-url code="assistant.tutorial.session.form.label.info" path="info"/>
+	
 	
 	<acme:input-select code="assistant.tutorial.session.form.label.type" path="sessionType" choices="${sessionType}"/>
 	<jstl:choose>
