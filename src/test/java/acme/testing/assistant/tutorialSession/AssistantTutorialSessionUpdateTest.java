@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.entities.Tutorial;
 import acme.testing.TestHarness;
 
-public class AssistantTutorialSessionCreateTest extends TestHarness {
+public class AssistantTutorialSessionUpdateTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
@@ -21,10 +21,11 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/assistant/tutorialSession/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/assistant/tutorialSession/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int tutorialRecordIndex, final int sessionRecordIndex, final String title, final String sessionType, final String startDate, final String finishDate, final String abstractSession, final String info) {
-		// HINT:This test proves that a session is created correctly and its data is saved correctly
+		// HINT:This test proves that a session is update correctly and its data is saved correctly
 
+		super.checkLinkExists("Sign in");
 		super.signIn("assistant1", "assistant1");
 
 		super.clickOnMenu("Assistant", "My tutorials");
@@ -36,20 +37,23 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 
 		super.clickOnButton("Sessions");
 		super.checkListingExists();
-		super.clickOnButton("Create");
+		super.clickOnListingRecord(sessionRecordIndex);
 		super.checkFormExists();
+
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
 		super.fillInputBoxIn("sessionType", sessionType);
 		super.fillInputBoxIn("startDate", startDate);
 		super.fillInputBoxIn("finishDate", finishDate);
 		super.fillInputBoxIn("info", info);
-		super.clickOnSubmit("Create");
+
+		super.clickOnSubmit("Update");
 
 		super.checkListingExists();
+
 		super.clickOnListingRecord(sessionRecordIndex);
 		super.checkFormExists();
-
+		super.sortListing(0, "asc");
 		super.checkInputBoxHasValue("startDate", startDate);
 		super.checkInputBoxHasValue("finishDate", finishDate);
 		super.checkInputBoxHasValue("title", title);
@@ -61,11 +65,12 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/assistant/tutorialSession/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int tutorialRecordIndex, final String title, final String sessionType, final String startDate, final String finishDate, final String abstractSession, final String info) {
-		// HINT: This test tests erroneous data when creating sessions to verify 
+	@CsvFileSource(resources = "/assistant/tutorialSession/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int tutorialRecordIndex, final int sessionRecordIndex, final String title, final String sessionType, final String startDate, final String finishDate, final String abstractSession, final String info) {
+		/// HINT: This test tests erroneous data when creating sessions to verify 
 		// HINT+ that the validations work
 
+		super.checkLinkExists("Sign in");
 		super.signIn("assistant1", "assistant1");
 
 		super.clickOnMenu("Assistant", "My tutorials");
@@ -77,19 +82,18 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 
 		super.clickOnButton("Sessions");
 		super.checkListingExists();
-		super.clickOnButton("Create");
+		super.clickOnListingRecord(sessionRecordIndex);
 		super.checkFormExists();
+
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractSession", abstractSession);
 		super.fillInputBoxIn("sessionType", sessionType);
 		super.fillInputBoxIn("startDate", startDate);
 		super.fillInputBoxIn("finishDate", finishDate);
 		super.fillInputBoxIn("info", info);
-		super.clickOnSubmit("Create");
 
+		super.clickOnSubmit("Update");
 		super.checkErrorsExist();
-
-		super.signOut();
 	}
 
 	@Test
@@ -106,31 +110,31 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 
 				id = String.format("id=%d", t.getId());
 				super.checkLinkExists("Sign in");
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 
 				super.signIn("company1", "company1");
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("administrator", "administrator");
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("auditor1", "auditor1");
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("student1", "student1");
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 				super.signOut();
 
@@ -138,7 +142,7 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 	}
 	@Test
 	public void test301Hacking() {
-		// HINT: This test attempts to create a session for a published tutorial created
+		// HINT: This test attempts to update a session for a published tutorial created
 		// HINT+ by the principal.
 		Collection<Tutorial> tutorials;
 		String id;
@@ -151,7 +155,7 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 		for (final Tutorial t : tutorials)
 			if (!t.isDraftMode()) {
 				id = String.format("id=%d", t.getId());
-				super.request("/assistant/tutorial-session/create", id);
+				super.request("/assistant/tutorial-session/update", id);
 				super.checkPanicExists();
 			}
 		super.signOut();
@@ -159,7 +163,7 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 
 	@Test
 	public void test302Hacking() {
-		// HINT: This test try to create sessions for tutorials
+		// HINT: This test try to update sessions for tutorials
 		//HINT+ that does not belong to the principal
 
 		Collection<Tutorial> tutorials;
@@ -172,7 +176,7 @@ public class AssistantTutorialSessionCreateTest extends TestHarness {
 
 		for (final Tutorial t : tutorials) {
 			id = String.format("id=%d", t.getId());
-			super.request("/assistant/tutorial-session/create", id);
+			super.request("/assistant/tutorial-session/update", id);
 			super.checkPanicExists();
 		}
 		super.signOut();

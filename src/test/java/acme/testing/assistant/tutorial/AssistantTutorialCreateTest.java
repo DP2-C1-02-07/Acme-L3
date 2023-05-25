@@ -12,8 +12,7 @@ public class AssistantTutorialCreateTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int tutorialRecordIndex, final String course, final String code, final String title, final String abstractTutorial, final String goals) {
-		// HINT: In this test we identify ourselves as an assistant, list his tutorials
-		// and try to create one and check that it's been created correctly.
+		// HINT:This test proves that a tutorial is created correctly and its data is saved correctly
 
 		super.signIn("assistant1", "assistant1");
 

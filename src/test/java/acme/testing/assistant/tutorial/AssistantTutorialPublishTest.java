@@ -128,7 +128,7 @@ public class AssistantTutorialPublishTest extends TestHarness {
 
 	@Test
 	public void test301Hacking() {
-		// HINT: This test attempts to publish a tutorial registered by the authenticated principal.
+		// HINT: This test attempts to publish a tutorial in not draft mode registered by the authenticated principal.
 		Collection<Tutorial> tutorials;
 		String id;
 
@@ -140,6 +140,7 @@ public class AssistantTutorialPublishTest extends TestHarness {
 			if (!t.isDraftMode()) {
 				id = String.format("id=%d", t.getId());
 				super.request("/assistant/tutorial/publish", id);
+				super.checkPanicExists();
 			}
 		super.signOut();
 	}
@@ -159,6 +160,7 @@ public class AssistantTutorialPublishTest extends TestHarness {
 		for (final Tutorial t : tutorials) {
 			id = String.format("id=%d", t.getId());
 			super.request("/assistant/tutorial/publish", id);
+			super.checkPanicExists();
 		}
 		super.signOut();
 	}

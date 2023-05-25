@@ -2,6 +2,7 @@ assistant.tutorial.session.list.label.title = Title
 assistant.tutorial.session.list.label.type = Type
 assistant.tutorial.session.list.label.startDate = startDate
 assistant.tutorial.session.list.label.finishDate = finishDate
+assistant.tutorial.session.list.label.abstractSession = Abstract
 
 
 assistant.tutorial.session.list.button.create = Create

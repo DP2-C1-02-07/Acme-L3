@@ -1,3 +1,12 @@
 tutorialRecordIndex,title,sessionType,startDate,finishDate,abstractSession,info
-0, supera los 75 caracteres para realizar incorrectamente el test de tamaño ssss,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract, http://www.test.es
-0,,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract, http://www.test.es
+0,This title is too long so it should give an error when exceeding 75 characters,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract, http://www.test.es
+0,,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract 1, http://www.test.es
+0,title 1,HANDS_ON,2023/02/21 19:30,2023/02/21 18:30,abstract 2, http://www.test.es
+0,title 2,---,2023/02/21 19:30,2023/02/21 19:30,abstract 3, http://www.test.es
+0,title 3,THEORY,2023/02/21 19:30,2023/02/21 20:20,abstract 4, http://www.test.es
+0,title 4,HANDS_ON,,2023/02/21 20:30,abstract 5, http://www.test.es
+0,title 5,THEORY,2023/02/21 19:30,,abstract 6, http://www.test.es
+0,title 9,THEORY,2023/02/21 19:30,2023/02/21 20:30,"This abstract exceeds 100 characters, so the form should return an error when entering the data if it works well", http://www.test.es
+0,title 10,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,, http://www.test.es
+0,title 10,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract, url-invalid
+0,title 10,HANDS_ON,2023/02/21 19:30,2023/02/22 20:30,abstract, http://www.test.es

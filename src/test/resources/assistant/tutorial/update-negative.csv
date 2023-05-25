@@ -1,4 +1,13 @@
 tutorialRecordIndex,course,code,title,goals,abstractTutorial
-0,Programming introduction,TUT001,Test de actualización con valores incorrectos porque el titulo supera los 75 caracteres marcados como maximo,goal,abstract
-0,Programming introduction,--,test,"goal 1",abstract)
-0,Programming introduction,TUT015,test,"goal 1", (supera los 100 caracteres para que de error)Blog en WordPress: Crea en 30 min. Guía fácil y rápida para principiantes
+0,Programming introduction,TUT001,This title is too long so it should give an error when exceeding 75 characters,goal,abstract
+0,Programming introduction,,test,"goal 1",abstract
+0,Programming introduction,TUT015,test,"goal 1","This abstract exceeds 100 characters, so the form should return an error when entering the data if it works well"
+0,---,TUT001,test 1,"This goal exceeds 100 characters, so the form should return an error when entering the data if it works well",abstract 1
+0,Programming introduction,TUT015,test,,abstract 2
+0,Programming introduction,TUT010,test,"goal 1",abstract
+0,Programming introduction,--,test,"goal 1",abstract
+0,Programming introduction,TUT001,test,"goal 1",
+0,Programming introduction,TUT001,,"goal 1",abstract
+
+
+

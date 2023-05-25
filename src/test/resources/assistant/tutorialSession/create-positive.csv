@@ -1,2 +1,9 @@
 tutorialRecordIndex,sessionRecordIndex,title,sessionType,startDate,finishDate,abstractSession,info
-0,0, prueba con justo 75 caracteres para realizar correctamente el test de tamañ,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract, http://www.test.es
+0,0,a test with just 75 characters to correctly perform of the title size test,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract 1, http://www.test.es
+0,1,b,THEORY,2023/02/21 19:30,2023/02/21 20:30,abstract 4 ,""
+0,4,title 1,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract 2, ""
+0,5,title 2,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,"This abstract has just 100 characters, necessary to test the validation and to be able to pass well.", ""
+0,6,title 3,HANDS_ON,2023/02/21 19:30,2023/02/21 20:30,abstract 3, "https://www.google.com/"
+0,7,title 3,THEORY,2023/02/21 19:30,2023/02/21 20:30,abstract 3, ""
+0,8,title 4,THEORY,2023/02/21 19:30,2023/02/21 20:30,abstract 3, "https://www.google.com/"
+0,9,title 5,THEORY,2023/02/21 19:30,2023/02/21 20:30,a,""

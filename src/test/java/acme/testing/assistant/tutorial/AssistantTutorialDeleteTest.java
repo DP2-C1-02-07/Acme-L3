@@ -24,6 +24,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/assistant/tutorial/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int tutorialRecordIndex, final String code, final String nextCode) {
+		// HINT:This test proves that a tutorial is deleted correctly
 
 		super.signIn("assistant1", "assistant1");
 
@@ -99,7 +100,8 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 	}
 	@Test
 	public void test301Hacking() {
-		// HINT: This test attempts to delete a tutorial posted by the authenticated principal.
+		// HINT: This test attempts to delete a tutorial that isn't in draft mode
+		//HITN + regiestered by the principal
 		Collection<Tutorial> tutorials;
 		String id;
 
@@ -111,6 +113,7 @@ public class AssistantTutorialDeleteTest extends TestHarness {
 			if (!t.isDraftMode()) {
 				id = String.format("id=%d", t.getId());
 				super.request("/assistant/tutorial/delete", id);
+				super.checkPanicExists();
 			}
 		super.signOut();
 	}
