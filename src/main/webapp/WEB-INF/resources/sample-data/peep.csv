@@ -1,10 +1,10 @@
 key,title,instantiation-moment,message,nick,link,email
 peep-01,This is the first peep,2019/03/11 12:00,The first peep in history of Acme-L3,acmeUser1,,acmeUser1@gmail.com
-peep-02,This is the first peep with 75 characters: rwuvnwuvnewnvuwnvrwvwvwvewvwevdd,2019/06/18 16:20,The first peep in history of Acme-L3 but with 75 characters:tgergvregverves,acmeUser2,https://github.com/,null
-peep-03,G,2020/01/08 14:00,L,acmeUser1,null,acmeUser1@gmail.com
-peep-04,This is the second peep,2022/07/30 00:00,The second peep in history of Acme-L3,userOfPeeps,null,acmeUser10@gmail.com
+peep-02,This is the first peep with 75 characters: rwuvnwuvnewnvuwnvrwvwvwvewvwevdd,2019/06/18 16:20,The first peep in history of Acme-L3 but with 75 characters:tgergvregverves,acmeUser2,https://github.com/,
+peep-03,G,2020/01/08 14:00,L,acmeUser1,,acmeUser1@gmail.com
+peep-04,This is the second peep,2022/07/30 00:00,The second peep in history of Acme-L3,userOfPeeps,,acmeUser10@gmail.com
 peep-05,This is the second peep with 75 characters: rwuvnwuvnewnvuwnvrwvwvwvewvw,2019/06/18 16:20,The first peep in history of Acme-L3 but with 75 characters:tgergvregverves,acmeUser2,https://github.com/,
-peep-06,LMK,2016/04/18 18:00,Lord of peeps,lord45,null,null
+peep-06,LMK,2016/04/18 18:00,Lord of peeps,lord45,,
 peep-07,This is the third peep,2019/03/11 12:00,The first peep in history of Acme-L3,acmeUser1,,acmeUser1@gmail.com
 peep-08,This is the third peep with 75 characters: rwuvnwuvnewnvuwnvrwvwvwvewvwevdd,2019/06/18 16:20,The first peep in history of Acme-L3 but with 75 characters:tgergvregverves,acmeUser2,https://github.com/,
 peep-09,Pol,2020/01/08 14:00,L,acmeUser1,,acmeUser1@gmail.com
