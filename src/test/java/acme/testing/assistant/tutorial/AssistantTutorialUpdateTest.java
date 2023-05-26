@@ -69,6 +69,7 @@ public class AssistantTutorialUpdateTest extends TestHarness {
 
 		super.clickOnListingRecord(tutorialRecordIndex);
 		super.checkFormExists();
+
 		super.fillInputBoxIn("course", course);
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("title", title);
