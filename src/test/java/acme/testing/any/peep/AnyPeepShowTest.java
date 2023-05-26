@@ -1,3 +1,4 @@
+
 package acme.testing.any.peep;
 
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,11 +9,11 @@ import acme.testing.TestHarness;
 public class AnyPeepShowTest extends TestHarness {
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "", encoding = "utf-8", numLinesToSkip = 1)
-	public void testPositive(final int recordIndex, final String instantiationMoment, final String title, final String nick, final String message, final String email, final String link) {
+	@CsvFileSource(resources = "/any/peep/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void testPositive(final int recordIndex, final String title, final String instantiationMoment, final String message, final String nick, final String link, final String email) {
 
 		super.clickOnMenu("Anonymous", "All peeps");
-		super.sortListing(1, "asc");
+		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 
