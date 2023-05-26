@@ -1,0 +1,6 @@
+tutorialRecordIndex,course,code,title,abstractTutorial,goals
+0,Programming introduction,TUT020,"Test of 75 characters, to verify the validation of the character limit test",abstract,goals
+0,Programming introduction,TUT021,"t","This asbtract has just 100 characters, necessary to test the validation and to be able to pass well.", goals
+0,Programming introduction,TUT022,title,"This asbtract has just 100 characters, necessary to test the validation and to be able to pass well.","g"
+0,Programming introduction,V023,TITLE,ABSTRACT, goals
+0,Programming introduction,V024,title-2,asbtract-2,"This goal has just 100 characters, necessary to test the validation and to be able to pass test    ."

@@ -9,7 +9,10 @@
 	<acme:input-textarea code="assistant.tutorial.form.label.abstractTutorial" path="abstractTutorial"/>
 	<acme:input-textarea code="assistant.tutorial.form.label.goals" path="goals"/>
 	<acme:input-select code="assistant.tutorial.form.label.course" path="course" choices="${courses}"/>
-	<acme:input-double code="assistant.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime"/>
+	
+	<jstl:if test="${ _command != 'create'}">
+			<acme:input-double code="assistant.tutorial.form.label.estimatedTotalTime" path="estimatedTotalTime" readonly="true"/>
+	</jstl:if>
 	
 	<jstl:choose>
 		<jstl:when test="${_command == 'show' && draftMode == false}">
