@@ -1,0 +1,7 @@
+courseRecordIndex,code,lectureRecordIndex,title,anAbstract,learningTime,body,type,furtherInformation
+0,ABC123,0,Data types in programming t1,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com
+1,ABH123,0,Data types in programming t2,Important lecture,2.50,We will see the basic data types in programming in Java and C,THEORETICAL,https://lectureinformation.com
+2,ABI123,0,Data types in programming t3,Important lecture,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,null
+3,ABJ123,0,Data types in programming t4,i,2.50,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com
+4,ABK123,0,Data types in programming t5,Important lecturesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss,8.00,We will see the basic data types in programming in Java and C,HANDS_ON,http://lectureinfo.com
+4,ABK123,1,Use of stream,Important lecture,0.01,We will see everything related to stream in java,THEORETICAL,http://lectureinfo.com
