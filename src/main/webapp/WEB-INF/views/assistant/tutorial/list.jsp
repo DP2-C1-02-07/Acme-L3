@@ -10,7 +10,6 @@
 	<acme:list-column code="assistant.tutorial.list.label.estimatedTotalTime" path="estimatedTotalTime"/>
 	
 </acme:list>
-<acme:message code="info.text"/>
 
 <br><br>
 <acme:button code="assistant.tutorial.list.button.create" action="/assistant/tutorial/create"/>
