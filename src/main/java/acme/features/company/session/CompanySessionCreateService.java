@@ -75,15 +75,16 @@ public class CompanySessionCreateService extends AbstractService<Company, Sessio
 
 		final Date startDate = super.getRequest().getData("startDate", Date.class);
 		final Date finishDate = super.getRequest().getData("finishDate", Date.class);
-		final Date availableStart = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
-		final Date availableEnd = MomentHelper.deltaFromMoment(startDate, 7, ChronoUnit.DAYS);
+		if (startDate != null && finishDate != null) {
+			final Date availableStart = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
+			final Date availableEnd = MomentHelper.deltaFromMoment(startDate, 7, ChronoUnit.DAYS);
 
-		final boolean validStart = startDate.getTime() >= availableStart.getTime();
-		super.state(validStart, "startDate", "company.session.validation.startDate.error.WeekAhead");
+			final boolean validStart = startDate.getTime() >= availableStart.getTime();
+			super.state(validStart, "startDate", "company.session.validation.startDate.error.WeekAhead");
 
-		final boolean validEnd = finishDate.getTime() >= availableEnd.getTime();
-		super.state(validEnd, "finishDate", "company.session.validation.finishDate.error.WeekLong");
-
+			final boolean validEnd = finishDate.getTime() >= availableEnd.getTime();
+			super.state(validEnd, "finishDate", "company.session.validation.finishDate.error.WeekLong");
+		}
 		//Spam validations
 
 		final SpamDetector detector = new SpamDetector();
