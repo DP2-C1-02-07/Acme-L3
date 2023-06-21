@@ -69,6 +69,7 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 	public void validate(final Practicum object) {
 		assert object != null;
 
+		//Spam validation
 		final SpamDetector detector = new SpamDetector();
 
 		final boolean titleHasSpam = !detector.scanString(super.getRequest().getData("title", String.class));
@@ -79,6 +80,15 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 
 		final boolean goalsHasSpam = !detector.scanString(super.getRequest().getData("goals", String.class));
 		super.state(goalsHasSpam, "goals", "javax.validation.constraints.HasSpam.message");
+
+		//Duplicate code validation
+
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Practicum existing;
+
+			existing = this.repository.findOnePracticaByCode(object.getCode());
+			super.state(existing == null, "code", "company.practicum.form.error.duplicated");
+		}
 	}
 
 	@Override
