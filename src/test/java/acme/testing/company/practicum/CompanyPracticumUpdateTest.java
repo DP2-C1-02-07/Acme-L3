@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.testing.TestHarness;
 
-public class CompanyPracticumCreateTest extends TestHarness {
+public class CompanyPracticumUpdateTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
@@ -19,7 +19,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 
 	@ParameterizedTest
 
-	@CsvFileSource(resources = "/company/practicum/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/company/practicum/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
 		// HINT:This test proves that a tutorial is created correctly and its data is saved correctly
 
@@ -28,15 +28,16 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.clickOnMenu("Company", "List my practica");
 		super.checkListingExists();
 
-		super.clickOnButton("Create a practicum");
+		super.clickOnListingRecord(practicumRecordIndex);
+		super.checkFormExists();
+
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractThing", abstractThing);
 		super.fillInputBoxIn("goals", goals);
 		super.fillInputBoxIn("course", course);
-		super.clickOnSubmit("Create");
+		super.clickOnSubmit("Update");
 
-		super.clickOnMenu("Company", "List my practica");
 		super.checkListingExists();
 		super.sortListing(0, "desc");
 		super.checkColumnHasValue(practicumRecordIndex, 0, code);
@@ -50,17 +51,11 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("goals", goals);
 		super.checkInputBoxHasValue("course", course);
 
-		super.clickOnButton("View sessions"); //New tutorial, no sessions
-
-		super.checkListingExists();
-		super.checkListingEmpty();
-
 		super.signOut();
 	}
 
 	@ParameterizedTest
-
-	@CsvFileSource(resources = "/company/practicum/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/company/practicum/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
 		// HINT: this test attempts to create tutorials with incorrect data.
 
@@ -69,13 +64,15 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.clickOnMenu("Company", "List my practica");
 		super.checkListingExists();
 
-		super.clickOnButton("Create a practicum");
+		super.clickOnListingRecord(practicumRecordIndex);
+		super.checkFormExists();
+
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("title", title);
 		super.fillInputBoxIn("abstractThing", abstractThing);
 		super.fillInputBoxIn("goals", goals);
 		super.fillInputBoxIn("course", course);
-		super.clickOnSubmit("Create");
+		super.clickOnSubmit("Update");
 
 		super.checkErrorsExist();
 
