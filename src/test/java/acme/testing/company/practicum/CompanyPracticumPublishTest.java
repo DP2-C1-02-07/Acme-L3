@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.entities.Practicum;
 import acme.testing.TestHarness;
 
-public class CompanyPracticumUpdateTest extends TestHarness {
+public class CompanyPracticumPublishTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
@@ -22,9 +22,9 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 
 	@ParameterizedTest
 
-	@CsvFileSource(resources = "/company/practicum/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/company/practicum/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
-		// HINT:This test proves that a practicum is modified correctly and its data is saved correctly
+		// HINT:This test proves that a practicum is created correctly and its data is saved correctly
 
 		super.signIn("company1", "company1");
 
@@ -39,13 +39,12 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 		super.fillInputBoxIn("abstractThing", abstractThing);
 		super.fillInputBoxIn("goals", goals);
 		super.fillInputBoxIn("course", course);
-		super.clickOnSubmit("Update");
+		super.clickOnSubmit("Publish");
 
 		super.checkListingExists();
 		super.sortListing(0, "desc");
-		super.checkColumnHasValue(practicumRecordIndex, 0, code);
-		super.checkColumnHasValue(practicumRecordIndex, 1, title);
-		super.clickOnListingRecord(practicumRecordIndex);
+
+		super.clickOnListingRecord(0);
 
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
@@ -58,9 +57,9 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/company/practicum/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/company/practicum/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
-		// HINT: this test attempts to modify practicum with incorrect data.
+		// HINT: this test attempts to publish practicum with incorrect data.
 
 		super.signIn("company1", "company1");
 
@@ -75,7 +74,7 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 		super.fillInputBoxIn("abstractThing", abstractThing);
 		super.fillInputBoxIn("goals", goals);
 		super.fillInputBoxIn("course", course);
-		super.clickOnSubmit("Update");
+		super.clickOnSubmit("Publish");
 
 		super.checkErrorsExist();
 
@@ -94,31 +93,31 @@ public class CompanyPracticumUpdateTest extends TestHarness {
 
 				id = String.format("id=%d", t.getId());
 				super.checkLinkExists("Sign in");
-				super.request("/company/practicum/update", id);
+				super.request("/company/practicum/publish", id);
 				super.checkPanicExists();
 
 				super.signIn("assistant1", "assistant1");
-				super.request("/company/practicum/update", id);
+				super.request("/company/practicum/publish", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("administrator", "administrator");
-				super.request("/company/practicum/update", id);
+				super.request("/company/practicum/publish", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("auditor1", "auditor1");
-				super.request("/company/practicum/update", id);
+				super.request("/company/practicum/publish", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("student1", "student1");
-				super.request("/company/practicum/update", id);
+				super.request("/company/practicum/publish", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/update", id);
+				super.request("/company/practicum/publish", id);
 				super.checkPanicExists();
 				super.signOut();
 

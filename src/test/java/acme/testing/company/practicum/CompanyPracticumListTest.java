@@ -21,7 +21,7 @@ public class CompanyPracticumListTest extends TestHarness {
 	@CsvFileSource(resources = "/company/practicum/list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int practicumRecordIndex, final String code, final String title) {
 
-		//HINT: This test proves that an assistant can consult their tutorials and publish one
+		//HINT: This test proves that a company can consult their practicum
 
 		super.signIn("company1", "company1");
 
@@ -44,7 +44,7 @@ public class CompanyPracticumListTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		// HINT: this test tries to show a tutorial using inappropriate roles
+		// HINT: this test tries to list practicum using inappropriate roles
 
 		super.checkLinkExists("Sign in");
 		super.request("/company/practicum/list");

@@ -21,7 +21,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 
 	@CsvFileSource(resources = "/company/practicum/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
-		// HINT:This test proves that a tutorial is created correctly and its data is saved correctly
+		// HINT:This test proves that a practicum is created correctly and its data is saved correctly
 
 		super.signIn("company1", "company1");
 
@@ -50,7 +50,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 		super.checkInputBoxHasValue("goals", goals);
 		super.checkInputBoxHasValue("course", course);
 
-		super.clickOnButton("View sessions"); //New tutorial, no sessions
+		super.clickOnButton("View sessions"); //New practicum, no sessions
 
 		super.checkListingExists();
 		super.checkListingEmpty();
@@ -62,7 +62,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 
 	@CsvFileSource(resources = "/company/practicum/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
-		// HINT: this test attempts to create tutorials with incorrect data.
+		// HINT: this test attempts to create practicum with incorrect data.
 
 		super.signIn("company1", "company1");
 
@@ -84,7 +84,7 @@ public class CompanyPracticumCreateTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		// HINT: this test tries to show a tutorial using inappropriate roles
+		// HINT: this test tries to create a practicum using inappropriate roles
 
 		super.checkLinkExists("Sign in");
 		super.request("/company/practicum/create");
