@@ -1,14 +1,11 @@
 
 package acme.testing.company.practicum;
 
-import java.util.Collection;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.Practicum;
 import acme.testing.TestHarness;
 
 public class CompanyPracticumListTest extends TestHarness {
@@ -49,44 +46,34 @@ public class CompanyPracticumListTest extends TestHarness {
 	public void test300Hacking() {
 		// HINT: this test tries to show a tutorial using inappropriate roles
 
-		final Collection<Practicum> practicum;
-		String id;
+		super.checkLinkExists("Sign in");
+		super.request("/company/practicum/list");
+		super.checkPanicExists();
 
-		practicum = this.repository.findManyPracticumByCompanyUsername("assistant1");
+		super.signIn("assistant1", "assistant1");
+		super.request("/company/practicum/list");
+		super.checkPanicExists();
+		super.signOut();
 
-		for (final Practicum t : practicum)
-			if (t.isDraftMode()) {
+		super.signIn("administrator", "administrator");
+		super.request("/company/practicum/list");
+		super.checkPanicExists();
+		super.signOut();
 
-				id = String.format("id=%d", t.getId());
-				super.checkLinkExists("Sign in");
-				super.request("/company/practicum/show", id);
-				super.checkPanicExists();
+		super.signIn("auditor1", "auditor1");
+		super.request("/company/practicum/list");
+		super.checkPanicExists();
+		super.signOut();
 
-				super.signIn("assistant1", "assistant1");
-				super.request("/company/practicum/show", id);
-				super.checkPanicExists();
-				super.signOut();
+		super.signIn("student1", "student1");
+		super.request("/company/practicum/list");
+		super.checkPanicExists();
+		super.signOut();
 
-				super.signIn("administrator", "administrator");
-				super.request("/company/practicum/show", id);
-				super.checkPanicExists();
-				super.signOut();
+		super.signIn("lecturer1", "lecturer1");
+		super.request("/company/practicum/list");
+		super.checkPanicExists();
+		super.signOut();
 
-				super.signIn("auditor1", "auditor1");
-				super.request("/company/practicum/show", id);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("student1", "student1");
-				super.request("/company/practicum/show", id);
-				super.checkPanicExists();
-				super.signOut();
-
-				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/show", id);
-				super.checkPanicExists();
-				super.signOut();
-
-			}
 	}
 }
