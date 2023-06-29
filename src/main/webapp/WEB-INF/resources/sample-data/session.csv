@@ -3,3 +3,4 @@ session-01,The first session,The first abstract,"2022/09/01 12:00","2022/09/09 1
 session-02,The second session,The second abstract,"2022/09/11 12:00","2022/09/20 12:00",https://ev.us.es/webapps/login/,true,false,practicum-01
 session-03,The first session for other practicum,The first abstract for other practicum,"2022/09/01 12:00","2022/09/09 12:00",null,true,false,practicum-02
 session-04,The second session for other practicum,The second abstract for other practicum,"2022/09/01 12:00","2022/09/09 12:00",null,false,false,practicum-02
+session-05,zThe third session,The third abstract,"2022/09/11 12:00","2022/09/20 12:00",https://ev.us.es/webapps/login/,true,false,practicum-01
