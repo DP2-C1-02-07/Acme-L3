@@ -24,7 +24,7 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 
 	@CsvFileSource(resources = "/company/practicum/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int practicumRecordIndex, final String code, final String nextCode) {
-		// HINT:This test proves that a practicum is created correctly and its data is saved correctly
+		// HINT:This test proves that a practicum is deleted correctly and its data is deleted correctly
 
 		super.signIn("company1", "company1");
 
@@ -32,8 +32,8 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(practicumRecordIndex, 0, code);
-		super.clickOnListingRecord(practicumRecordIndex);
+		super.checkColumnHasValue(0, 0, code);
+		super.clickOnListingRecord(0);
 
 		super.checkFormExists();
 		super.clickOnSubmit("Delete");
@@ -42,17 +42,15 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(practicumRecordIndex, 0, nextCode);
+		super.checkColumnHasValue(0, 0, nextCode);
 
 		super.signOut();
 	}
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/company/practicum/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test200Negative(final int practicumRecordIndex, final String code, final String title, final String abstractThing, final String goals, final String course) {
-		// HINT: This test does not include a negative test because it does not 
-		//receive data that we must verify
-
+	@Test
+	public void test200Negative() {
+		// HINT: there's no negative test case for this listing, since it doesn't
+		// HINT+ involve filling in any forms.
 	}
 
 	@Test
