@@ -41,10 +41,14 @@
 </acme:footer-panel>
 
 <jstl:if test="${banner != null}">
-	<div class="panel-body" style="margin: 1em 0em 1em 0em; text-align: center;">	
+	<div class="panel-body" style="margin: 1em 0em 1em 0em; text-align: center;">
+			
 		<a href="${banner.documentLink}" target="_blank">
 			<img src="${banner.pictureLink}" alt="${banner.slogan}" class="img-fluid rounded" style="border-style: solid;" width = "25%"/>
 		</a>
+		<p>
+			${banner.slogan}
+		</p>
 	</div>
 </jstl:if>
 
