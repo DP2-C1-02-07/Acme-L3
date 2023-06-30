@@ -98,7 +98,8 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 			Practicum existing;
 
 			existing = this.repository.findOnePracticaByCode(object.getCode());
-			super.state(existing == null, "code", "company.practicum.form.error.duplicated");
+			super.state(existing == null || object.equals(existing), "code", "company.practicum.form.error.duplicated");
+
 		}
 	}
 
@@ -124,11 +125,15 @@ public class CompanyPracticumPublishService extends AbstractService<Company, Pra
 
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
+
+		final Collection<Session> sessions = this.repository.findSessionsByPracticumId(object.getId());
+		final Double estimatedTime = object.estimatedTime(sessions);
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "estimatedTime", "draftMode");
+		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+		tuple.put("estimatedTime", estimatedTime);
 
 		super.getResponse().setData(tuple);
 	}

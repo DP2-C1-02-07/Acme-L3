@@ -87,7 +87,7 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 			Practicum existing;
 
 			existing = this.repository.findOnePracticaByCode(object.getCode());
-			super.state(existing == null, "code", "company.practicum.form.error.duplicated");
+			super.state(existing == null || object.equals(existing), "code", "company.practicum.form.error.duplicated");
 		}
 	}
 
