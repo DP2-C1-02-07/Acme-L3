@@ -1,5 +1,5 @@
 
-package acme.testing.company.practicum;
+package acme.testing.company.session;
 
 import java.util.Collection;
 
@@ -8,23 +8,23 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.entities.Practicum;
+import acme.entities.Session;
 import acme.testing.TestHarness;
 
-public class CompanyPracticumDeleteTest extends TestHarness {
+public class CompanySessionShowTest extends TestHarness {
 
 	// Internal state ---------------------------------------------------------
 	@Autowired
-	protected CompanyPracticumTestRepository repository;
+	protected CompanySessionTestRepository repository;
 
 	// Test data --------------------------------------------------------------
 
 
 	@ParameterizedTest
+	@CsvFileSource(resources = "/company/session/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test100Positive(final int sessionRecordIndex, final String title, final String startDate, final String finishDate, final String practicum) {
 
-	@CsvFileSource(resources = "/company/practicum/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	public void test100Positive(final int practicumRecordIndex, final String code, final String nextCode) {
-		// HINT:This test proves that a practicum is deleted correctly and its data is deleted correctly
+		//HINT: This test proves that a company can consult their practicum
 
 		super.signIn("company1", "company1");
 
@@ -32,19 +32,24 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(0, 0, code);
 		super.clickOnListingRecord(0);
-
 		super.checkFormExists();
-		super.clickOnSubmit("Delete");
 
-		super.clickOnMenu("Company", "List my practica");
+		super.clickOnButton("View sessions");
+
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 
-		super.checkColumnHasValue(0, 0, nextCode);
+		super.clickOnListingRecord(sessionRecordIndex);
+		super.checkFormExists();
+
+		super.checkInputBoxHasValue("title", title);
+		super.checkInputBoxHasValue("startDate", startDate);
+		super.checkInputBoxHasValue("finishDate", finishDate);
+		super.checkInputBoxHasValue("practicum", practicum);
 
 		super.signOut();
+
 	}
 
 	@Test
@@ -55,41 +60,42 @@ public class CompanyPracticumDeleteTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
-		final Collection<Practicum> practicum;
+		// HINT: this test tries to list session using inappropriate roles
+		final Collection<Session> sessions;
 		String id;
 
-		practicum = this.repository.findManyPracticumByCompanyUsername("company1");
+		sessions = this.repository.findManySessionByCompanyUsername("company1");
 
-		for (final Practicum t : practicum)
+		for (final Session t : sessions)
 			if (t.isDraftMode()) {
 
 				id = String.format("id=%d", t.getId());
 				super.checkLinkExists("Sign in");
-				super.request("/company/practicum/delete", id);
+				super.request("/company/session/show", id);
 				super.checkPanicExists();
 
 				super.signIn("assistant1", "assistant1");
-				super.request("/company/practicum/delete", id);
+				super.request("/company/session/show", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("administrator", "administrator");
-				super.request("/company/practicum/delete", id);
+				super.request("/company/session/show", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("auditor1", "auditor1");
-				super.request("/company/practicum/delete", id);
+				super.request("/company/session/show", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("student1", "student1");
-				super.request("/company/practicum/delete", id);
+				super.request("/company/session/show", id);
 				super.checkPanicExists();
 				super.signOut();
 
 				super.signIn("lecturer1", "lecturer1");
-				super.request("/company/practicum/delete", id);
+				super.request("/company/session/show", id);
 				super.checkPanicExists();
 				super.signOut();
 
