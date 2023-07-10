@@ -2,7 +2,6 @@
 package acme.features.auditor.audit;
 
 import java.util.Collection;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,12 +54,12 @@ public class AuditorAuditDeleteService extends AbstractService<Auditor, Audit> {
 	public void bind(final Audit object) {
 		assert object != null;
 		final int courseId = super.getRequest().getData("course", int.class);
-		final Collection<Course> course = this.repository.findOneCourseById(courseId);
-		final Optional<Course> firstCourse = course.stream().findFirst();
-		assert firstCourse.isPresent();
+		final Course course = this.repository.findOneCourseById(courseId);
+		//		final Optional<Course> firstCourse = course.stream().findFirst();
+		//		assert firstCourse.isPresent();
 
 		super.bind(object, "code", "conclusion", "strongPoints", "weakPoints");
-		object.setCourse(firstCourse.get());
+		object.setCourse(course);
 	}
 
 	@Override
