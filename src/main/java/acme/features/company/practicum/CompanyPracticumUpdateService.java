@@ -120,7 +120,7 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 		final Double estimatedTime = object.estimatedTime(sessions);
 		Tuple tuple;
 
-		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "estimatedTime", "draftMode");
+		tuple = super.unbind(object, "code", "title", "abstractThing", "goals", "draftMode");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
 		tuple.put("estimatedTime", estimatedTime);
