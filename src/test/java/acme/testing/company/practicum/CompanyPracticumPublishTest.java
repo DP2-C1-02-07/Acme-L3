@@ -30,7 +30,7 @@ public class CompanyPracticumPublishTest extends TestHarness {
 
 		super.clickOnMenu("Company", "List my practica");
 		super.checkListingExists();
-
+		super.sortListing(0, "asc");
 		super.clickOnListingRecord(practicumRecordIndex);
 		super.checkFormExists();
 
@@ -65,8 +65,8 @@ public class CompanyPracticumPublishTest extends TestHarness {
 
 		super.clickOnMenu("Company", "List my practica");
 		super.checkListingExists();
-
-		super.clickOnListingRecord(practicumRecordIndex);
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(0);
 		super.checkFormExists();
 
 		super.fillInputBoxIn("code", code);
