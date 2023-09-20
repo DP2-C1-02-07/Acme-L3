@@ -83,17 +83,23 @@ public class CompanySessionPublishService extends AbstractService<Company, Sessi
 
 		//Date Validations
 
-		final Date startDate = super.getRequest().getData("startDate", Date.class);
-		final Date finishDate = super.getRequest().getData("finishDate", Date.class);
-		if (startDate != null && finishDate != null) {
-			final Date availableStart = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
-			final Date availableEnd = MomentHelper.deltaFromMoment(startDate, 7, ChronoUnit.DAYS);
+		if (!super.getBuffer().getErrors().hasErrors("startDate") && !super.getBuffer().getErrors().hasErrors("finishDate")) {
+			final Date startDate = super.getRequest().getData("startDate", Date.class);
+			final boolean badStartDate = super.getResponse().getErrors().hasErrors("startDate");
+			super.state(badStartDate, "startDate", "company.session.validation.startDate.error.WeekAhead");
 
-			final boolean validStart = startDate.getTime() >= availableStart.getTime();
-			super.state(validStart, "startDate", "company.session.validation.startDate.error.WeekAhead");
+			final Date finishDate = super.getRequest().getData("finishDate", Date.class);
+			if (startDate != null && finishDate != null) {
+				final Date availableStart = MomentHelper.deltaFromCurrentMoment(7, ChronoUnit.DAYS);
+				final Date availableEnd = MomentHelper.deltaFromMoment(startDate, 7, ChronoUnit.DAYS);
 
-			final boolean validEnd = finishDate.getTime() >= availableEnd.getTime();
-			super.state(validEnd, "finishDate", "company.session.validation.finishDate.error.WeekLong");
+				final boolean validStart = startDate.getTime() >= availableStart.getTime();
+				super.state(validStart, "startDate", "company.session.validation.startDate.error.WeekAhead");
+
+				final boolean validEnd = finishDate.getTime() >= availableEnd.getTime();
+				super.state(validEnd, "finishDate", "company.session.validation.finishDate.error.WeekLong");
+
+			}
 		}
 
 		//Spam validations
