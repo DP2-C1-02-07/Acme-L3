@@ -1,0 +1,11 @@
+tutorialRecordIndex,course,code,title,abstractTutorial,goals
+0,Programming introduction,,title,abstractTutorial,"goal 1, goal 2"
+0,---,TUT023,title,abstract,goals
+0,Programming introduction,TUT006,title,abstract,goal
+0,Programming introduction,No-valid, title, abstract,goal
+0,Programming introduction, TUT024,This title is too long so it should give an error when exceeding 75 characters,abstract, goal
+0,Programming introduction, TUT025, ,Abstract,goal
+0,Programming introduction, TUT028,title valid, "This abstract exceeds 100 characters, so the form should return an error when entering the data if it works well",goal
+0,Programming introduction, TUT300, title valid,,goal
+0,Programming introduction, TUT333, title valid,abstract valid,"This goal exceeds 100 characters, so the form should return an error when entering the data if it works well"
+0,Programming introduction, TUT033, title valid,abstract valid,

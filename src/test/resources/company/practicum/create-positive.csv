@@ -1,0 +1,6 @@
+practicumRecordIndex,code,title,abstractThing,goals,course
+0,HHG0001,"Test of 75 characters, to verify the validation of the character limit test",abstract,goals,ABG123
+0,HHG0002,"t","This asbtract has just 100 characters, necessary to test the validation and to be able to pass well.", goals,ABG123
+0,HHG0003,title,"This asbtract has just 100 characters, necessary to test the validation and to be able to pass well.","g",ABG123
+0,HHG0004,TITLE,ABSTRACT, goals,ABG123
+0,HHG0005,title-2,asbtract-2,"This goal has just 100 characters, necessary to test the validation and to be able to pass test    .",ABG123

@@ -64,8 +64,8 @@ public class AdministratorOfferCreateService extends AbstractService<Administrat
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("price")) {
-			final boolean pricePositive = object.getPrice().getAmount() > 0.0;
-			super.state(pricePositive, "*", "administrator.offer.post.price-positive");
+			final boolean validPrice = object.getPrice().getAmount() > 0.0 && object.getPrice().getAmount() <= 1000000;
+			super.state(validPrice, "*", "administrator.offer.post.valid-price");
 
 			final Money price = super.getRequest().getData("price", Money.class);
 			final String priceCurrency = price.getCurrency();

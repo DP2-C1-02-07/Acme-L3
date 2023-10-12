@@ -1,0 +1,12 @@
+recordIndex,title,instantiationMoment,message,nick,link,email
+0,,2019/03/11 12:00,Message 10,Nick 10,https://www.twitter.com,example10@gmail.com
+0,Title Test 75 characters Title Test 75 characters Title Test 75 characters negative,2019/03/11 12:00,Message 11,Nick 11,https://www.twitter.com,example11@gmail.com
+0,Title 12,2019/03/11 12:00,,Nick 12,https://www.twitter.com,example12@gmail.com
+0,Title 13,2019/03/11 12:00,Message Test 100 characters Message Test 100 characters Message Test 100 characters upper limit negative,Nick 13,https://www.twitter.com,example13@gmail.com
+0,Title 14,2019/03/11 12:00,Message 14,,https://www.twitter.com,example14@gmail.com
+0,Title 15,2019/03/11 12:00,Message 15,Nick Test 75 characters  Nick Test 75 characters  Nick Test 75 characters negative,https://www.twitter.com,example15@gmail.com
+0,,null,,,no es una url,no es un email
+0,Title 17,2024/03/11 12:00,Message 17,Nick 17,https://www.twitter.com,example17@gmail.com
+0,Title 18,null,Message 18,Nick 18,https://www.twitter.com,example18@gmail.com
+0,Title 19,2019/03/11 12:00,Message 19,Nick 19,no es una url,example18@gmail.com
+0,Title 20,2019/03/11 12:00,Message 20,Nick 20,https://www.twitter.com,no es un email

@@ -1,13 +1,15 @@
 key,code,title,an-abstract,retail-price,further-information,draft-mode,key:lecturer
 course-01,ABC123,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,false,lecturer-01
-course-02,DEF456,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,false,lecturer-02
+course-02,DEF456,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 2,000.00",http://courseinfo.com,false,lecturer-02
 course-03,A001,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,true,lecturer-03
 course-04,ABD123,P,This course offers an introduction to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,true,lecturer-04
 course-05,ABE123,Programming introductionsssssssssssssssssssssssssssssssssssssssssssssssssss,This course offers an introduction to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,false,lecturer-05
 course-06,ABF123,Programming introduction,t,"EUR 1,000.00",http://courseinfo.com,true,lecturer-06
 course-07,ABG123,Programming introduction,This course offers an introduction to programming fundamentalsssssssssssssssssssssssssssssssssssssss,"EUR 1,000.00",http://courseinfo.com,true,lecturer-07
-course-08,ABH123,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,false,lecturer-01
-course-09,ABI123,Programming introduction,This course offers an introduction to programming fundamentals,"USD 1,000.00",http://courseinfo.com,false,lecturer-01
-course-10,ABJ123,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 1,000.00",https://courseinformation.com,false,lecturer-01
-course-11,ABK123,Programming introduction,This course offers an introduction to programming fundamentals,"EUR 1,000.00",null,false,lecturer-01
+course-08,ABH123,Programming I,This course offers an initiation to programming fundamentals,"EUR 1,000.00",http://courseinfo.com,true,lecturer-01
+course-09,ABI123,Programming II,This course offers programming concepts for beginners,"USD 1,000.00",http://courseinfo.com,true,lecturer-01
+course-10,ABJ123,Programming III,This course offers programming concepts for junior developers,"EUR 1,000.00",https://courseinformation.com,true,lecturer-01
+course-11,ABK123,Programming IV,This course offers programming concepts for senior developers,"EUR 1,000.00",null,false,lecturer-01
 course-12,AB999,应用部署,本课程提供如何在云中部署我们的应用程序,"EUR 1,000.00",http://courseinfo.com,false,lecturer-02
+course-13,AZS123,Programming V,This course offers programming concepts for expert senior developers,"EUR 2,000.00",http://courseinfo.com,true,lecturer-03
+course-14,AXX128,Programming VI,This course offers programming concepts for expert senior developers,"EUR 2,000.00",http://courseinfo.com,true,lecturer-01

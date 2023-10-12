@@ -11,6 +11,6 @@ administrator.offer.form.button.delete = Delete
 administrator.offer.form.button.create = Create
 administrator.offer.post.day-after-instantiation = Availability period must start at least one day after the offer is instantiated
 administrator.offer.post.one-week = Availability period must last for at least one week
-administrator.offer.post.price-positive = Price must be positive
+administrator.offer.post.valid-price = Price must be either positive or less than 1000000
 administrator.offer.form.error.price.currencies = Currency not accepted in system configuration. Accepted currencies
 administrator.offer.money-exchange.form.label.api-error = Sorry, couldn't perform the exchange
